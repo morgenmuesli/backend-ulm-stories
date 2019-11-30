@@ -1,0 +1,19 @@
+{
+  "name": "backend-ulm-stories",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annip95/backend-ulm-stories.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/annip95/backend-ulm-stories#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
