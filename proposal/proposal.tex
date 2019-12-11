@@ -1,0 +1,122 @@
+\documentclass[]{hci-proposal}
+
+% Select your language
+%\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\title{Interaktiver Reiseführer}
+\author{Anastasia Parlapani, Sandra Menhorn, Pascal Leber, Daria Waldow, Christoph Meyer}
+\date{\today}
+\email{anastasia.parlapani@uni-ulm.de,
+		sandra.menhorn@uni-ulm.de,
+		pascal.leber@uni-ulm.de,
+		daria.waldow@uni-ulm.de,
+		christoph.meyer-1@uni-ulm.de}
+
+\begin{document}
+
+% Keine Seitenzahlen
+\pagenumbering{gobble}
+
+\maketitle
+
+\begin{abstract}
+  Wir entwickeln einen interaktiven Reiseführer für die Stadt Ulm. Mithilfe eines Smartphones soll
+  der Nutzer die Stadt Ulm erkunden. Auf einer Stadtkarte sind verschiedene Stationen vermerkt, die
+  der Nutzer ansteuern kann. Dort trifft er auf berühmte Ulmer Persönlichkeiten, mit denen der er
+  interagieren kann und verschiedene Aufgaben in Form vom Mini-Games absolvieren muss.
+
+
+
+\end{abstract}
+
+
+\section{Zielgruppe}
+Unsere Zielgruppe sind Schüler und Jugendlich ab 12 Jahren, weswegen wir einen Edutainment Ansatz befolgen. Anhand
+von spielerischen Inhalten werden Inhalte übermittelt.
+
+
+\section{Problem, Goal and Approach}
+Klassische Reiseführer in Buchform bieten für eine jüngere Zielgruppe keinen Mehrwert.
+Als Rahmenhandlung erzählen wir von dem Missglückten Physikversuch des fiktiven Professors Alfred Zweistein weswegen vergangene Persönlichkeiten der Ulmer Stadt Geschichte in unserer Zeit geraten sind.
+Er schickt den Nutzer als seinen Assistenten in die Stadt um Albert Einstein zu finden, welcher ihm bei dem Problem helfen soll.
+Der Nutzer erhält eine Karte, in denen alle Hotspots vermerkt sind, an denen sich Berühmtheiten aufhalten (z.B. das Ulmer
+Münster, altes Rathaus, ...). Der Nutzer kann mit diesen interagieren und muss verschiedene Aufgaben bewltigen um einen
+Hinweis über den Standort von Albert Einstein zu erfahren.
+
+
+\section{Konkurrenzanalyse}
+
+Reiseführer-Apss gibt es bereits viele. Jedoch handelt es sich meistens um Audio-Guides, die jedoch nicht standortgebunden sind,
+oder um Karten, in denen verschiedene Standorte markiert werden, zu denen man Informationen in Form von Texten, Bildern oder
+Videos bekommt.
+
+Wenn man nach interaktiven Stadtführern sucht, erhält man im App-Store einen einzigen Vorschlag: "Industriegeschichte erleben" der
+Stadt Chemnitz. Hierbei handelt es sich um einen GPS-abhängigen Stadtführer, bei dem man erst Inhalte vermittelt bekommt, wenn man sich
+in der Nähe eines im voraus festgelegten Standortes befindet. Man kann auf der Karte navigieren, um zu schauen, welche Hotspots
+sich im Umkreis befindet und kann auch verschiedene Pfade auswählen, die man angezeigt haben will.
+Diesen Ansatz werden wir bei unserer Anwendung ebenfalls zu Teilen verwenden. Sobald man sich in der Nähe eines Hotspots aufhält,
+wird ein Event ausgelöst.
+
+Wenn man nach einen interaktiven Stadtführer für die Stadt Ulm im Internet sucht bekommt man tatsächlich ein Ergebnis. Hierbei handelt
+es sich um den Stadtführer "Jakobs Welt", die von des Ulmer Digital Media Studenten Maximilian Girndt erstellt wurde. Hierbei
+handelt es sich um einen interaktiven Film, bei dem man den Weg der Hauptfigur Jakob bestimmen kann.
+
+%\section{Implementation}
+%Implementiert wird der Reiseführer als Android Application. Um den Nutzer eine bessere Emersion  zu vermitteln
+%werden Standortdaten abgefragt und bei erreichen von vordefinierten Lokalitäten wird ein Animationsfilm abgespielt.
+%Als Programmiersprache wird
+
+\section{Projektpartner}
+Unsere Projektpartner sind Jörg Zenker und Annika Fuchs. Diese helfen uns sowohl bei der Story und Geschichte,
+als auch bei der Visualisierung/Animation der Charaktere.
+
+\section{Time Schedule}
+See this list as examples, feel free to add more if needed.
+%\begin{itemize}
+%\item Literature Research
+%\item Preparation (e.g. Hardware Setup)
+%\item Framework/Architecture Development
+%\item Implementation
+%\item Evaluation
+%\item Study
+%\item Writing
+%\item (Gantt-Chart to illustrate the time schedule)
+%\end{itemize}
+
+\bibliographystyle{IEEEtranS}   % alternativer Stil
+\bibliography{bibliography} % Bib-Datei
+
+\begin{landscape}
+  \begin{figure*}[htbp]
+    \begin{ganttchart}[vgrid, hgrid, y unit chart=0.7cm]{1}{24}
+      % Titles
+      \gantttitle{2014}{12}
+      \gantttitle{2015}{12} \\
+      \gantttitlelist{1,...,24}{1} \\
+
+      % First Group
+      \ganttgroup{Group 1}{1}{10} \\
+      \ganttbar{Literature Research}{1}{3} \\
+      \ganttbar{Preparation }{4}{10} \\
+      \ganttbar{Implementation}{9}{12} \\
+      \ganttmilestone{Milestone 1}{8} \\
+      \ganttlink{elem1}{elem2}
+      \ganttlink{elem2}{elem3}
+
+      % Second Group
+      \ganttgroup{Group 2}{13}{21} \\
+      \ganttbar{Task 1}{13}{18} \\
+      \ganttbar{Task 2}{18}{21} \\
+      \ganttbar{Task 3}{22}{24} \\
+      \ganttmilestone{Milestone 2}{17}
+      \ganttlink{elem6}{elem7}
+      \ganttlink{elem7}{elem8}
+    \end{ganttchart}
+    \label{gc}
+    \caption{Gantt-Chart example}
+  \end{figure*}
+\end{landscape}
+
+\end{document}
