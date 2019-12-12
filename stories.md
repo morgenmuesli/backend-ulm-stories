@@ -8,7 +8,7 @@ Albrecht Ludwig von Berblingen -> Deppressionen da sein Flug mißglückt ist und
 
 Agathe Streicher -> erste Deutsche Ärztin in Deutschland obwohl sie nicht auf die Universität durfte. Wir klären Sie auf das Ulm heute eine der führenden Universität im Beriech Medizin ist und viele Ihrem Beispiel folgen.
 
-Hanna Essinger -> Lehrerin half nach dem zweiten Weltkrieg Essen und KLeidung für Kinder zu sammeln
+Anna Essinger -> Lehrerin half nach dem zweiten Weltkrieg Essen und KLeidung für Kinder zu sammeln
 
 Mathilde Planck -> Frauenrechtlerin und erste weibliche Abgeordnete im Landtag von Württemberg. 
 
