@@ -47,6 +47,9 @@ Nadine wohnt seit neuem in der Stadt, da sie ein Studium angefangen hat.
 Sie ist fasziniert von der Ulmer Stadtgeschichte möchte allerdings nicht mit anderen Touristen die Stadt besuchen, da Sie nicht als Fremd angesehen werden will.
 \subsubsection*{Fr. Holle}
 Frau Holle ist Lehrerin. Sie möchte ihren Schülern Wissen über die Stadt auf moderne Art und Weise vermitteln.
+\subsubsection*{Justin}
+Justin ist 16 Jahre alt und zu Besuch in der Stadt und er muss auf seine Freundin warten und will die Zeit überbrücken.
+Um die Zeit zu überbrücken möchte er die Stadt erkunden.
 
 \section{Problem, Goal and Approach}
 Klassische Reiseführer in Buchform bieten für eine jüngere Zielgruppe keinen Mehrwert.
@@ -85,6 +88,59 @@ als auch bei der Visualisierung/Animation der Charaktere.
 
 \section{Time Schedule}
 See this list as examples, feel free to add more if needed.
+\
+\begin{figure*}[htbp]
+  \begin{ganttchart}[vgrid, hgrid, y unit chart=0.7cm]{1}{20}
+        % Titles
+    \gantttitle{2019}{4}
+    \gantttitle{2020}{16} \\
+    \gantttitlelist{12}{4} 
+    \gantttitlelist{1,...,04}{4} \\
+        
+    \gantttitlelist{1,...,20}{1} \\
+        
+  
+        % First Group
+    
+    \ganttgroup{Einarbeitung}{1}{4} \\
+    \ganttbar{Figma}{1}{3} \\
+    \ganttbar{Vue.Js}{1}{4} \\
+    \ganttbar{Character Animator CC}{1}{4} \\
+
+
+    \\
+    \ganttgroup{Design}{4}{15} \\
+    \ganttbar{Mock-Ups }{3}{4} \\
+    \ganttmilestone{Triggerpunkte auf Karte}{8} \\
+    \ganttbar{Figuren zeichnen}{5}{10}  \\
+    \ganttbar{Animationen erstellen}{7}{12} \\
+    \\
+    \ganttgroup{Story}{1}{10} \\
+    \ganttmilestone{Route Ablaufen}{5} \\
+    \ganttbar{Grobe Story}{1}{2} \\
+    \ganttbar{Character Geschichten}{5}{8}\\
+
+    \\
+    \ganttgroup{Implementation}{1}{16} \\
+    \ganttbar{Navigationsystem}{1}{6} \\
+    \ganttbar{Navigationspunkte einpflegen}{5}{8} \\
+    \ganttbar{Animationen einbinden}{10}{13} \\
+    \ganttbar{Minigames}{8}{13} \\
+
+    \\
+    \ganttgroup{Test}{8}{20} \\
+    \\
+    \ganttgroup{Abgabe}{15}{20} \\
+    \ganttmilestone{Präsentation}{15} \\
+    \ganttbar{Feinschliff}{18}{20} \\
+    \ganttmilestone{Streiflicht}{20}
+
+  
+  
+  \end{ganttchart}
+  \label{gc}
+  \caption{Zeitplan}
+  \end{figure*}
 %\begin{itemize}
 %\item Literature Research
 %\item Preparation (e.g. Hardware Setup)
@@ -98,33 +154,8 @@ See this list as examples, feel free to add more if needed.
 
 
 
-  \begin{figure*}[htbp]
-  \begin{ganttchart}[vgrid, hgrid, y unit chart=0.7cm]{1}{20}
-      % Titles
-    \gantttitle{2019}{4}
-    \gantttitle{2020}{16} \\
-    \gantttitlelist{12}{4} 
-    \gantttitlelist{1,...,04}{4} \\
-      
-    \gantttitlelist{1,...,20}{1} \\
-      
 
-      % First Group
-    \ganttgroup{Group 1}{1}{10} \\
-    \ganttbar{Navigationsystem}{1}{6} \\
-    \ganttbar{Mock-Ups }{1}{5} \\
-    \ganttbar{Implementation}{9}{12} \\
-    \ganttmilestone{Triggerpunkte auf Karte}{8} \\
-
-
- 
-    \ganttlink{elem2}{elem3}
-
-
-  \end{ganttchart}
-  \label{gc}
-  \caption{Zeitplan}
-\end{figure*}
+\newpage
 
 \bibliographystyle{IEEEtranS}   % alternativer Stil
 \bibliography{bibliography} % Bib-Datei
