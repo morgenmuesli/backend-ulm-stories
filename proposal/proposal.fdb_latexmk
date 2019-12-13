@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex proposal"] 1576141647 "proposal.aux" "proposal.bbl" "proposal" 1576141648
+["bibtex proposal"] 1576157791 "proposal.aux" "proposal.bbl" "proposal" 1576157792
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/IEEEtran/IEEEtranS.bst" 1440712899 61730 614a61a3af01043d45925bdf2bd38471 ""
   "bibliography.bib" 1576139068 137 0228cfbc6d7b63fc6d845e3f6f4eb503 ""
-  "proposal.aux" 1576141648 1501 7152828308aadab3911c93986160abc2 "pdflatex"
+  "proposal.aux" 1576157792 1605 542ab872b7bd58ba8c5bd67da4ec693e "pdflatex"
   (generated)
   "proposal.bbl"
   "proposal.blg"
-["pdflatex"] 1576141647 "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.tex" "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.pdf" "proposal" 1576141648
-  "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.aux" 1576141648 1501 7152828308aadab3911c93986160abc2 ""
-  "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.tex" 1576141645 5360 41856bae74c52eec1723b4531fa44a08 ""
-  "/dev/null" 1576141641 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1576157791 "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.tex" "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.pdf" "proposal" 1576157792
+  "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.aux" 1576157792 1605 542ab872b7bd58ba8c5bd67da4ec693e ""
+  "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.tex" 1576157790 6735 b7f233d0d1f0e20b02b9473fd6e23454 ""
+  "/dev/null" 1576157792 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
@@ -175,14 +175,14 @@
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1563824215 4259636 7d88d535e2bd6776274ce167fc90948e ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
   "hci-proposal.cls" 1576139068 2482 c89c8b459e0f1d92e574d0ba06f8a7e4 ""
-  "proposal.aux" 1576141648 1501 7152828308aadab3911c93986160abc2 "pdflatex"
-  "proposal.bbl" 1576141647 879 3823a7cc4084414188a1a57d404f7663 "bibtex proposal"
-  "proposal.out" 1576141648 265 d8d12a171dcdc9cbaf32e0df65c5da5c "pdflatex"
-  "proposal.tex" 1576141645 5360 41856bae74c52eec1723b4531fa44a08 ""
+  "proposal.aux" 1576157792 1605 542ab872b7bd58ba8c5bd67da4ec693e "pdflatex"
+  "proposal.bbl" 1576157791 879 3823a7cc4084414188a1a57d404f7663 "bibtex proposal"
+  "proposal.out" 1576157792 326 2d5451fe1e4eeefd3c6e63f3ef972e72 "pdflatex"
+  "proposal.tex" 1576157790 6735 b7f233d0d1f0e20b02b9473fd6e23454 ""
   (generated)
-  "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.log"
-  "proposal.log"
-  "proposal.pdf"
   "proposal.aux"
+  "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.log"
   "proposal.out"
+  "proposal.pdf"
   "/Users/christophmeyer/Documents/workspace/storytelling/backend-ulm-stories/proposal/proposal.pdf"
+  "proposal.log"
