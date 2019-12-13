@@ -8,6 +8,6 @@ npm run dev
 
 ## Frontend (Quasar)
 ```
-nps install @quasar/cli
+npm install @quasar/cli
 quasar dev
 ```
