@@ -1,16 +1,8 @@
 <template>
     <q-page>
-      <q-row>
-        <q-col><q-button>
-          Start
-        </q-button></q-col>
-        <q-col><q-button>
-          Continue
-        </q-button></q-col>
-        <q-col><q-button>
-          Options
-        </q-button></q-col>
-      </q-row>
+      <q-btn>Starte neue Tour</q-btn>
+      <q-btn>Führe letzte Tour fort</q-btn>
+      <q-btn>Optionen</q-btn>
     </q-page>
 </template>
 
