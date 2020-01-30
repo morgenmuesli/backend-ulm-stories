@@ -21,8 +21,14 @@
     "cordova-serve-osx": "cross-env CORDOVA_PLATFORM=osx vue-cli-service cordova-serve-osx"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.2.2",
     "core-js": "^3.4.4",
-    "vue": "^2.6.10"
+    "leaflet": "^1.6.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.5",
+    "vue2-leaflet": "^2.4.2",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
@@ -33,8 +39,11 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
     "vue-cli-plugin-cordova": "^2.4.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.5"
   }
 }

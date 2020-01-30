@@ -1,0 +1,49 @@
+{
+  "name": "ulm-stories",
+  "version": "1.0.0",
+  "description": "A interactive travel guide as pwa for 12 years old kids",
+  "author": "Christoph Meyer",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "test": "jest",
+    "cordova": "npm run build-spa && npm run replace-relative-paths && npm run copy-cordova && npm run run-android;",
+    "build-spa": "nuxt build --spa",
+    "replace-relative-paths": "replace '/nuxtfiles/' 'nuxtfiles/' dist --recursive && replace '/assets/' 'nuxtfiles/' dist --recursive && replace '(href|src|\"href\"|\"src\")=\"/' '$1=\"../' dist --recursive && replace '(href|src|\"href\"|\"src\"):\"/' '$1:\"../' dist --recursive",
+    "copy-cordova": "cp -R dist/* cordova/www/",
+    "clear-cordova": "rm -R cordova/www/*",
+    "run-android": "cd cordova && cordova run android"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "leaflet": "^1.6.0",
+    "nuxt": "^2.0.0",
+    "nuxt-leaflet": "0.0.19",
+    "p5": "^0.10.2",
+    "vue-p5": "^0.8.3",
+    "vue-video": "^0.1.7",
+    "vue2-leaflet": "^2.4.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/vuetify": "^1.0.0",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "replace": "^1.1.5",
+    "vue-jest": "^4.0.0-0"
+  }
+}
