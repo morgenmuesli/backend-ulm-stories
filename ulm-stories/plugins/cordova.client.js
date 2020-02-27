@@ -1,14 +1,14 @@
 export default (ctx, inject) => {
-  const { app } = ctx
+  const { app } = ctx;
 
   const cordovaApp = {
     // Application Constructor
     initialize() {
       document.addEventListener(
-        'deviceready',
+        "deviceready",
         this.onDeviceReady.bind(this),
         false
-      )
+      );
     },
 
     // deviceready Event Handler
@@ -35,31 +35,31 @@ export default (ctx, inject) => {
        */
 
       try {
-        this.initStatusBar()
+        this.initStatusBar();
       } catch (err) {
         // console.error('status bar failed', err)
       }
 
       try {
-        this.initWKWebView()
+        this.initWKWebView();
       } catch (err) {
         // console.error('init WKWebView failed', err)
       }
 
       try {
-        this.initCustomUrlScheme()
+        this.initCustomUrlScheme();
       } catch (err) {}
     },
 
     initCustomUrlScheme() {
-      window.handleOpenURL = (url) => {
-        alert('DeepLink: ' + url)
-      }
+      window.handleOpenURL = url => {
+        alert("DeepLink: " + url);
+      };
     },
 
     initStatusBar() {
-      window.StatusBar.overlaysWebView(false)
-      window.StatusBar.backgroundColorByHexString('#009896')
+      window.StatusBar.overlaysWebView(false);
+      window.StatusBar.backgroundColorByHexString("#009896");
     },
 
     initWKWebView() {
@@ -72,30 +72,30 @@ export default (ctx, inject) => {
         }
       }) */
     }
-  }
+  };
 
-  cordovaApp.initialize()
+  cordovaApp.initialize();
 
   // patch redirect url for cordova - removes "formatUrl" call because it add "//" to the path
   app.context.redirect = (status, path, query) => {
     if (!status) {
-      return
+      return;
     }
 
-    app.context._redirected = true
+    app.context._redirected = true;
     // if only 1 or 2 arguments: redirect('/') or redirect('/', { foo: 'bar' })
-    let pathType = typeof path
+    let pathType = typeof path;
     if (
-      typeof status !== 'number' &&
-      (pathType === 'undefined' || pathType === 'object')
+      typeof status !== "number" &&
+      (pathType === "undefined" || pathType === "object")
     ) {
-      query = path || {}
-      path = status
-      pathType = typeof path
-      status = 302
+      query = path || {};
+      path = status;
+      pathType = typeof path;
+      status = 302;
     }
-    if (pathType === 'object') {
-      path = app.router.resolve(path).href
+    if (pathType === "object") {
+      path = app.router.resolve(path).href;
     }
     // "/absolute/route", "./relative/route" or "../relative/route"
     if (/(^[.]{1,2}\/)|(^\/(?!\/))/.test(path)) {
@@ -103,13 +103,13 @@ export default (ctx, inject) => {
         path,
         query,
         status
-      })
+      });
     } else {
       // https://developer.mozilla.org/en-US/docs/Web/API/Location/replace
 
       // path = formatUrl(path, query) removed
 
-      window.location.replace(path)
+      window.location.replace(path);
     }
-  }
-}
+  };
+};

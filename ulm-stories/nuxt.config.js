@@ -1,29 +1,29 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from "vuetify/es5/util/colors";
 
 export default {
-  mode: 'spa',
+  mode: "spa",
   /*
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: "%s - " + process.env.npm_package_name,
+    title: process.env.npm_package_name || "",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
+        hid: "description",
+        name: "description",
+        content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [{ src: 'cordova.js' }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [{ src: "cordova.js" }]
   },
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: "#fff" },
   /*
    ** Global CSS
    */
@@ -31,25 +31,25 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/cordova.client'],
+  plugins: ["~/plugins/cordova.client"],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
+    "@nuxtjs/eslint-module",
+    "@nuxtjs/vuetify"
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
-    'nuxt-leaflet'
+    "@nuxtjs/dotenv",
+    "nuxt-leaflet"
   ],
   /*
    ** Axios module configuration
@@ -59,17 +59,17 @@ export default {
 
   serverMiddleware: [
     {
-      path: '/nuxtfiles',
-      handler: '~/servermiddleware/assets.js'
+      path: "/nuxtfiles",
+      handler: "~/servermiddleware/assets.js"
     }
   ],
-  router: { mode: 'hash' },
+  router: { mode: "hash" },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ["~/assets/variables.scss"],
     theme: {
       dark: true,
       themes: {
@@ -89,10 +89,10 @@ export default {
    ** Build configuration
    */
   build: {
-    publicPath: '/nuxtfiles/',
+    publicPath: "/nuxtfiles/",
     /*
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
   }
-}
+};

@@ -40,50 +40,50 @@ export default {
       map: null,
       mapAttribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      mapTileLayer: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-    }
+      mapTileLayer: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    };
   },
   computed: {
     mapHeight() {
-      this.resizeMap()
-      return this.$vuetify.breakpoint.height - 150
+      this.resizeMap();
+      return this.$vuetify.breakpoint.height - 150;
     },
     mapId() {
-      return `map-card-${this._uid}`
+      return `map-card-${this._uid}`;
     }
   },
   mounted() {
-    this.buildMap()
+    this.buildMap();
   },
   methods: {
     resizeMap() {
       if (this.map !== null) {
         setTimeout(
-          (vm) => {
-            vm.map.invalidateSize()
+          vm => {
+            vm.map.invalidateSize();
           },
           200,
           this
-        )
+        );
       }
     },
     buildMap() {
-      const lat = this.latitude
-      const lon = this.longitude
+      const lat = this.latitude;
+      const lon = this.longitude;
 
       this.map = this.$L
         .map(this.mapId, {
           zoomControl: false
         })
-        .setView([lat, lon], 13)
+        .setView([lat, lon], 13);
 
-      this.map.scrollWheelZoom.disable()
+      this.map.scrollWheelZoom.disable();
 
       this.$L.control
         .zoom({
-          position: 'bottomleft'
+          position: "bottomleft"
         })
-        .addTo(this.map)
+        .addTo(this.map);
 
       this.$L
         .tileLayer(this.mapTileLayer, {
@@ -91,24 +91,24 @@ export default {
           maxZoom: 14,
           minZoom: 10
         })
-        .addTo(this.map)
+        .addTo(this.map);
 
       const marker = this.$L.marker([lat, lon], {
         title: `lat: ${lat} | lon: ${lon}`,
         riseOnHover: true
-      })
+      });
 
       if (this.popUpData !== null) {
-        let finalPopUpData
+        let finalPopUpData;
         if (this.popUpIsJson) {
-          const pData = JSON.parse(this.popUpData)
+          const pData = JSON.parse(this.popUpData);
           finalPopUpData = `<h3>Host Information:</h3><v-card><pre id='json-pre'>${JSON.stringify(
             pData,
             undefined,
             2
-          )}</pre></v-card>`
+          )}</pre></v-card>`;
         } else {
-          finalPopUpData = this.popUpData
+          finalPopUpData = this.popUpData;
         }
         marker
           .bindPopup(finalPopUpData, {
@@ -116,15 +116,15 @@ export default {
             maxHeight: 200,
             keepInView: true
           })
-          .addTo(this.map)
+          .addTo(this.map);
       } else {
-        marker.addTo(this.map)
+        marker.addTo(this.map);
       }
 
-      this.map.invalidateSize()
+      this.map.invalidateSize();
     }
   }
-}
+};
 </script>
 <style scoped>
 .leaflet-map-container {
