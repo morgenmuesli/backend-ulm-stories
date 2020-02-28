@@ -1,10 +1,5 @@
 <template>
-  <div>
-    <leaflet-map latitude="29.7545" longitude="-95.4093"></leaflet-map>
-    <div class="">
-      <NuxtChild />
-    </div>
-  </div>
+  <LeafletMap />
 </template>
 
 <script>
@@ -23,14 +18,5 @@ export default {
 body {
   margin: 0;
   padding: 0;
-}
-
-.container {
-  padding: 0;
-  width: 100%;
-  margin: 0;
-}
-
-#map {
 }
 </style>

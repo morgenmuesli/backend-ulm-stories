@@ -1,9 +1,13 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <h3>Ulm Reiseführer</h3>
-    </v-flex>
-  </v-layout>
+  <div class="container">
+    <div class="menu">
+      <ul class="menu-list">
+        <li><nuxt-link to="/game">Start Game</nuxt-link></li>
+        <li><nuxt-link to="/preferences">Einstellungen</nuxt-link></li>
+        <li><nuxt-link to="/about">Über uns</nuxt-link></li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -11,3 +15,14 @@ export default {
   components: {}
 };
 </script>
+
+<style lang="scss" scoped>
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.menu-list {
+  font-size: 42px;
+}
+</style>

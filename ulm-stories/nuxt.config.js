@@ -1,5 +1,3 @@
-import colors from "vuetify/es5/util/colors";
-
 export default {
   mode: "spa",
   /*
@@ -37,14 +35,15 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    "@nuxtjs/eslint-module",
-    "@nuxtjs/vuetify"
+    "@nuxtjs/eslint-module"
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
+    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
+    "@nuxtjs/bulma",
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
     // Doc: https://github.com/nuxt-community/dotenv-module
@@ -65,31 +64,20 @@ export default {
   ],
   router: { mode: "hash" },
   /*
-   ** vuetify module configuration
-   ** https://github.com/nuxt-community/vuetify-module
-   */
-  vuetify: {
-    customVariables: ["~/assets/variables.scss"],
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
-  },
-  /*
    ** Build configuration
    */
   build: {
     publicPath: "/nuxtfiles/",
+    /*
+     ** You can extend webpack config here
+     */
+    postcss: {
+      preset: {
+        features: {
+          customProperties: false
+        }
+      }
+    },
     /*
      ** You can extend webpack config here
      */
