@@ -1,4 +1,6 @@
 # Stadtführer Ulm
+## Project directories
+* app root: ./ulm-stories/
 
 ## Project setup (NodeJS)
 
