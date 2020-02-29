@@ -4,7 +4,7 @@
       <l-tile-layer
         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
       ></l-tile-layer>
-      <l-marker :lat-lng="location"></l-marker>
+      <l-marker :lat-lng="userLocation"></l-marker>
       <l-marker
         v-for="(location, index) in allLocations"
         :key="index"
@@ -21,7 +21,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "LeafletMap",
   computed: {
-    location() {
+    userLocation() {
       return {
         lat: this.$store.state.geolocation.lat,
         lng: this.$store.state.geolocation.lng,
