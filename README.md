@@ -34,4 +34,5 @@ Allerdings wäre es ein zu großer Aufwand hier auch noch Zeitpunkte einzutragen
 --------- | ------- | ---------------------
 nuxt and vuejs | [Nuxt JS Crash Course](https://www.youtube.com/watch?v=ltzlhAxJr74) | In this video we will look at Vue.js server side rendering with Nuxt.js. We will build a dadjokes app. This requires at least minimal Vue.js experience.
 vuejs and vuex | [Learn Vue.js - Full Course for Beginners - 2019](https://www.youtube.com/watch?v=4deVCNJq3qc) | complete course for vue and vuex in 3h
+nuxt and cordova | [Vue.js, Cordova Containers With NuxtJS, April 2019](https://www.youtube.com/watch?v=nWKLGyWStUA) | einrichten von nuxt und wie man cordova plugins verwendet. zusätzlich sinnvoll: [presentation](https://docs.google.com/presentation/d/1bvT9ZKt_zDHqWJfMeNbpphQuY2hgMELHByTigxRG90o/edit?fbclid=IwAR2uRrc_s4dDge7ukQgWn65SHEumPB6bU2WjNCZ0zMOFQLM_eEyr9rZHHsU#slide=id.g5683107f14_0_332) [github repo](https://github.com/hokify/cordova-nuxt-demo)
 
