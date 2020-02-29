@@ -43,3 +43,4 @@ Hier bitte Fehler welche ihr gemacht habt und gelöst bzw. daraus gelernt habt e
 **topic** | **description** | **solution**
 --------- | --------------- | ------------
 prettier & filewatcher | prettier und eslint bereiten einige Kopfschmerzen da man nicht immer den code richtig formatiert | in webstorm [filewatcher](https://prettier.io/docs/en/webstorm.html) konfigurieren, dann wird der Code bei jedem speichern automatisch richtig formatiert 🥳
+getters in stores | zugriff auf getters von unterstores (bsw. currentLocation -> location) | wichtig es wird immer erst der standart "index" store geladen und dann die verschiedenen modules. wenn ihr nen getter von einem Module nutzen wollt so müsst ihr das Module bei mapGetters mit angeben (siehe bsw. LeafletMap.vue oder beschrieben in dieser Stackoverflow frage: [stackoverflow](https://stackoverflow.com/questions/57074134/understanding-state-and-getters-in-nuxt-js-getters-wont-working)
