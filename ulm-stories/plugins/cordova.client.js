@@ -16,6 +16,8 @@ export default (ctx, inject) => {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady() {
+      console.log("navigator.geolocation works well");
+
       /**
        * initialize all different stuff here:
        * e.g.

@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.christoph.ulmstories"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.christoph.ulmstories"
     }
   },
   "dependent_plugins": {}
