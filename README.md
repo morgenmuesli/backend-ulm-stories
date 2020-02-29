@@ -36,3 +36,10 @@ nuxt and vuejs | [Nuxt JS Crash Course](https://www.youtube.com/watch?v=ltzlhAxJ
 vuejs and vuex | [Learn Vue.js - Full Course for Beginners - 2019](https://www.youtube.com/watch?v=4deVCNJq3qc) | complete course for vue and vuex in 3h
 nuxt and cordova | [Vue.js, Cordova Containers With NuxtJS, April 2019](https://www.youtube.com/watch?v=nWKLGyWStUA) | einrichten von nuxt und wie man cordova plugins verwendet. zusätzlich sinnvoll: [presentation](https://docs.google.com/presentation/d/1bvT9ZKt_zDHqWJfMeNbpphQuY2hgMELHByTigxRG90o/edit?fbclid=IwAR2uRrc_s4dDge7ukQgWn65SHEumPB6bU2WjNCZ0zMOFQLM_eEyr9rZHHsU#slide=id.g5683107f14_0_332) [github repo](https://github.com/hokify/cordova-nuxt-demo)
 
+## lesson learned
+
+Hier bitte Fehler welche ihr gemacht habt und gelöst bzw. daraus gelernt habt eintragen, dass alle von dem Wissen profitieren können.
+
+**topic** | **description** | **solution**
+--------- | --------------- | ------------
+prettier & filewatcher | prettier und eslint bereiten einige Kopfschmerzen da man nicht immer den code richtig formatiert | in webstorm [filewatcher](https://prettier.io/docs/en/webstorm.html) konfigurieren, dann wird der Code bei jedem speichern automatisch richtig formatiert 🥳
