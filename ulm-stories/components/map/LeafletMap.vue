@@ -1,16 +1,21 @@
 <template>
   <div id="map-wrap" style="height: 100vh">
-    <l-map :zoom="13" :center="location">
+    <l-map :zoom="13" :center="userLocation">
       <l-tile-layer
         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
       ></l-tile-layer>
       <l-marker :lat-lng="userLocation"></l-marker>
+
       <l-marker
         v-for="(location, index) in allLocations"
         :key="index"
         :lat-lng="location.latlng"
       >
-        <l-popup> {{ location.characterName }}</l-popup>
+        <l-popup>
+          <nuxt-link :to="getLink(location)">{{
+            location.characterName
+          }}</nuxt-link>
+        </l-popup>
       </l-marker>
     </l-map>
   </div>
@@ -38,7 +43,11 @@ export default {
     },
     ...mapGetters("npcLocation", ["allLocations"])
   },
-  methods: {}
+  methods: {
+    getLink(npcInfo) {
+      return `/game/${npcInfo.chapter}/${npcInfo.characterID}`;
+    }
+  }
 };
 </script>
 

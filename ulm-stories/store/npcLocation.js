@@ -37,8 +37,8 @@ export const state = () => ({
       chapter: 5
     },
     {
-      characterID: "Schwanenwirten",
-      characterName: "Schwanenwirten",
+      characterID: "Schwanenwirtin",
+      characterName: "Schwanenwirtin",
       latlng: [48.397154, 9.98873],
       chapter: 6
     }
