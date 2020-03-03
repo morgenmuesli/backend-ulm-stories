@@ -1,5 +1,8 @@
 # Stadtführer Ulm
 
+## Animation Characters
+OneDrive Link: https://1drv.ms/u/s!AgA0R-C1HSwtlghQzgGuUnjc3iIf?e=KrpRpM
+
 ## Project directories
 
 - app root: ./ulm-stories/
