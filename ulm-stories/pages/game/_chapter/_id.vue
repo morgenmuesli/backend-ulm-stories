@@ -58,7 +58,8 @@ export default {
   },
   methods: {
     getImagePath() {
-      const img = require("assets/img/character/ensinger.png");
+      const img = require(this.dialogs[0].imagePath);
+      window.console.log(img);
       return img;
     },
     getBackgroundUrl() {
