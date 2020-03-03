@@ -6,9 +6,20 @@
 
 ## Project setup (NodeJS)
 
-```
-npm install
-npm run dev
+```bash
+# install dependencies
+$ npm run install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# build on android
+# please make sure you set the android path correctly ;)
+$ npm run cordova
 ```
 
 ## used technology
