@@ -1,11 +1,3 @@
 <template>
-  <div class="container">
-    <nuxt />
-  </div>
+  <nuxt />
 </template>
-
-<style scoped>
-.container {
-  min-height: 100vh;
-}
-</style>

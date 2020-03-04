@@ -10,11 +10,13 @@
         v-for="(location, index) in allLocations"
         :key="index"
         :lat-lng="location.latlng"
+        @click="openLink(getLink(location))"
+        :icon="getMarker(location)"
       >
         <l-popup>
-          <nuxt-link :to="getLink(location)">{{
-            location.characterName
-          }}</nuxt-link>
+          <nuxt-link :to="getLink(location)"
+            >{{ location.characterName }}
+          </nuxt-link>
         </l-popup>
       </l-marker>
     </l-map>
@@ -23,8 +25,12 @@
 
 <script>
 import { mapGetters } from "vuex";
+import { icon } from "leaflet";
 export default {
   name: "LeafletMap",
+  data() {
+    return {};
+  },
   computed: {
     userLocation() {
       return {
@@ -43,9 +49,25 @@ export default {
     },
     ...mapGetters("npcLocation", ["allLocations"])
   },
+  mounted() {},
   methods: {
     getLink(npcInfo) {
       return `/game/${npcInfo.chapter}/${npcInfo.characterID}`;
+    },
+    openLink(href) {
+      this.$router.push(href);
+    },
+    getMarker(npcInfo) {
+      let iconUrl = `/img/mapmarker/ensinger.png`;
+      if (npcInfo.characterID !== "schwanenwirtin") {
+        iconUrl = `/img/mapmarker/${npcInfo.characterID}.png`;
+      }
+      const marker = icon({
+        iconUrl,
+        iconSize: [32, 37],
+        iconAnchor: [16, 37]
+      });
+      return marker;
     }
   }
 };

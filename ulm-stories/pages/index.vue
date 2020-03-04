@@ -18,8 +18,9 @@ export default {
 
 <style>
 .container {
-  display: flex;
-  align-items: center;
+  display: grid;
+  align-content: center;
+
   height: 100%;
 }
 .menu-list {

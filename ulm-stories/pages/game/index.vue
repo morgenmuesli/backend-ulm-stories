@@ -1,5 +1,5 @@
 <template>
-  <LeafletMap />
+  <LeafletMap :key="componentKey" />
 </template>
 
 <script>
@@ -10,7 +10,17 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     LeafletMap
   },
-  data: () => ({})
+  data: () => ({
+    componentKey: 0
+  }),
+  methods: {
+    forceRerender() {
+      this.componentKey += 1;
+    }
+  },
+  mounted() {
+    this.forceRerender();
+  }
 };
 </script>
 

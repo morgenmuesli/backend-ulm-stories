@@ -1,7 +1,7 @@
 <template>
   <div :style="getBackgroundUrl()" class="container">
     <div class="characterimage">
-      <img :src="getImagePath()" />
+      <img :src="require(`assets/${getImagePath}`)" alt="avatar" />
     </div>
 
     <p class="text">{{ currentText }}</p>
@@ -23,7 +23,7 @@ export default {
           chapter: 1,
           id: "ensinger",
           title: "Blubber",
-          imagePath: "assets/img/character/ensinger.png",
+          imagePath: "img/character/ensinger.png",
           background: "assets/img/background/ensinger.jpg",
           text:
             "Saggrament, Rutschn, Fettl, Aufgeiga, aus’gschammta, Zwidawurzn, Geizgroogn, Grachal, mogsd a Wadschn, Lätschnbebbi, Schwindsüchtl, Kircharutschn, Bettwanzn, Beitlschneida, Hausdracha, Schanial, halbseidener, Freibialädschn, gscheate Ruam, hoit’s Mei, Asphaltwanzn, Flaschn, Luada, Betschwesta, Zwidawurzn, Schwobndeifi, ja, wo samma denn, Auftreiwa, damischa Depp, bsuffas Wagscheidl, Schwindsüchtl, glei foid da Wadschnbam um, gscheate Ruam, Lätschnbebbi, Herrgoddsacklzementfixlujja, Zwedschgnmanndl, Hemmadbiesla, Radlfahra, schau, dass di schleichst, Schuggsn, Grawurgl, Pfingsdochs, Oaschgsicht, Rotzgloggn, Schoaswiesn, i glaub, dir brennt da Huat, fade Noggn, hosd mi, aus’gschammta, Bauantrampl!"
@@ -54,14 +54,13 @@ export default {
       } else {
         return "Souffleuse! Ich hab meinen Text vergessen!!!";
       }
+    },
+    getImagePath() {
+      const img = this.dialogs[0].imagePath;
+      return img;
     }
   },
   methods: {
-    getImagePath() {
-      const img = require(this.dialogs[0].imagePath);
-      window.console.log(img);
-      return img;
-    },
     getBackgroundUrl() {
       const url = require("assets/img/background/ensinger.jpg");
       // const url = require(this.dialogs[0].background);
@@ -77,15 +76,11 @@ export default {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 20% 20% 20% 20% 20%;
-  grid-template-areas:
-    ". . text text"
-    "image image text text "
-    "image image . ."
-    "image image . ."
-    "option option option option";
+  grid-template-areas: ". . text text" "image image text text " "image image . ." "image image . ." "option option option option";
   padding: 16px;
   height: 100vh;
-  background-size: 100vh auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .characterimage {
   grid-area: image;

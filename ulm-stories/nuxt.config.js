@@ -25,7 +25,14 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    // Load a Node.js module directly (here it's a Sass file)
+    "bulma",
+    // CSS file in the project
+    "@/assets/style/main.css",
+    // SCSS file in the project
+    "@/assets/style/main.scss"
+  ],
   /*
    ** Plugins to load before mounting the App
    */
