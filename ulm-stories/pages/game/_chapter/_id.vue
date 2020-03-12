@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  layout: "dialog",
   data() {
     return {
       chapter_id: this.$route.params.chapter,
