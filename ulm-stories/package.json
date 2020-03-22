@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/bulma": "^1.2.7",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "leaflet": "^1.6.0",
@@ -28,7 +29,8 @@
     "p5": "^0.10.2",
     "vue-p5": "^0.8.3",
     "vue-video": "^0.1.7",
-    "vue2-leaflet": "^2.4.2"
+    "vue2-leaflet": "^2.4.2",
+    "vuex-geolocation": "^1.2.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
