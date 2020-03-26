@@ -1,3 +1,4 @@
+import webpack from "webpack";
 export default {
   mode: "spa",
   /*
@@ -78,6 +79,13 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    plugins: [
+      new webpack.ProvidePlugin({
+        // global modules
+        $: "jquery",
+        _: "lodash"
+      })
+    ],
     postcss: {
       preset: {
         features: {
