@@ -28,16 +28,13 @@ export default {
    */
   css: [
     // Load a Node.js module directly (here it's a Sass file)
-    "bulma",
-    // CSS file in the project
-    "@/assets/style/main.css",
     // SCSS file in the project
-    "@/assets/style/main.scss"
+    "@/assets/style/main"
   ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/cordova.client", "~plugins/vuex-geolocation.js"],
+  plugins: ["~/plugins/cordova.client", "~/plugins/vuex-geolocation"],
   /*
    ** Nuxt.js dev-modules
    */
