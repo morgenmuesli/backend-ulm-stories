@@ -1,5 +1,5 @@
 export default {
-  toggleVisit(state, { dialog }) {
+  TOGGLE_VISIT(state, { dialog }) {
     dialog.visit = true;
   }
 };

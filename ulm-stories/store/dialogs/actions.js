@@ -1,5 +1,5 @@
 export default {
   toggleVisit(context) {
-    context.commit("");
+    context.commit("toggleVisit");
   }
 };

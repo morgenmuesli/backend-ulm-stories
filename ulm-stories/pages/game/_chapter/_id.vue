@@ -1,7 +1,8 @@
 <template>
   <div :style="getBackgroundUrl()" class="container">
     <div class="characterimage">
-      <img :src="require(`assets/${getImagePath}`)" alt="avatar" />
+      <!-- <img :src="require(`assets/${getImagePath}`)" alt="avatar" /> -->
+      <video src="/img/sample.webm" autoplay loop type='video/webm"'></video>
     </div>
 
     <p class="text">{{ currentText }}</p>
@@ -21,13 +22,13 @@ export default {
       id: this.$route.params.id,
       dialogs: [
         {
-          chapter: 1,
-          id: "ensinger",
+          id: 1,
           title: "Blubber",
           imagePath: "img/character/ensinger.png",
           background: "assets/img/background/ensinger.jpg",
           text:
-            "Saggrament, Rutschn, Fettl, Aufgeiga, aus’gschammta, Zwidawurzn, Geizgroogn, Grachal, mogsd a Wadschn, Lätschnbebbi, Schwindsüchtl, Kircharutschn, Bettwanzn, Beitlschneida, Hausdracha, Schanial, halbseidener, Freibialädschn, gscheate Ruam, hoit’s Mei, Asphaltwanzn, Flaschn, Luada, Betschwesta, Zwidawurzn, Schwobndeifi, ja, wo samma denn, Auftreiwa, damischa Depp, bsuffas Wagscheidl, Schwindsüchtl, glei foid da Wadschnbam um, gscheate Ruam, Lätschnbebbi, Herrgoddsacklzementfixlujja, Zwedschgnmanndl, Hemmadbiesla, Radlfahra, schau, dass di schleichst, Schuggsn, Grawurgl, Pfingsdochs, Oaschgsicht, Rotzgloggn, Schoaswiesn, i glaub, dir brennt da Huat, fade Noggn, hosd mi, aus’gschammta, Bauantrampl!"
+            "Saggrament, Rutschn, Fettl, Aufgeiga, aus’gschammta, Zwidawurzn, Geizgroogn, Grachal, mogsd a Wadschn, Lätschnbebbi, Schwindsüchtl, Kircharutschn, Bettwanzn, Beitlschneida, Hausdracha, Schanial, halbseidener, Freibialädschn, gscheate Ruam, hoit’s Mei, Asphaltwanzn, Flaschn, Luada, Betschwesta, Zwidawurzn, Schwobndeifi, ja, wo samma denn, Auftreiwa, damischa Depp, bsuffas Wagscheidl, Schwindsüchtl, glei foid da Wadschnbam um, gscheate Ruam, Lätschnbebbi, Herrgoddsacklzementfixlujja, Zwedschgnmanndl, Hemmadbiesla, Radlfahra, schau, dass di schleichst, Schuggsn, Grawurgl, Pfingsdochs, Oaschgsicht, Rotzgloggn, Schoaswiesn, i glaub, dir brennt da Huat, fade Noggn, hosd mi, aus’gschammta, Bauantrampl!",
+          nextId: 2
         },
         {
           chapter: 2,

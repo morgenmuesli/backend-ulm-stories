@@ -1,10 +1,10 @@
 <template>
-  <div id="map-wrap" style="height: 100vh">
-    <l-map :zoom="13" :center="userLocation">
+  <div id="map-wrap" style="height: 100vh; width: 100vw">
+    <l-map :zoom="13" :center="userLocation()">
       <l-tile-layer
         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
       ></l-tile-layer>
-      <l-marker :lat-lng="userLocation"></l-marker>
+      <l-marker :lat-lng="userLocation()"></l-marker>
 
       <l-marker
         v-for="(location, index) in allLocations"
@@ -25,13 +25,17 @@
 
 <script>
 import { mapGetters } from "vuex";
-import { icon } from "leaflet";
+import L, { icon } from "leaflet";
 export default {
   name: "LeafletMap",
   data() {
     return {};
   },
   computed: {
+    ...mapGetters("npcLocation", ["allLocations"])
+  },
+  mounted() {},
+  methods: {
     userLocation() {
       return {
         lat: this.$store.state.geolocation.lat,
@@ -47,10 +51,6 @@ export default {
     error() {
       return this.$store.state.geolocation.error;
     },
-    ...mapGetters("npcLocation", ["allLocations"])
-  },
-  mounted() {},
-  methods: {
     getLink(npcInfo) {
       return `/game/${npcInfo.chapter}/${npcInfo.characterID}`;
     },
@@ -58,16 +58,29 @@ export default {
       this.$router.push(href);
     },
     getMarker(npcInfo) {
-      let iconUrl = `/img/mapmarker/ensinger.png`;
-      if (npcInfo.characterID !== "schwanenwirtin") {
-        iconUrl = `/img/mapmarker/${npcInfo.characterID}.png`;
-      }
+      // check if npcInfo is true
+      const iconUrl = npcInfo.haveVisit
+        ? `/img/mapmarker/${npcInfo.characterID}BW.png` // true
+        : `/img/mapmarker/${npcInfo.characterID}.png`; // false
       const marker = icon({
         iconUrl,
         iconSize: [32, 37],
         iconAnchor: [16, 37]
       });
       return marker;
+    },
+    checkDistanceToNpc(userLocation, allLocations) {
+      for (const location in allLocations) {
+        // check if user is under 1m away from location
+        if (
+          L.latLng(userLocation.lat, userLocation.long).distanceTo(
+            location.latlng
+          ) < 1
+        ) {
+          // trigger Event with n
+          this.$emit("near-npc", location.characterID);
+        }
+      }
     }
   }
 };
