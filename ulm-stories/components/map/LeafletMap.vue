@@ -29,7 +29,9 @@ import L, { icon } from "leaflet";
 export default {
   name: "LeafletMap",
   data() {
-    return {};
+    return {
+      watchID: null
+    };
   },
   computed: {
     ...mapGetters("npcLocation", ["allLocations"])

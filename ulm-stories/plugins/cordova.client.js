@@ -1,6 +1,7 @@
+/* eslint-disable */
 export default (ctx, inject) => {
   const { app } = ctx;
-
+  /* eslint-enable */
   const cordovaApp = {
     // Application Constructor
     initialize() {
@@ -48,9 +49,11 @@ export default (ctx, inject) => {
         // console.error('init WKWebView failed', err)
       }
 
+      /* eslint-disable */
       try {
         this.initCustomUrlScheme();
       } catch (err) {}
+      /* eslint-enable */
     },
 
     initCustomUrlScheme() {

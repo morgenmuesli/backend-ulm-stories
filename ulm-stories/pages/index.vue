@@ -5,15 +5,14 @@
         <li><nuxt-link to="/game">Start Game</nuxt-link></li>
         <li><nuxt-link to="/preferences">Einstellungen</nuxt-link></li>
         <li><nuxt-link to="/about">Über uns</nuxt-link></li>
+        <li><nuxt-link to="/game/minigame/test">Puzzle</nuxt-link></li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  components: {}
-};
+export default {};
 </script>
 
 <style>
