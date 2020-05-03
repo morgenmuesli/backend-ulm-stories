@@ -5,7 +5,7 @@ export const state = () => ({
       characterName: "Alber Einstein",
       latlng: [48.396018, 9.991371],
       chapter: 7,
-      haveVisit: false
+      haveVisit: true
     },
     {
       characterID: "ensinger",
@@ -51,7 +51,19 @@ export const state = () => ({
     }
   ]
 });
-
+export const mutations = {
+  toggleVisit(state, location) {
+    location.haveVisit = !location.haveVisit;
+  }
+};
+export const actions = {
+  visitlocation({ state, commit }, characterID) {
+    const character = state.locations.find(
+      item => item.characterID === characterID
+    );
+    commit("toggleVisit", character);
+  }
+};
 export const getters = {
   allLocations: state => state.locations
 };

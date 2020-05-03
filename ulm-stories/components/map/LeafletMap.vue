@@ -1,17 +1,17 @@
 <template>
   <div id="map-wrap" style="height: 100vh; width: 100vw">
-    <l-map :zoom="13" :center="userLocation()">
+    <button @click="toggleVisit('holl')">Click me</button>
+    <l-map :zoom="zoom" :center="userLocation()">
       <l-tile-layer
         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
       ></l-tile-layer>
       <l-marker :lat-lng="userLocation()"></l-marker>
-
       <l-marker
         v-for="(location, index) in allLocations"
         :key="index"
         :lat-lng="location.latlng"
-        @click="openLink(getLink(location))"
         :icon="getMarker(location)"
+        @click="openLink(getLink(location))"
       >
         <l-popup>
           <nuxt-link :to="getLink(location)"
@@ -24,19 +24,23 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 import L, { icon } from "leaflet";
 export default {
   name: "LeafletMap",
   data() {
     return {
-      watchID: null
+      zoom: 13,
+      watchID: null,
+      location: L.latLng(20, 20),
+      gettingLocation: false,
+      errorStr: null
     };
   },
   computed: {
-    ...mapGetters("npcLocation", ["allLocations"])
+    ...mapGetters("npcLocation", ["allLocations"]),
+    ...mapState(["npcLocation"])
   },
-  mounted() {},
   methods: {
     userLocation() {
       return {
@@ -53,6 +57,10 @@ export default {
     error() {
       return this.$store.state.geolocation.error;
     },
+    toggleVisit(characterID) {
+      alert(characterID);
+      this.$store.dispatch("npcLocation/visitlocation", characterID);
+    },
     getLink(npcInfo) {
       return `/game/${npcInfo.chapter}/${npcInfo.characterID}`;
     },
@@ -62,27 +70,14 @@ export default {
     getMarker(npcInfo) {
       // check if npcInfo is true
       const iconUrl = npcInfo.haveVisit
-        ? `/img/mapmarker/${npcInfo.characterID}BW.png` // true
-        : `/img/mapmarker/${npcInfo.characterID}.png`; // false
+        ? require(`assets/img/mapmarker/${npcInfo.characterID}BW.png`) // true
+        : require(`assets/img/mapmarker/${npcInfo.characterID}.png`); // false
       const marker = icon({
         iconUrl,
         iconSize: [32, 37],
         iconAnchor: [16, 37]
       });
       return marker;
-    },
-    checkDistanceToNpc(userLocation, allLocations) {
-      for (const location in allLocations) {
-        // check if user is under 1m away from location
-        if (
-          L.latLng(userLocation.lat, userLocation.long).distanceTo(
-            location.latlng
-          ) < 1
-        ) {
-          // trigger Event with n
-          this.$emit("near-npc", location.characterID);
-        }
-      }
     }
   }
 };

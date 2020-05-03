@@ -3,7 +3,7 @@
     <component
       :is="currentComponent"
       :parentData="dataForChild"
-      v-on:nextcontent="updateContent"
+      @nextcontent="updateContent"
     >
     </component>
   </div>
@@ -37,6 +37,7 @@ export default {
     },
     updateContent: () => {
       //TODO
+      alert("next page");
     },
 
     forceRerender() {

@@ -1,13 +1,13 @@
 <template>
-  <div></div>
+  <div>
+    {{ parentData }}
+  </div>
 </template>
 
 <script>
 export default {
   name: "Test",
-  props: {
-    msg: String
-  }
+  props: ["parentData"]
 };
 </script>
 

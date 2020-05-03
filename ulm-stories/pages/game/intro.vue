@@ -1,14 +1,12 @@
 <template>
-  <div class="container">
-    <p>
-      Du besuchst
-    </p>
-  </div>
+  <div class="container"></div>
 </template>
 
 <script>
+import Video from "~/components/content/VideoContent";
 export default {
   name: "intro",
+  components: {},
   data: () => ({
     text: [
       "Du besuchst deinen Onkel Professor Alfred Zweistein in seinem Labor.",
