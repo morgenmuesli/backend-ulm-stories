@@ -1,5 +1,5 @@
 <template>
-  <div id="map-wrap" style="height: 100vh; width: 100vw">
+  <div id="map-wrap" style="height: 100%; width: 100%">
     <l-map :zoom="13" :center="userLocation()">
       <l-tile-layer
         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"

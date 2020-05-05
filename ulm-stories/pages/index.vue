@@ -5,6 +5,7 @@
         <li><nuxt-link to="/game">Start Game</nuxt-link></li>
         <li><nuxt-link to="/preferences">Einstellungen</nuxt-link></li>
         <li><nuxt-link to="/about">Über uns</nuxt-link></li>
+        <li><nuxt-link to="/slider">Slider</nuxt-link></li>
         <li>
           <nuxt-link to="/flappy_schneider_test"
             >Flappy Schneider Test</nuxt-link
