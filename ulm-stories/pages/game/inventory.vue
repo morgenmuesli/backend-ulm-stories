@@ -10,7 +10,6 @@
 import crystal from "~/components/inventory/crystal";
 export default {
   layout: "game",
-  name: "inventory",
   components: {
     crystal
   },

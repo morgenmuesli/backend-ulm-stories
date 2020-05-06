@@ -1,15 +1,12 @@
 <template>
   <div :style="getBackgroundUrl()" class="container">
+    <div v-on:click="prev()" class="previous">Previous</div>
+    <div v-on:click="next()" class="next">Next</div>
     <div class="characterimage">
       <!-- <img :src="require(`assets/${getImagePath}`)" alt="avatar" /> -->
       <video src="/img/sample.webm" autoplay loop type='video/webm"'></video>
     </div>
-
     <p class="text">{{ currentText }}</p>
-    <div class="option">
-      <div class="optionItem">Option A</div>
-      <div class="optionItem">Option B</div>
-    </div>
   </div>
 </template>
 
@@ -74,11 +71,12 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
 .container {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-  grid-template-areas: ". . text text" "image image text text " "image image . ." "image image . ." "option option option option";
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas: "text text text text" "image image image image " "image image image image" "image image image image";
   padding: 16px;
   height: 100vh;
   background-repeat: no-repeat;
@@ -93,11 +91,13 @@ img {
 }
 .text {
   background: whitesmoke;
-  padding: 25px;
-  text-align: center;
+  padding: 15px;
+  text-align: left;
   grid-area: text;
   border-radius: 20px;
   overflow: scroll;
+  font-size: 18px;
+  font-family: "Kalam", cursive;
 }
 .option {
   grid-area: option;
@@ -114,5 +114,25 @@ img {
   padding: 0.5rem;
   border-radius: 0.5rem;
   width: 7rem;
+}
+.previous {
+  position: fixed;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 50%;
+  height: 100%;
+  border: dotted red 1px;
+}
+.next {
+  position: fixed;
+  justify-content: flex-end;
+  top: 0;
+  left: 50%;
+  z-index: 99999;
+  width: 50%;
+  height: 100%;
+  border: dotted red 1px;
 }
 </style>

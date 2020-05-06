@@ -1,15 +1,21 @@
-export const state = {
-  dialogs: [
+import { TYPE } from "~/js/type_constants";
+export const state = () => ({
+  chapters: [
     {
       chapter: "ensinger",
-      scene: 2,
-      type: "video",
-      data: {
-        text: "Ich bin ein Text",
-        img: "/img/ensinger.jpg",
-        videopath: "/webm/ensinger.webm"
-      }
-    },
-    {}
+      isFinish: false,
+      dialogs: [
+        {
+          scene: 0,
+          type: TYPE.video,
+          isFinish: false,
+          data: {
+            text: "Ich bin ein Text",
+            img: "/img/ensinger.jpg",
+            videopath: "/webm/ensinger.webm"
+          }
+        }
+      ]
+    }
   ]
-};
+});

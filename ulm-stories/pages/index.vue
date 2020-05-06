@@ -6,6 +6,12 @@
         <li><nuxt-link to="/preferences">Einstellungen</nuxt-link></li>
         <li><nuxt-link to="/about">Über uns</nuxt-link></li>
         <li><nuxt-link to="/game/minigame/test">Puzzle</nuxt-link></li>
+        <li><nuxt-link to="/slider">Slider</nuxt-link></li>
+        <li>
+          <nuxt-link to="/flappy_schneider_test"
+            >Flappy Schneider Test</nuxt-link
+          >
+        </li>
       </ul>
     </div>
   </div>

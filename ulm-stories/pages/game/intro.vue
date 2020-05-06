@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import Video from "~/components/content/VideoContent";
 export default {
   name: "intro",
   components: {},

@@ -1,12 +1,14 @@
 <template>
   <div>
-    <nuxt />
+    This should be a video
   </div>
 </template>
 
 <script>
 export default {
-  name: "SMARTPHONE"
+  asyncData: ({ query }) => ({
+    queryData: query
+  })
 };
 </script>
 

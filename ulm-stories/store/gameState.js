@@ -8,9 +8,11 @@ export const state = () => ({
 export const getters = {
   getElementByChapterAndScene(state) {
     return (chapterId, sceneId) => {
-      return state.gameState.gameState.find(
+      return state.gameState.find(
         a => a.chapter === chapterId && a.scene === sceneId
       );
     };
   }
 };
+
+export const mutation = {};
