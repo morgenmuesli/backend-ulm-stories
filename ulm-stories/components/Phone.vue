@@ -24,8 +24,8 @@ export default {
   justify-content: center;
 
   .frame-content {
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 85%;
     position: relative;
     top: 7.5%;
   }
