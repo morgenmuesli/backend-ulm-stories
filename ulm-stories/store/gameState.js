@@ -1,6 +1,15 @@
 import { TYPE } from "~/js/type_constants";
 export const state = () => ({
   gameState: [
+    { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.game },
+    { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.game },
+    { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.game },
+    { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.game },
+    { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.game },
+    { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.game },
+    { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.game },
+    { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.game },
+    { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.game },
     { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.game }
   ]
 });

@@ -1,7 +1,7 @@
 export const state = () => ({
   videos: [
     { id: 0, chapter: "ensinger", path: "assets/video/0.webm" },
-    { id: 1, chapter: "ensinger", path: "assets/video/0.webm" },
+    { id: 1, chapter: "ensinger", path: "assets/video/sample.webm" },
     { id: 2, chapter: "ensinger", path: "assets/video/0.webm" },
     { id: 3, chapter: "ensinger", path: "assets/video/0.webm" },
     { id: 4, chapter: "ensinger", path: "assets/video/0.webm" },

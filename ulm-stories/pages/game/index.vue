@@ -1,17 +1,14 @@
 <template>
-  <phone>
-    <LeafletMap :key="componentKey" />
-  </phone>
+  <LeafletMap :key="componentKey" />
 </template>
 
 <script>
 import LeafletMap from "~/components/map/LeafletMap";
-import Phone from "~/components/Phone";
 
 export default {
   name: "Map",
+  layout: "Phone",
   components: {
-    Phone,
     // eslint-disable-next-line vue/no-unused-components
     LeafletMap
   },

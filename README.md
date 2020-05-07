@@ -63,3 +63,27 @@ Hier bitte Fehler welche ihr gemacht habt und gelöst bzw. daraus gelernt habt e
 | prettier & filewatcher | prettier und eslint bereiten einige Kopfschmerzen da man nicht immer den code richtig formatiert        | in webstorm [filewatcher](https://prettier.io/docs/en/webstorm.html) konfigurieren, dann wird der Code bei jedem speichern automatisch richtig formatiert 🥳                                                                                                                                                                                                                                                    |
 | getters in stores      | zugriff auf getters von unterstores (bsw. currentLocation -> location)                                  | wichtig es wird immer erst der standart "index" store geladen und dann die verschiedenen modules. wenn ihr nen getter von einem Module nutzen wollt so müsst ihr das Module bei mapGetters mit angeben (siehe bsw. LeafletMap.vue oder beschrieben in dieser Stackoverflow frage: [stackoverflow](https://stackoverflow.com/questions/57074134/understanding-state-and-getters-in-nuxt-js-getters-wont-working) |
 | page navigation        | normale hrefs funktionieren innerhalb der Seite nicht immer da man mit dem Router neue Pfade definiert. | nuxt bietet den Componenten [nuxt-link](https://nuxtjs.org/api/components-nuxt-link#the-lt-nuxt-link-gt-component) bei welchen man die weiterführende Seite angibt. Sollte man kein nuxt-link verwenden wollen (zum beispiel da man einen Link in einer Methode verwenden will) so nutzt man [this.\$router.push](https://router.vuejs.org/guide/essentials/navigation.html)                                    |
+
+# in case of 🔥
+
+- ✔ git commit
+- ↑️ git push
+- 💨 exit building
+
+## nutzt git zum speichern und versionieren
+
+Auch wenn ihr bei n paar Zeilen Code euch nicht sicher seit oder ihr sie hässlic findet.
+Macht euch einfach einen eigenen Branch:
+
+```bash
+git branch <branchname>
+git checkout <branchname>
+```
+
+danach könnt ihr auf diesem commiten pushen wie ihr wollt.
+Solltet ihr dann mit allem zufrieden sein merged ihr diesen.
+Einfach den Branch zum developer Branch wechseln und dann in Webstorm VCS &rightarrow; Git &rightarrow; Merge Changes.
+Solltet ihr dann irgendwann wieder einen eigenen Branch brauchen einfach wieder zu eurem Branch wechseln den developer branch mergen und wieder herum experimentieren.
+Macht nicht den fehler wie ich und commited nur sporadisch. mit git ist es deutlich einfacher wieder funktionierende Zustände wieder herzustellen als wenn ihr von Hand sucht was genau ihr verändert habt.
+Einfach am Boden eurer IDE unten den Log anschauen und rechtsklick auf den passenden commit gehen checkout und fertig 😁
+**nutzt git für das was es tun soll!**
