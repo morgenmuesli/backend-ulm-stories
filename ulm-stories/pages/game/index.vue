@@ -12,6 +12,7 @@ export default {
   name: "Map",
   components: {
     Phone,
+    // eslint-disable-next-line vue/no-unused-components
     LeafletMap
   },
   data: () => ({

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg viewBox="0 0 400 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     xml:space="preserve"
-     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+<svg viewBox="0 0 400 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <rect id="ArtBoard1" x="0" y="0" width="400" height="800" style="fill:none;"/>
-    <g id="ArtBoard11">
+    <g id="ArtBoard11" serif:id="ArtBoard1">
         <g id="Ebene1">
             <path d="M400,100C400,44.808 355.192,0 300,0L100,0C44.808,0 0,44.808 0,100L0,700C0,755.192 44.808,800 100,800L300,800C355.192,800 400,755.192 400,700L400,100ZM360.303,59.608L40.938,59.608L40.938,701L360.303,701L360.303,59.608Z"/>
         </g>
