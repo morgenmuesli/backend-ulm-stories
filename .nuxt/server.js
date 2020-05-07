@@ -41,7 +41,8 @@ const createNext = ssrContext => opts => {
   const routerBase = "/";
   if (
     !opts.path.startsWith("http") &&
-    routerBase !== "/" && !opts.path.startsWith(routerBase)
+    routerBase !== "/" &&
+    !opts.path.startsWith(routerBase)
   ) {
     opts.path = urlJoin(routerBase, opts.path);
   }

@@ -1,7 +1,6 @@
 import _ from "lodash";
-// import { TYPE } from "~/js/type_constants";
 
-import { TYPE } from "~/js/type_constants";
+import { TYPE } from "~/js/constants";
 
 export default function({ redirect, query, store }) {
   if (!(_.has(query, "chapter") && _.has(query, "scene"))) {

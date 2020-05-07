@@ -1,22 +1,39 @@
 export const state = () => ({
   videos: [
-    { id: 0, chapter: "ensinger", path: "assets/video/0.webm" },
-    { id: 1, chapter: "ensinger", path: "assets/video/sample.webm" },
-    { id: 2, chapter: "ensinger", path: "assets/video/0.webm" },
-    { id: 3, chapter: "ensinger", path: "assets/video/0.webm" },
-    { id: 4, chapter: "ensinger", path: "assets/video/0.webm" },
-    { id: 5, chapter: "ensinger", path: "assets/video/0.webm" },
-    { id: 6, chapter: "ensinger", path: "assets/video/0.webm" }
+    {
+      id: 0,
+      chapter: "ensinger",
+      scene: 0,
+      img: "ensinger",
+      video: "sample",
+      text: "sample text"
+    },
+    {
+      id: 1,
+      chapter: "holl",
+      scene: 0,
+      img: "ensinger",
+      video: "sample",
+      text: "sample text"
+    }
   ]
 });
 
-export const getter = {
-  getAllSortedVideosOfChapter(chapterId) {
+export const getters = {
+  getAllSortedVideosOfChapter: state => chapterId => {
     const videosOfChapter = state.videos.filter(a => a.chapter === chapterId);
     return videosOfChapter.sort((a, b) => a.id - b.id);
   },
 
-  getVideoByVideoId(videoID) {
+  getVideoByVideoId: state => videoID => {
     return state.videos.find(a => a.id === videoID);
+  },
+  getVideoByChapterAndScene: state => (chapter, scene) => {
+    scene = parseInt(scene);
+    const video = state.videos.find(
+      a => a.chapter === chapter && a.scene === scene
+    );
+    console.log(video);
+    return video;
   }
 };

@@ -1,39 +1,6 @@
 <template>
   <div class="container">
-    <div class="left">
-      <h2>
-        <NuxtLink to="/">
-          Players
-        </NuxtLink>
-      </h2>
-      <ul class="players">
-        <ul>
-          <li><NuxtLink to="/content/video">other</NuxtLink></li>
-          <li>
-            <NuxtLink
-              :to="{ path: '/content/game', query: { character: 'ensinger' } }"
-              >game</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink :to="{ path: '/content/game', query: { character: 1 } }"
-              >game</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink :to="{ path: '/content/game', query: { character: 1 } }"
-              >game</NuxtLink
-            >
-          </li>
-          <li>
-            <p></p>
-          </li>
-        </ul>
-      </ul>
-    </div>
-    <div class="right">
-      <NuxtChild :key="$route.params.id" @nextPage="this.nextPage()" />
-    </div>
+    <NuxtChild :key="$route.query.scene" @nextPage="this.nextPage()" />
   </div>
 </template>
 
@@ -41,22 +8,27 @@
 import { mapGetters } from "vuex";
 export default {
   middleware: "gamemw",
-  data: () => ({
-    users: [
-      { id: 1, name: "Kobe Bryant", number: 24 },
-      { id: 2, name: "Michael Jordan", number: 23 },
-      { id: 3, name: "Stephen Curry", number: 30 },
-      { id: 4, name: "Lebron James", number: 23 },
-      { id: 5, name: "Kevin Durant", number: 35 },
-      { id: 6, name: "Kyrie Irving", number: 2 }
-    ]
+  asyncData: context => ({
+    current_scene: context.query.scene,
+    current_chapter: context.query.chapter
   }),
+  mounted() {
+    console.log("scene: ", this.current_scene);
+    console.log("chapter: ", this.current_chapter);
+  },
   computed: {
     ...mapGetters
   },
   methods: {
     nextPage() {
-      alert("nextPage");
+      const path = "/content/";
+      const query = {
+        chapter: this.current_chapter,
+        scene: this.current_scene + 1,
+        direct: true
+      };
+      this.$stable.dispatch("finishedScene");
+      this.$router.push({ path, query });
     }
   }
 };
@@ -81,33 +53,5 @@ export default {
   padding: 0;
   font-family: sans-serif;
   box-sizing: border-box;
-}
-.left {
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.right {
-  width: 50%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.players {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.players li a {
-  display: block;
-  border: 1px #ddd solid;
-  padding: 10px;
-  text-align: left;
-  color: #222;
-  text-decoration: none;
-}
-.players li a:hover {
-  color: orange;
 }
 </style>
