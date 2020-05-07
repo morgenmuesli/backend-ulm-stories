@@ -254,7 +254,8 @@
                   !Z &&
                   !tt &&
                   void 0 !== t &&
-                  t.process && "server" === t.process.env.VUE_ENV),
+                  t.process &&
+                  "server" === t.process.env.VUE_ENV),
               Y
             );
           },
@@ -4142,7 +4143,8 @@
               ("ReactNative" !== navigator.product &&
                 "NativeScript" !== navigator.product &&
                 "NS" !== navigator.product)) &&
-            "undefined" != typeof window && "undefined" != typeof document
+            "undefined" != typeof window &&
+            "undefined" != typeof document
           );
         },
         forEach: h,
@@ -5435,9 +5437,9 @@
                   $(a.query, b.query)
                 : !(!a.name || !b.name) &&
                   a.name === b.name &&
-                    a.hash === b.hash &&
-                    $(a.query, b.query) &&
-                    $(a.params, b.params));
+                  a.hash === b.hash &&
+                  $(a.query, b.query) &&
+                  $(a.params, b.params));
       }
       function $(a, b) {
         if ((void 0 === a && (a = {}), void 0 === b && (b = {}), !a || !b))
@@ -6137,8 +6139,8 @@
             -1 === Ot.indexOf("Mobile Safari") ||
             -1 !== Ot.indexOf("Chrome") ||
             -1 !== Ot.indexOf("Windows Phone")) &&
-            window.history &&
-            "pushState" in window.history;
+          window.history &&
+          "pushState" in window.history;
       function At(t, e) {
         yt();
         var n = window.history;
