@@ -14,7 +14,7 @@ export default {
     crystal
   },
   data: () => ({
-    finishedList: ["holl", "ensinger", "berblinger"],
+    finishedList: ["holl", "ensinger", "berblinger", "aicher", "berblinger"],
     crystalSize: {
       height: "100%",
       width: "100%"
