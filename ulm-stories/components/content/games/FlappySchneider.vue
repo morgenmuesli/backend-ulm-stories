@@ -165,7 +165,7 @@ export default {
 .bkg {
   /* width: 100%; */
   height: 1280px;
-  background-image: url(../../assets/img/flappyBird/background2.png);
+  background-image: url(assets/img/flappyBird/background2.png);
   border: 3px solid green;
   position: absolute;
 }
@@ -180,22 +180,22 @@ export default {
 }
 
 .bird-0 {
-  background: url(../../assets/img/flappyBird/schneider1.png) 50% 50% no-repeat;
+  background: url(assets/img/flappyBird/schneider1.png) 50% 50% no-repeat;
 }
 .bird-1 {
-  background: url(../../assets/img/flappyBird/schneider2.png) 50% 50% no-repeat;
+  background: url(assets/img/flappyBird/schneider2.png) 50% 50% no-repeat;
 }
 .bird-2 {
-  background: url(../../assets/img/flappyBird/schneider3.png) 50% 50% no-repeat;
+  background: url(assets/img/flappyBird/schneider3.png) 50% 50% no-repeat;
 }
 
 .pipe-top {
-  background: url(../../assets/img/flappyBird/pipeup.png) bottom no-repeat;
+  background: url(assets/img/flappyBird/pipeup.png) bottom no-repeat;
   background-size: cover;
 }
 
 .pipe-bottom {
-  background: url(../../assets/img/flappyBird/pipedown.png) no-repeat;
+  background: url(assets/img/flappyBird/pipedown.png) no-repeat;
   background-size: cover;
 }
 
