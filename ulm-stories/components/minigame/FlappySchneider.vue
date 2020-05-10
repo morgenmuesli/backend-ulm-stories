@@ -1,11 +1,12 @@
 <template>
   <div id="app">
     <div @click="upperBird" class="bkg-main">
-      <div class="score">Meter: {{ game.score }}0</div>
-      <div class="score-max">Rekord: {{ max }}0</div>
-      <div class="score-text">Du musst 70 Meter überwinden!</div>
+      <div class="score" v-if="playing">Meter: {{ game.score }}0</div>
+      <div class="score-max" v-if="playing">Rekord: {{ max }}0</div>
+      <div class="score-text" v-if="playing">Du musst 70 Meter überwinden!</div>
+      <div class="end" v-if="win">Du hast es geschafft!</div>
       <div :style="styleBgr" class="bkg">
-        <div class="pipe-group">
+        <div class="pipe-group" v-if="playing">
           <div
             v-for="(pipe, id) in game.pipes"
             :key="id"
@@ -23,7 +24,6 @@
             ></div>
           </div>
         </div>
-
         <div
           :class="'bird-' + game.bird.wingState"
           :style="styleBird"
@@ -35,11 +35,17 @@
 </template>
 
 <script>
+import Vue from "vue";
+import VueConfetti from "vue-confetti";
+
+Vue.use(VueConfetti);
 export default {
   name: "App",
   data() {
     return {
       max: 0,
+      playing: true,
+      win: false,
       defoult: {
         score: 0,
         pipes: [],
@@ -49,7 +55,7 @@ export default {
           uBird: 10,
           dt: 0.025,
 
-          xBird: 650,
+          xBird: 1600,
           yBird: 100,
 
           g: 300,
@@ -58,7 +64,7 @@ export default {
         },
 
         bgr: {
-          width: 1000
+          width: 1920
         }
       },
       game: {}
@@ -77,7 +83,7 @@ export default {
       return {
         width: this.game.bgr.width + "px",
         right: 0,
-        height: 1000
+        height: 1920
       };
     }
   },
@@ -93,15 +99,24 @@ export default {
     }, 1000);
   },
   methods: {
+    start() {
+      this.$confetti.start();
+      this.playing = false;
+      this.win = true;
+      setTimeout(() => {
+        this.stop();
+      }, 4000);
+    },
+    stop() {
+      window.location = "ulm-stories/pages/index.vue";
+      this.$confetti.stop();
+    },
     gameLoop() {
       this.game.bird.vBird += this.game.bird.dt * this.game.bird.g;
       this.game.bird.yBird += this.game.bird.dt * this.game.bird.vBird;
       if (this.game.bird.yBird > 480) this.game.bird.vBird = -100;
       if (this.game.bird.yBird < 0) this.game.bird.vBird = 100;
-
-      // this.bird.uBird += this.bird.dt * this.bird.g
       this.game.bird.xBird += this.game.bird.uBird;
-
       this.game.bgr.width += this.game.bird.uBird;
       this.checkDue();
     },
@@ -147,8 +162,7 @@ export default {
           this.game.score = i + 1;
         }
         if (this.game.score === 8) {
-          window.alert("WOW super! Du hast es geschafft!");
-          window.location = "ulm-stories/pages/index.vue";
+          this.start();
         }
       });
     }
@@ -163,19 +177,17 @@ export default {
   overflow: hidden;
 }
 .bkg {
-  /* width: 100%; */
-  height: 1280px;
+  width: 100vw;
+  height: 100vh;
   background-image: url(../../assets/img/flappyBird/background2.png);
-  border: 3px solid green;
   position: absolute;
 }
 
 .bird {
-  position: absolute;
   z-index: 20;
   width: 133px;
   height: 24px;
-
+  position: absolute;
   transition: transform 0.5s;
 }
 
@@ -196,7 +208,7 @@ export default {
 
 .pipe-bottom {
   background: url(../../assets/img/flappyBird/pipedown.png) no-repeat;
-  background-size: cover;
+  background-size: 100%;
 }
 
 .pipe-group {
@@ -246,6 +258,13 @@ export default {
   left: 20px;
   top: 0px;
   font-size: 1em;
+  font-weight: bolder;
+}
+.end {
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  font-size: 2em;
   font-weight: bolder;
 }
 </style>
