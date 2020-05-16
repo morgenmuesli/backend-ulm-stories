@@ -11,6 +11,9 @@
             >Flappy Schneider Test</nuxt-link
           >
         </li>
+        <li>
+          <nuxt-link to="/quiz_test">Quiz Test</nuxt-link>
+        </li>
       </ul>
     </div>
   </div>
