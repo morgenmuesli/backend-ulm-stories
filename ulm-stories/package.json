@@ -24,6 +24,7 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "leaflet": "^1.6.0",
+    "lodash.sample": "^4.2.1",
     "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
     "nuxt-leaflet": "0.0.19",
