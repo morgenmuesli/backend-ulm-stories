@@ -30,6 +30,7 @@
     "nuxt-leaflet": "0.0.19",
     "p5": "^0.10.2",
     "sass-loader": "^8.0.2",
+    "vue-confetti": "^2.0.8",
     "vue-p5": "^0.8.3",
     "vue-video": "^0.1.7",
     "vue2-leaflet": "^2.4.2",
