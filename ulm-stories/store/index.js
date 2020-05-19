@@ -330,9 +330,93 @@ export const state = () => ({
       type: TYPE.game
     },
     {
-      id: 5,
-      chapter: "schwanenwirtin",
-      scene: 14,
+      id: 6,
+      chapter: "einstein",
+      scene: 0,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 1,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 2,
+      isFinish: false,
+      type: TYPE.game /* Kristall-Game */
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 3,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 4,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 5,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 6,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 7,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 8,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 9,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 10,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 11,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 12,
       isFinish: true,
       type: TYPE.video
     }
