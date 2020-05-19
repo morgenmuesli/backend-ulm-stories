@@ -70,6 +70,7 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 .containerApp {
   display: block;
   padding: 1rem;
@@ -87,7 +88,8 @@ img {
 .text {
   background: whitesmoke;
   padding: 25px;
-  text-align: center;
+  font-family: Kalam, cursive;
+  text-align: left;
   grid-area: text;
   border-radius: 20px;
   overflow: scroll;

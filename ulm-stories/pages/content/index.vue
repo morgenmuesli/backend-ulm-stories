@@ -51,7 +51,6 @@ export default {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   box-sizing: border-box;
 }
 </style>
