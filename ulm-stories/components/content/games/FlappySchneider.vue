@@ -4,12 +4,11 @@
       <div v-if="playing">
         <div class="score">Meter: {{ game.score }}0</div>
         <div class="score-max">Rekord: {{ max }}0</div>
+        <div class="score-text">Du musst 70 Meter überwinden!</div>
       </div>
-
-      <div class="score-text">Du musst 70 Meter überwinden!</div>
       <div v-if="win" class="end">Du hast es geschafft!</div>
       <div :style="styleBgr" class="bkg">
-        <div class="pipe-group" v-if="playing">
+        <div v-if="playing" class="pipe-group">
           <div
             v-for="(pipe, id) in game.pipes"
             :key="id"
@@ -59,7 +58,7 @@ export default {
           uBird: 10,
           dt: 0.025,
 
-          xBird: 1600,
+          xBird: 1650,
           yBird: 100,
 
           g: 300,
@@ -184,8 +183,8 @@ export default {
   overflow: hidden;
 }
 .bkg {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: url("../../../assets/img/flappybird/background2.png");
   position: absolute;
 }
@@ -249,31 +248,31 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20%;
 }
 
 .score,
 .score-max {
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 3%;
+  top: 3%;
   font-size: 2em;
   font-weight: bolder;
 }
 .score-max {
-  left: 200px;
+  left: 48%;
 }
 .score-text {
   position: absolute;
-  left: 20px;
-  top: 0px;
+  left: 3%;
+  top: 0%;
   font-size: 1em;
   font-weight: bolder;
 }
 .end {
   position: absolute;
-  left: 20px;
-  top: 0px;
+  left: 3%;
+  top: 0%;
   font-size: 2em;
   font-weight: bolder;
 }
