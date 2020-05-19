@@ -7,17 +7,8 @@
           require('@/assets/img/background/' + this.currentData.img + '.jpg') +
           ')'
       }"
-      class="container"
+      class="containerApp"
     >
-      <video
-        class="videoStyle"
-        v-bind:src="
-          require('@/assets/webm/' + this.currentData.video + '.webm')
-        "
-        autoplay
-        loop
-        type='video/webm"'
-      ></video>
       <div class="text">
         <ul>
           <li>
@@ -25,6 +16,15 @@
           </li>
         </ul>
       </div>
+      <video
+        class="videoStyle"
+        v-bind:src="
+          require('@/assets/webm/' + this.currentData.video + '.webm')
+        "
+        autoplay
+        type='video/webm"'
+      ></video>
+
       <div v-on:click="updateData" class="button">
         <button></button>
       </div>
@@ -70,20 +70,14 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 25% 25% 25% 25%;
-  grid-template-areas: ". . text text" ". . text text " ". . . ." "video video . .";
-  padding: 16px;
+.containerApp {
+  display: block;
+  padding: 1rem;
   height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.characterImage {
-  grid-area: image;
-  height: 100%;
 }
 
 img {
@@ -100,7 +94,6 @@ img {
 }
 
 .button {
-  position: absolute;
   width: 100%;
   height: 100%;
   border: none;
@@ -111,6 +104,8 @@ img {
 }
 
 .videoStyle {
-  grid-area: video;
+  position: absolute;
+  bottom: 0;
+  max-height: 70%;
 }
 </style>

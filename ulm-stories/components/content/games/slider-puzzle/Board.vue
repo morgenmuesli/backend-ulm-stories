@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import sample from "lodash.sample";
+import _ from "lodash";
 import Tile from "./Tile";
 
 let backupTiles = null;
@@ -138,7 +138,7 @@ export default {
         const movableTiles = this.tiles.filter(t => {
           return this.getAdjacentOrders(emptyTile).includes(t.styles.order);
         });
-        this.switchTiles(emptyTile, sample(movableTiles));
+        this.switchTiles(emptyTile, _.sample(movableTiles));
       }
 
       // Make a backup for later reset
