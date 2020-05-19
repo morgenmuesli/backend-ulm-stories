@@ -21,7 +21,7 @@
       <div class="text">
         <ul>
           <li>
-            <h3>{{ currentData.text }}</h3>
+            <h3 v-html="currentData.text"></h3>
           </li>
         </ul>
       </div>

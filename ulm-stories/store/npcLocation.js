@@ -2,7 +2,7 @@ export const state = () => ({
   locations: [
     {
       characterID: "einstein",
-      characterName: "Alber Einstein",
+      characterName: "Albert Einstein",
       latlng: [48.396018, 9.991371],
       chapter: 7,
       haveVisit: true,
