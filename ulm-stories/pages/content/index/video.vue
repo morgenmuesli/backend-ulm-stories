@@ -17,16 +17,16 @@
         </ul>
       </div>
       <video
-        class="videoStyle"
         v-bind:src="
           require('@/assets/webm/' + this.currentData.video + '.webm')
         "
+        class="videoStyle"
         autoplay
         type='video/webm"'
       ></video>
 
       <div v-on:click="updateData" class="button">
-        <button></button>
+        <v-btn>Weiter</v-btn>
       </div>
     </div>
   </div>
@@ -96,13 +96,10 @@ img {
 }
 
 .button {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-repeat: no-repeat;
-  outline: none;
-  padding: 100% 100%;
-  visibility: hidden;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  box-shadow: 0px 17px 10px -7px rgba(0, 0, 0, 0.4);
 }
 
 .videoStyle {
