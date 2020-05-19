@@ -84,7 +84,7 @@ export default {
 
 <style>
 .Quiz {
-  background-image: url("../../assets/img/quiz/um.jpeg");
+  background-image: url("../../../assets/img/quiz/um.jpeg");
   background-position: center;
   background-size: 120% 100%;
 }

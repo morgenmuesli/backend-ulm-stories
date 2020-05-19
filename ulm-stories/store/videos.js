@@ -587,7 +587,7 @@ export const state = () => ({
       img: "holl",
       video: "64_Holl",
       text:
-        "Genug von grauenhaften und ernsten Gespächen! Um den Kristall wieder zu bekommen spielen wir ein Spiel.",
+        "Genug von Grauenhaften und ernsten Gespächen! Um den Kristall wieder zu bekommen spielen wir ein Spiel.",
       answer: "Weiter"
     },
     {

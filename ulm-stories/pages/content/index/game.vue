@@ -1,14 +1,25 @@
 <template
   ><div>
-    <memory v-if="queryData.chapter === 'ensinger'"></memory>
-    <memory v-else-if="queryData.chapter === 'aicher'"></memory>
+    <Quiz v-if="this.queryData.chapter === 'ensinger'"></Quiz>
+    <memory v-else-if="this.queryData.chapter === 'ensinger'"></memory>
+    <FlappySchneider
+      v-else-if="this.queryData.chapter === 'berblinger'"
+    ></FlappySchneider>
+    <PuzzleDND v-else-if="this.queryData.chapter === 'streicher'"></PuzzleDND>
   </div>
 </template>
 
 <script>
 import GAME_FIELD from "~/components/content/games/memorie/GameField";
+import Quiz from "~/components/content/games/Quiz";
+import FlappySchneider from "~/components/content/games/FlappySchneider";
+import PuzzleDND from "~/components/content/games/dndpuzzle/PuzzleDND";
+
 export default {
   components: {
+    PuzzleDND,
+    FlappySchneider,
+    Quiz,
     memory: GAME_FIELD
   },
   asyncData: ({ query }) => ({

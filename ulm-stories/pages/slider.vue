@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Board from "../components/minigame/slider-puzzle/Board";
+import Board from "../components/content/games/slider-puzzle/Board";
 
 export default {
   name: "Slider",
