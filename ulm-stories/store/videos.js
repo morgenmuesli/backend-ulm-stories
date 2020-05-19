@@ -744,9 +744,126 @@ export const state = () => ({
       chapter: "schwanenwirtin",
       scene: 14,
       img: "schwanenwirtin",
-      video: "81_Schwanenwirtin",
+      video: "80_Schwanenwirtin",
       text:
         "Vielen Dank! Jetzt wird man mich erkennen. Als Dankeschön bekommst du diesen Kristall. Auf Wiedersehen!",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 0,
+      img: "einstein",
+      video: "87_Zweistein",
+      text:
+        "Da bist du ja schon. Hier ist der Fuß des Zeitmessgeräts. Da müssen alle Kristalle wieder eingefügt werden.",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 1,
+      img: "einstein",
+      video: "88_Zweistein",
+      text:
+        "Machst du das bitte für mich? Dann kann ich schonmal die Daten eingeben.",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 3,
+      img: "einstein",
+      video: "89_Zweistein",
+      text: "Perfekt! Jetzt kommt der Kristall zurück in die Zeitmaschine.",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 4,
+      img: "einstein",
+      video: "90_Zweistein",
+      text:
+        "Noch ein paar kleine Änderungen uuuuund fertig! Jetzt geht es los! Drück die Daumen, dass es klappt.",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 5,
+      img: "einstein",
+      video: "91_Einstein",
+      text: "Nanu, wo bin ich denn jetzt gelandet?",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 6,
+      img: "einstein",
+      video: "92_Zweistein",
+      text:
+        "Hallo Albert! Schön dich zu sehen! Ich brauche unbedingt deine Hilfe!",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 7,
+      img: "einstein",
+      video: "93_Einstein",
+      text:
+        "Du schon wieder?! Wieso kannst du deine Experimente nicht alleine hinbekommen?",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 8,
+      img: "einstein",
+      video: "94_Einstein",
+      text:
+        "Ich hab in meiner Zeit sehr viel zu tun und ich kann dir nicht immer zur Hilfe eilen.",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 9,
+      img: "einstein",
+      video: "95_Zweistein",
+      text: "Ich weiß! Das ist das letzte Mal. Versprochen!",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 10,
+      img: "einstein",
+      video: "96_Einstein",
+      text:
+        "Wie ich sehe, hast du dieses Mal eine Zeitmaschine gebaut um mit mir persönlich zu sprechen.",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 11,
+      img: "einstein",
+      video: "97_Zweistein",
+      text:
+        "Ja, bist du beeindruckt? Die Zeitmaschine war ein riesiges Projekt! Zum Glück hatte ich einen Assistenten.",
+      answer: "Weiter"
+    },
+    {
+      id: 6,
+      chapter: "einstein",
+      scene: 12,
+      img: "einstein",
+      video: "98_Einstein",
+      text:
+        "Also gut! Mehr als die Vergangenheit interessiert mich die Zukunft, denn in ihr gedenke ich zu leben. Erzähl mir von deinem Problem.",
       answer: "Weiter"
     }
   ]
