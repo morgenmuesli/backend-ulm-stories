@@ -134,7 +134,7 @@ export const state = () => ({
       img: "ensinger",
       video: "14_Ensinger",
       text:
-        "Mein Vater sagt immer: Gute Taten geben uns Stärke und inspirieren andere dazu Gutes zu tun.",
+        "Mein Vater sagt immer: &quot;Gute Taten geben uns Stärke und inspirieren andere dazu Gutes zu tun.&quot;",
       answer: "Weiter"
     },
     {
