@@ -422,7 +422,7 @@ export const state = () => ({
       img: "berblinger",
       video: "47_Berblinger",
       text:
-        "Hallo! ich hab dich gar nicht gesehen! Wer bist du? Was mache ich hier?",
+        "Hallo! Ich hab dich gar nicht gesehen! Wer bist du? Was mache ich hier?",
       answer: "Antworten"
     },
     {
@@ -587,7 +587,7 @@ export const state = () => ({
       img: "holl",
       video: "64_Holl",
       text:
-        "Genug von Grauenhaften und ernsten Gespächen! Um den Kristall wieder zu bekommen spielen wir ein Spiel.",
+        "Genug von grauenhaften und ernsten Gespächen! Um den Kristall wieder zu bekommen spielen wir ein Spiel.",
       answer: "Weiter"
     },
     {
