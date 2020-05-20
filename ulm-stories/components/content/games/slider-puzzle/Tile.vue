@@ -28,7 +28,7 @@ export default {
   border: 1px solid #111;
 
   &.empty {
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px inset;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px inset;
 
     &:hover {
       border-color: #111;
@@ -37,7 +37,6 @@ export default {
   }
 
   &:hover {
-    border-color: #f00;
     cursor: pointer;
   }
 }
