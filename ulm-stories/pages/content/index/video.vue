@@ -5,7 +5,7 @@
         backgroundImage:
           'url(' +
           require('@/assets/img/background/' + this.currentData.img + '.jpg') +
-          ')',
+          ')'
       }"
       class="containerApp"
     >
@@ -40,8 +40,8 @@ export default {
       video: "sample",
       text: "sample text",
       img: "ensinger",
-      answer: "sample",
-    },
+      answer: "sample"
+    }
   }),
   asyncData: ({ query, store }) => ({
     chapter: query.chapter,
@@ -49,7 +49,7 @@ export default {
     currentData: store.getters["videos/getVideoByChapterAndScene"](
       query.chapter,
       query.scene
-    ),
+    )
   }),
   mounted() {
     console.log("current Data: " + this.currentData);
@@ -65,8 +65,8 @@ export default {
       } else {
         this.currentData = newData;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -98,9 +98,9 @@ img {
 
 .button {
   position: absolute;
-  font-family: Ubuntu;
+  font-family: Ubuntu, serif;
   color: black;
-  background-color: #a5a5a5;
+  background-color: whitesmoke;
   border: 1px solid #6e6e6e;
   right: 5%;
   bottom: 5%;
