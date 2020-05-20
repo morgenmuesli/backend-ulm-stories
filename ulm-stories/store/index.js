@@ -446,12 +446,14 @@ export const getters = {
 
 export const mutations = {
   toggleFinish(state, gameState) {
-    gameState.isFinish = true;
+    console.info("toggle finish  ", gameState);
+    state.gameState.find(x => x === gameState).isFinish = true;
   }
 };
 
 export const actions = {
   finishedScene({ state, commit, dispatch, getters }, data) {
+    console.info("finish scene action ", data);
     const gameState = state.gameState.find(
       gameScene =>
         gameScene.chapter === data.chapter && gameScene.scene === data.scene

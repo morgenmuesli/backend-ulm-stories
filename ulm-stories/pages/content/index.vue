@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapActions } from "vuex";
 export default {
   middleware: "gamemw",
   asyncData: context => ({
@@ -16,10 +16,9 @@ export default {
     console.log("scene: ", this.current_scene);
     console.log("chapter: ", this.current_chapter);
   },
-  computed: {
-    ...mapGetters
-  },
+  computed: {},
   methods: {
+    ...mapActions(["finishedScene"]),
     nextPage() {
       const path = "/content/";
       const query = {
@@ -27,7 +26,9 @@ export default {
         scene: this.current_scene + 1,
         direct: true
       };
-      this.$stable.dispatch("finishedScene");
+      const chapter = this.current_chapter;
+      const scene = this.current_scene;
+      this.finishedScene({ chapter, scene });
       this.$router.push({ path, query });
     }
   }

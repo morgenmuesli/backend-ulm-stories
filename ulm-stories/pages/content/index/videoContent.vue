@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   layout: "dialog",
   data: () => ({
@@ -40,7 +41,7 @@ export default {
       video: "sample",
       text: "sample text",
       img: "ensinger",
-      answer: "sample"
+      answer: "sample",
     }
   }),
   asyncData: ({ query, store }) => ({
@@ -53,15 +54,34 @@ export default {
   }),
   mounted() {
     console.log("current Data: " + this.currentData);
+
+    this.chapter = this.$route.query.chapter;
+    this.scene = this.$route.query.scene;
+    console.log("chapter&scene ", this.chapter, " ", this.scene);
+    this.currentData = this.$store.getters["videos/getVideoByChapterAndScene"](
+      this.$route.query.chapter,
+      this.$route.query.scene
+    );
+  },
+  computed: {
+    ...mapGetters({
+      getVideoByChapterAndScene: ["videos/getVideoByChapterAndScene"]
+    })
   },
   methods: {
-    updateData: () => {
-      const newData = this.$store.getters["videos/getVideoByChapterAndScene"](
-        this.currentData.chapter,
-        this.currentData.scene + 1
-      );
+    updateData() {
+      console.log(this.currentData);
+      this.scene = this.scene + 1;
+
+      const newData = this.getVideoByChapterAndScene(this.chapter, this.scene);
       if (!newData) {
-        this.$router.push(this.currentData.chapter, this.currentData.scene + 1);
+        const path = "/content/";
+        const query = {
+          chapter: this.current_chapter,
+          scene: this.scene,
+          direct: true
+        };
+        this.$router.push({ path, query });
       } else {
         this.currentData = newData;
       }
@@ -98,13 +118,13 @@ img {
 
 .button {
   position: absolute;
-  font-family: Ubuntu, serif;
+  font-family: Ubuntu;
   color: black;
-  background-color: whitesmoke;
+  background-color: #a5a5a5;
   border: 1px solid #6e6e6e;
   right: 5%;
   bottom: 5%;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 17px 10px -7px rgba(0, 0, 0, 0.4);
 }
 
 .videoStyle {
