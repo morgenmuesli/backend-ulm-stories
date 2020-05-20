@@ -25,9 +25,9 @@
         type='video/webm"'
       ></video>
 
-      <div v-on:click="updateData" class="button">
-        <button>{{ currentData.answer }}</button>
-      </div>
+      <button v-on:click="updateData" class="button">
+        {{ currentData.answer }}
+      </button>
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ export default {
       video: "sample",
       text: "sample text",
       img: "ensinger",
-      answer: "sample"
+      answer: "sample",
     }
   }),
   asyncData: ({ query, store }) => ({
@@ -118,6 +118,10 @@ img {
 
 .button {
   position: absolute;
+  font-family: Ubuntu;
+  color: black;
+  background-color: #a5a5a5;
+  border: 1px solid #6e6e6e;
   right: 5%;
   bottom: 5%;
   box-shadow: 0px 17px 10px -7px rgba(0, 0, 0, 0.4);

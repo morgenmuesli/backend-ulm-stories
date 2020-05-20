@@ -211,12 +211,12 @@ export default {
 }
 
 .pipe-top {
-  background: url("../../../assets/img/flappybird/pipeup.png") bottom no-repeat;
+  background: url("../../../assets/img/flappybird/pipeup.svg") bottom no-repeat;
   background-size: cover;
 }
 
 .pipe-bottom {
-  background: url("../../../assets/img/flappybird/pipedown.png") no-repeat;
+  background: url("../../../assets/img/flappybird/pipedown.svg") no-repeat;
   background-size: 100%;
 }
 
