@@ -34,6 +34,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+
 export default {
   layout: "dialog",
   data: () => ({
@@ -85,9 +86,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
 .containerApp {
   display: block;
   padding: 1rem;
@@ -110,14 +112,27 @@ img {
   text-align: left;
   grid-area: text;
   border-radius: 20px;
-  overflow: hidden;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 33px solid transparent;
+    border-top-color: whitesmoke;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -16.5px;
+    margin-bottom: -33px;
+  }
 }
 
 .button {
   position: absolute;
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
-  color: black;
   background-color: whitesmoke;
   right: 5%;
   bottom: 5%;

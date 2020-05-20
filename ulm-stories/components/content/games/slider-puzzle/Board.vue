@@ -87,6 +87,13 @@ export default {
       return true;
     }
   },
+  watch: {
+    valid() {
+      if (this.valid) {
+        this.$emit("solved");
+      }
+    }
+  },
 
   methods: {
     start({ image, size }) {
@@ -211,13 +218,6 @@ export default {
       canvas.height = size.height;
       ctx.drawImage(image, 0, 0, size.width, size.height);
       return canvas.toDataURL();
-    }
-  },
-  watch: {
-    valid() {
-      if (this.valid) {
-        this.$emit("solved");
-      }
     }
   }
 };
