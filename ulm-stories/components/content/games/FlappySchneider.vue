@@ -63,14 +63,14 @@ export default {
 
           g: 300,
 
-          wingState: 1,
+          wingState: 1
         },
 
         bgr: {
-          width: 1920,
-        },
+          width: 1920
+        }
       },
-      game: {},
+      game: {}
     };
   },
   computed: {
@@ -79,16 +79,16 @@ export default {
         width: "33px",
         height: "24px",
         left: this.game.bird.xBird + "px",
-        top: this.game.bird.yBird + "px",
+        top: this.game.bird.yBird + "px"
       };
     },
     styleBgr() {
       return {
         width: this.game.bgr.width + "px",
         right: 0,
-        height: 1920,
+        height: 1920
       };
-    },
+    }
   },
   created() {
     this.$set(this, "game", JSON.parse(JSON.stringify(this.defoult)));
@@ -139,7 +139,7 @@ export default {
     addPipe() {
       this.game.pipes.push({
         position: this.game.bgr.width,
-        topPipeHeight: 100 + Math.random() * 100,
+        topPipeHeight: 100 + Math.random() * 100
       });
     },
     bottomPipeHeight(pipe) {
@@ -171,8 +171,8 @@ export default {
           this.start();
         }
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
