@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="Quiz" v-if="isQuizStarted">
+  <div class="Quiz">
+    <div v-if="isQuizStarted">
       <h1>
         Quiz
       </h1>
@@ -9,13 +9,13 @@
         {{ Question }}
       </h4>
       <div id="container">
-        <button class="answer" @click="selectedAnswer(answer_one)">
+        <button @click="selectedAnswer(answer_one)" class="answer">
           {{ answer_one }}
         </button>
-        <button class="answer" @click="selectedAnswer(answer_two)">
+        <button @click="selectedAnswer(answer_two)" class="answer">
           {{ answer_two }}
         </button>
-        <button class="answer" @click="selectedAnswer(answer_three)">
+        <button @click="selectedAnswer(answer_three)" class="answer">
           {{ answer_three }}
         </button>
       </div>
@@ -26,7 +26,7 @@
         Quiz
       </h1>
 
-      <button class="start" @click="startQuiz">
+      <button @click="startQuiz" class="start">
         Start
       </button>
     </div>
@@ -82,14 +82,18 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .Quiz {
-  background-image: url("../../../assets/img/quiz/um.jpeg");
-  background-position: center;
-  background-size: 120% 100%;
+  /*background-image: url("../../../assets/img/quiz/um.jpeg");*/
+  background-image: url("../../../assets/img/background/ensinger.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
+  font-family: "Ubuntu", sans-serif;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
@@ -97,22 +101,22 @@ h1 {
 }
 
 h4 {
+  font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   text-align: center;
   line-height: 50vh;
 }
 
 button {
-  padding: 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
   width: 300px;
   height: 60px;
-  margin-right: 10px;
-  margin-bottom: 10px;
   color: black;
-  background-color: lightskyblue;
-  font-size: 24px;
-  vertical-align: center;
-  horiz-align: center;
+  background-color: whitesmoke;
+  display: inline-block;
+  border-radius: 3px;
 }
 
 #container {
@@ -127,6 +131,6 @@ button {
 
 .start {
   display: block;
-  margin: 55% auto;
+  margin: 65% auto;
 }
 </style>

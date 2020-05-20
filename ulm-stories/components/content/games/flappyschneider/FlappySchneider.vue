@@ -19,7 +19,7 @@
               :style="{ height: pipe.topPipeHeight + 'px' }"
               class="pipe-top"
             ></div>
-            <div class="space" style="height:100px"></div>
+            <div class="space" style="height: 100px;"></div>
             <div
               :style="{ height: bottomPipeHeight(pipe) + 'px' }"
               class="pipe-bottom"
@@ -178,8 +178,8 @@ export default {
 
 <style>
 .bkg-main {
-  width: 100%;
-  height: 505px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 .bkg {
@@ -187,6 +187,7 @@ export default {
   height: 100%;
   background-image: url("../../../assets/img/flappybird/background2.png");
   position: absolute;
+  overflow: hidden;
 }
 
 .bird {
@@ -249,6 +250,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 20%;
+  overflow: hidden;
 }
 
 .score,

@@ -19,7 +19,9 @@
       </div>
     </div>
 
-    <div class="controls"></div>
+    <div class="controls">
+      <Button v-on:click="shuffleTiles" class="button">Erneut mischen</Button>
+    </div>
   </div>
 </template>
 
@@ -83,6 +85,13 @@ export default {
       }
 
       return true;
+    }
+  },
+  watch: {
+    valid() {
+      if (this.valid) {
+        this.$emit("solved");
+      }
     }
   },
 
@@ -210,13 +219,6 @@ export default {
       ctx.drawImage(image, 0, 0, size.width, size.height);
       return canvas.toDataURL();
     }
-  },
-  watch: {
-    valid() {
-      if (this.valid) {
-        this.$emit("solved");
-      }
-    }
   }
 };
 </script>
@@ -262,7 +264,15 @@ export default {
   background: #fff;
   background-size: cover;
 }
-
+.button {
+  position: absolute;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: black;
+  background-color: whitesmoke;
+  right: 5%;
+  bottom: 5%;
+}
 .controls {
   margin-top: 30px;
 

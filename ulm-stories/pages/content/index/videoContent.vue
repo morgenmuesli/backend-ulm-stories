@@ -34,6 +34,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+
 export default {
   layout: "dialog",
   data: () => ({
@@ -85,8 +86,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
 .containerApp {
   display: block;
   padding: 1rem;
@@ -105,21 +108,34 @@ img {
   background: whitesmoke;
   padding: 25px;
   font-family: Kalam, cursive;
+  font-size: 20px;
   text-align: left;
   grid-area: text;
   border-radius: 20px;
-  overflow: scroll;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 33px solid transparent;
+    border-top-color: whitesmoke;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -16.5px;
+    margin-bottom: -33px;
+  }
 }
 
 .button {
   position: absolute;
-  font-family: Ubuntu;
-  color: black;
-  background-color: #a5a5a5;
-  border: 1px solid #6e6e6e;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  background-color: whitesmoke;
   right: 5%;
   bottom: 5%;
-  box-shadow: 0px 17px 10px -7px rgba(0, 0, 0, 0.4);
 }
 
 .videoStyle {
