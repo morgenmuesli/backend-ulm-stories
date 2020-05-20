@@ -1,12 +1,12 @@
 <template>
   <svg
+    :width="size.width"
+    :height="size.height"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
-    :width="size.width"
-    :height="size.height"
     viewBox="0 0 959 841.9"
     style="enable-background:new 0 0 959 841.9"
     xml:space="preserve"
@@ -77,14 +77,14 @@
 
 <script>
 export default {
-  name: "cristalPage",
-  data: () => ({
-    hideArray: []
-  }),
+  name: "CristalPage",
   props: {
     size: Object,
     visibleCharacters: Array
   },
+  data: () => ({
+    hideArray: []
+  }),
   mounted() {
     this.visibleCharacters.map(x => this.showImageByReference(x));
   },

@@ -8,6 +8,7 @@
 import { mapActions } from "vuex";
 export default {
   middleware: "gamemw",
+  computed: {},
   asyncData: context => ({
     current_scene: context.query.scene,
     current_chapter: context.query.chapter
@@ -16,7 +17,6 @@ export default {
     console.log("scene: ", this.current_scene);
     console.log("chapter: ", this.current_chapter);
   },
-  computed: {},
   methods: {
     ...mapActions(["finishedScene"]),
     nextPage() {

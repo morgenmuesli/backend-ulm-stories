@@ -19,7 +19,7 @@
  */
 
 exports.defineAutoTests = function() {
-  var isAndroid = cordova.platformId === "android";
+  const isAndroid = cordova.platformId === "android";
 
   describe("Whitelist API (cordova.whitelist)", function() {
     it("should exist", function() {
@@ -45,7 +45,7 @@ exports.defineAutoTests = function() {
             // Timeout is 7.5 seconds to allow physical devices enough
             // time to query the response. This is important for some
             // Android devices.
-            var originalTimeout, cb;
+            let originalTimeout, cb;
 
             beforeEach(function(done) {
               originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
@@ -68,8 +68,8 @@ exports.defineAutoTests = function() {
         };
       }
 
-      var itShouldMatch = expectMatchWithResult(true);
-      var itShouldNotMatch = expectMatchWithResult(false);
+      const itShouldMatch = expectMatchWithResult(true);
+      const itShouldNotMatch = expectMatchWithResult(false);
 
       it("should exist", function() {
         expect(cordova.whitelist.match).toBeDefined();
@@ -225,7 +225,7 @@ exports.defineAutoTests = function() {
               pending("Whitelist Plugin only exists for Android");
             }
 
-            var cb, originalTimeout;
+            let cb, originalTimeout;
 
             beforeEach(function(done) {
               originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
@@ -247,8 +247,8 @@ exports.defineAutoTests = function() {
         };
       }
 
-      var itShouldAccept = expectTestWithResult(true);
-      var itShouldReject = expectTestWithResult(false);
+      const itShouldAccept = expectTestWithResult(true);
+      const itShouldReject = expectTestWithResult(false);
 
       it("should exist", function() {
         expect(cordova.whitelist.test).toBeDefined();

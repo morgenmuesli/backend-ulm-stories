@@ -1,23 +1,23 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
-    218: function(e, n, t) {
+    218(e, n, t) {
       "use strict";
       t.r(n);
-      var c = { name: "IndexVue" },
-        r = t(16),
-        component = Object(r.a)(
-          c,
-          function() {
-            var e = this.$createElement;
-            return (this._self._c || e)("h1", [this._v("Über uns")]);
-          },
-          [],
-          !1,
-          null,
-          "58c09511",
-          null
-        );
+      const c = { name: "IndexVue" };
+      const r = t(16);
+      const component = Object(r.a)(
+        c,
+        function() {
+          const e = this.$createElement;
+          return (this._self._c || e)("h1", [this._v("Über uns")]);
+        },
+        [],
+        !1,
+        null,
+        "58c09511",
+        null
+      );
       n.default = component.exports;
     }
   }

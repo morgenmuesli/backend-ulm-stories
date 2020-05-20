@@ -18,7 +18,7 @@ import _ from "lodash";
 import Tile from "~/components/content/games/memorie/Tile";
 
 export default {
-  name: "GAME_FIELD",
+  name: "GAMEFIELD",
   // eslint-disable-next-line vue/no-unused-components
   components: { Tile },
   data: () => ({

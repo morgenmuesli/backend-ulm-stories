@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [8],
   {
-    216: function(t, e, n) {
+    216(t, e, n) {
       "use strict";
       n.r(e),
         n.d(e, "Workbox", function() {
@@ -15,7 +15,7 @@
       } catch (r) {}
       var r = function(t, e) {
         return new Promise(function(i) {
-          var n = new MessageChannel();
+          const n = new MessageChannel();
           (n.port1.onmessage = function(t) {
             return i(t.data);
           }),
@@ -23,8 +23,8 @@
         });
       };
       function o(t, e) {
-        for (var i = 0; i < e.length; i++) {
-          var n = e[i];
+        for (let i = 0; i < e.length; i++) {
+          const n = e[i];
           (n.enumerable = n.enumerable || !1),
             (n.configurable = !0),
             "value" in n && (n.writable = !0),
@@ -41,18 +41,18 @@
       try {
         self["workbox:core:4.3.1"] && _();
       } catch (r) {}
-      var c = function() {
-          var t = this;
-          this.promise = new Promise(function(e, i) {
-            (t.resolve = e), (t.reject = i);
-          });
-        },
-        h = function(t, e) {
-          return new URL(t, location).href === new URL(e, location).href;
-        },
-        v = function(t, e) {
-          Object.assign(this, e, { type: t });
-        };
+      const c = function() {
+        const t = this;
+        this.promise = new Promise(function(e, i) {
+          (t.resolve = e), (t.reject = i);
+        });
+      };
+      const h = function(t, e) {
+        return new URL(t, location).href === new URL(e, location).href;
+      };
+      const v = function(t, e) {
+        Object.assign(this, e, { type: t });
+      };
       function u(t) {
         return function() {
           for (var e = [], i = 0; i < arguments.length; i++)
@@ -73,9 +73,9 @@
       }
       function s() {}
       var f = (function(t) {
-        var e, n;
+        let e, n;
         function f(e, n) {
-          var r;
+          let r;
           return (
             void 0 === n && (n = {}),
             ((r = t.call(this) || this).t = e),
@@ -95,16 +95,16 @@
           ((e = f).prototype = Object.create(n.prototype)),
           (e.prototype.constructor = e),
           (e.__proto__ = n);
-        var l,
-          d,
-          w = f.prototype;
+        let l;
+        let d;
+        const w = f.prototype;
         return (
           (w.register = u(function(t) {
-            var e,
-              i,
-              n = this,
-              u = (void 0 === t ? {} : t).immediate,
-              r = void 0 !== u && u;
+            let e;
+            let i;
+            const n = this;
+            const u = (void 0 === t ? {} : t).immediate;
+            const r = void 0 !== u && u;
             return (
               (e = function() {
                 return (
@@ -118,7 +118,7 @@
                         n.h.resolve(n.P),
                         n.j(n.P),
                         n.P.addEventListener("statechange", n.l, { once: !0 }));
-                    var e = n.B.waiting;
+                    const e = n.B.waiting;
                     return (
                       e &&
                         h(e.scriptURL, n.t) &&
@@ -148,7 +148,7 @@
                 );
               }),
               (i = (function() {
-                if (!r && "complete" !== document.readyState)
+                if (!r && document.readyState !== "complete")
                   return (function(t, e) {
                     return t && t.then ? t.then(s) : Promise.resolve();
                   })(
@@ -170,11 +170,11 @@
             });
           })),
           (w.R = function() {
-            var t = navigator.serviceWorker.controller;
+            const t = navigator.serviceWorker.controller;
             if (t && h(t.scriptURL, this.t)) return t;
           }),
           (w.k = u(function() {
-            var t = this;
+            const t = this;
             return (function(t, e) {
               try {
                 var i = t();
@@ -199,7 +199,7 @@
             r(t, { type: "WINDOW_READY", meta: "workbox-window" });
           }),
           (w.g = function() {
-            var t = this.B.installing;
+            const t = this.B.installing;
             this.o > 0 ||
             !h(t.scriptURL, this.t) ||
             performance.now() > this.L + 6e4
@@ -210,25 +210,25 @@
               t.addEventListener("statechange", this.l);
           }),
           (w.l = function(t) {
-            var e = this,
-              i = t.target,
-              n = i.state,
-              r = i === this.W,
-              u = r ? "external" : "",
-              a = { sw: i, originalEvent: t };
+            const e = this;
+            const i = t.target;
+            const n = i.state;
+            const r = i === this.W;
+            const u = r ? "external" : "";
+            const a = { sw: i, originalEvent: t };
             !r && this.p && (a.isUpdate = !0),
               this.dispatchEvent(new v(u + n, a)),
-              "installed" === n
+              n === "installed"
                 ? (this._ = setTimeout(function() {
-                    "installed" === n &&
+                    n === "installed" &&
                       e.B.waiting === i &&
                       e.dispatchEvent(new v(u + "waiting", a));
                   }, 200))
-                : "activating" === n &&
+                : n === "activating" &&
                   (clearTimeout(this._), r || this.s.resolve(i));
           }),
           (w.m = function(t) {
-            var e = this.O;
+            const e = this.O;
             e === navigator.serviceWorker.controller &&
               (this.dispatchEvent(
                 new v("controlling", { sw: e, originalEvent: t })
@@ -236,20 +236,20 @@
               this.h.resolve(e));
           }),
           (w.v = function(t) {
-            var e = t.data;
+            const e = t.data;
             this.dispatchEvent(new v("message", { data: e, originalEvent: t }));
           }),
           (l = f),
           (d = [
             {
               key: "active",
-              get: function() {
+              get() {
                 return this.s.promise;
               }
             },
             {
               key: "controlling",
-              get: function() {
+              get() {
                 return this.h.promise;
               }
             }
@@ -261,7 +261,7 @@
           function t() {
             this.D = {};
           }
-          var e = t.prototype;
+          const e = t.prototype;
           return (
             (e.addEventListener = function(t, e) {
               this.T(t).add(e);

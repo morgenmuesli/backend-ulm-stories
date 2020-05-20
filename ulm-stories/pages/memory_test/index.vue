@@ -13,13 +13,13 @@ export default {
   data: () => ({
     componentKey: 0
   }),
+  mounted() {
+    this.forceRerender();
+  },
   methods: {
     forceRerender() {
       this.componentKey += 1;
     }
-  },
-  mounted() {
-    this.forceRerender();
   }
 };
 </script>

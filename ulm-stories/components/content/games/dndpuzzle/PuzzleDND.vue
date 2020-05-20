@@ -1,23 +1,23 @@
 <template>
-  <div class="frame" ref="puzzleFrame">
+  <div ref="puzzleFrame" class="frame">
     <div :style="frameSize" class="puzzle">
       <div
         v-for="(item, index) in puzzleList"
         :key="index"
         :style="item.style"
-        class="puzzleTile"
         @click="clickOnPuzzle(item)"
+        class="puzzleTile"
       >
         <p></p>
       </div>
     </div>
     <div class="dragList" style="width: 100%">
       <div
-        class="tile"
         v-for="(item, index) in tileList"
         :key="index"
         :style="item.style"
         @click="selectItem(item)"
+        class="tile"
       >
         <p></p>
       </div>
@@ -51,10 +51,6 @@ export default {
       flexWrap: "wrap"
     }
   }),
-  mounted() {
-    this.calculateSizes();
-    this.generateTiles();
-  },
 
   computed: {
     /**
@@ -64,6 +60,10 @@ export default {
     totalTiles() {
       return this.size.horizontal * this.size.vertical;
     }
+  },
+  mounted() {
+    this.calculateSizes();
+    this.generateTiles();
   },
   methods: {
     calculateSizes() {

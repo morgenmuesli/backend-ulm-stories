@@ -1,10 +1,10 @@
 <template>
-  <div class="Tile" @click="pressTile" :class="{ open: isOpen }">
+  <div @click="pressTile" :class="{ open: isOpen }" class="Tile">
     <img
       v-if="dataFromParent.isOpen"
+      :src="require(`assets/${this.dataFromParent.path}`)"
       width="100%"
       height="100%"
-      :src="require(`assets/${this.dataFromParent.path}`)"
     />
   </div>
 </template>
