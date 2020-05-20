@@ -26,7 +26,7 @@
       ></video>
 
       <div v-on:click="updateData" class="button">
-        <v-btn>Weiter</v-btn>
+        <v-btn>{{ currentData.answer }}</v-btn>
       </div>
     </div>
   </div>
@@ -39,7 +39,8 @@ export default {
     currentData: {
       video: "sample",
       text: "sample text",
-      img: "ensinger"
+      img: "ensinger",
+      answer: "sample"
     }
   }),
   asyncData: ({ query, store }) => ({
