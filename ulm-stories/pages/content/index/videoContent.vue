@@ -106,20 +106,21 @@ img {
   background: whitesmoke;
   padding: 25px;
   font-family: Kalam, cursive;
+  font-size: 20px;
   text-align: left;
   grid-area: text;
   border-radius: 20px;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .button {
   position: absolute;
   font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
   color: black;
   background-color: whitesmoke;
   right: 5%;
   bottom: 5%;
-  box-shadow: 0px 17px 10px -7px rgba(0, 0, 0, 0.4);
 }
 
 .videoStyle {
