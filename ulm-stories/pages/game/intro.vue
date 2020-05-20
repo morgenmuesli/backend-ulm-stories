@@ -1,12 +1,20 @@
 <template>
-  <div class="container"></div>
+  <div class="container">
+    <video src="assets/video/sample.webm" autoplay></video>
+    <div>
+      <p>
+        {{ subtitle }}
+      </p>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "intro",
+  name: "Intro",
   components: {},
   data: () => ({
+    subtitle: "Sample Text",
     text: [
       "Du besuchst deinen Onkel Professor Alfred Zweistein in seinem Labor.",
       "Professor Zweistein arbeitet gerade auf Hochtouren an einer neuen Art der Energiegewinnung mithilfe eines Schwarzen Loches.",

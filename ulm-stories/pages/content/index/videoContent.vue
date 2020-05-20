@@ -26,13 +26,14 @@
       ></video>
 
       <div v-on:click="updateData" class="button">
-        <v-btn>Weiter</v-btn>
+        <button>Weiter</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   layout: "dialog",
   data: () => ({
@@ -40,27 +41,40 @@ export default {
       video: "sample",
       text: "sample text",
       img: "ensinger"
-    }
-  }),
-  asyncData: ({ query, store }) => ({
-    chapter: query.chapter,
-    scene: query.scene,
-    currentData: store.getters["videos/getVideoByChapterAndScene"](
-      query.chapter,
-      query.scene
-    )
+    },
+    chapter: "ensinger",
+    scene: 0
   }),
   mounted() {
     console.log("current Data: " + this.currentData);
+
+    this.chapter = this.$route.query.chapter;
+    this.scene = this.$route.query.scene;
+    console.log("chapter&scene ", this.chapter, " ", this.scene);
+    this.currentData = this.$store.getters["videos/getVideoByChapterAndScene"](
+      this.$route.query.chapter,
+      this.$route.query.scene
+    );
+  },
+  computed: {
+    ...mapGetters({
+      getVideoByChapterAndScene: ["videos/getVideoByChapterAndScene"]
+    })
   },
   methods: {
-    updateData: () => {
-      const newData = this.$store.getters["videos/getVideoByChapterAndScene"](
-        this.currentData.chapter,
-        this.currentData.scene + 1
-      );
+    updateData() {
+      console.log(this.currentData);
+      this.scene = this.scene + 1;
+
+      const newData = this.getVideoByChapterAndScene(this.chapter, this.scene);
       if (!newData) {
-        this.$router.push(this.currentData.chapter, this.currentData.scene + 1);
+        const path = "/content/";
+        const query = {
+          chapter: this.current_chapter,
+          scene: this.scene,
+          direct: true
+        };
+        this.$router.push({ path, query });
       } else {
         this.currentData = newData;
       }

@@ -15,11 +15,16 @@ export default function({ redirect, query, store }) {
       return redirect("/game");
     }
 
+    store.dispatch("finishedScene", {
+      chapter: query.chapter,
+      scene: parseInt(query.scene)
+    });
+
     console.log(side.type);
 
     switch (side.type) {
       case TYPE.video:
-        return redirect("/content/video", {
+        return redirect("/content/videoContent", {
           chapter: query.chapter,
           scene: query.scene
         });
