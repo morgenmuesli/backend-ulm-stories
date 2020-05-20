@@ -65,7 +65,7 @@ img {
   text-align: center;
   grid-area: text;
   border-radius: 20px;
-  overflow: scroll;
+  overflow: hidden;
 }
 .button {
   position: absolute;

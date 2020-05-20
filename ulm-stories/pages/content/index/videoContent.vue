@@ -41,7 +41,7 @@ export default {
       video: "sample",
       text: "sample text",
       img: "ensinger",
-      answer: "sample",
+      answer: "sample"
     }
   }),
   asyncData: ({ query, store }) => ({
@@ -92,6 +92,7 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
 .containerApp {
   display: block;
   padding: 1rem;
@@ -118,10 +119,9 @@ img {
 
 .button {
   position: absolute;
-  font-family: Ubuntu;
+  font-family: "Ubuntu", sans-serif;
   color: black;
-  background-color: #a5a5a5;
-  border: 1px solid #6e6e6e;
+  background-color: whitesmoke;
   right: 5%;
   bottom: 5%;
   box-shadow: 0px 17px 10px -7px rgba(0, 0, 0, 0.4);
