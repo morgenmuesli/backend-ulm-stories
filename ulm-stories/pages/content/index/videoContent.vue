@@ -26,7 +26,7 @@
       ></video>
 
       <div v-on:click="updateData" class="button">
-        <button>Weiter</button>
+        <button>{{ currentData.answer }}</button>
       </div>
     </div>
   </div>
@@ -40,10 +40,17 @@ export default {
     currentData: {
       video: "sample",
       text: "sample text",
-      img: "ensinger"
-    },
-    chapter: "ensinger",
-    scene: 0
+      img: "ensinger",
+      answer: "sample"
+    }
+  }),
+  asyncData: ({ query, store }) => ({
+    chapter: query.chapter,
+    scene: query.scene,
+    currentData: store.getters["videos/getVideoByChapterAndScene"](
+      query.chapter,
+      query.scene
+    )
   }),
   mounted() {
     console.log("current Data: " + this.currentData);

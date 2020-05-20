@@ -221,10 +221,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+.board {
+  width: 100%;
+}
+
 .frame-wrapper {
   margin: 0 auto;
-  position: relative;
   box-shadow: 0 0 0 10px;
   width: 100%;
 

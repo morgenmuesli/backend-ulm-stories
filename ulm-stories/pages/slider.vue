@@ -1,7 +1,6 @@
 <template>
   <div id="slider">
     <header>
-      <h1>Slider Puzzle</h1>
       <div class="board-frame">
         <Board ref="board" @solved="onSolved" />
       </div>
@@ -29,13 +28,15 @@ export default {
   }
 };
 </script>
-<style scoped>
-#slider {
-  font: 16px Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-
+<style scoped lang="scss">
 .board-frame {
-  background: #f0f;
+  background-image: url("../assets/img/background/aicher.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 </style>
