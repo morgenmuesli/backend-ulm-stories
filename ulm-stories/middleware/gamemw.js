@@ -3,6 +3,7 @@ import _ from "lodash";
 import { TYPE } from "~/js/constants";
 
 export default function({ redirect, query, store }) {
+  console.debug("Hello from middleware: Query:", query);
   if (!(_.has(query, "chapter") && _.has(query, "scene"))) {
     return redirect("/game");
   }
@@ -11,6 +12,7 @@ export default function({ redirect, query, store }) {
       query.chapter,
       query.scene
     );
+
     if (side === undefined) {
       return redirect("/game");
     }

@@ -42,15 +42,9 @@ export default {
       text: "sample text",
       img: "ensinger",
       answer: "sample",
+      chapter: "ensinger",
+      scene: 0
     }
-  }),
-  asyncData: ({ query, store }) => ({
-    chapter: query.chapter,
-    scene: query.scene,
-    currentData: store.getters["videos/getVideoByChapterAndScene"](
-      query.chapter,
-      query.scene
-    )
   }),
   mounted() {
     console.log("current Data: " + this.currentData);
@@ -77,10 +71,11 @@ export default {
       if (!newData) {
         const path = "/content/";
         const query = {
-          chapter: this.current_chapter,
+          chapter: this.chapter,
           scene: this.scene,
           direct: true
         };
+        console.debug({ path, query });
         this.$router.push({ path, query });
       } else {
         this.currentData = newData;
