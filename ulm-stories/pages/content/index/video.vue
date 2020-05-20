@@ -5,7 +5,7 @@
         backgroundImage:
           'url(' +
           require('@/assets/img/background/' + this.currentData.img + '.jpg') +
-          ')'
+          ')',
       }"
       class="containerApp"
     >
@@ -25,9 +25,9 @@
         type='video/webm"'
       ></video>
 
-      <div v-on:click="updateData" class="button">
-        <v-btn>{{ currentData.answer }}</v-btn>
-      </div>
+      <button v-on:click="updateData" class="button">
+        {{ currentData.answer }}
+      </button>
     </div>
   </div>
 </template>
@@ -40,8 +40,8 @@ export default {
       video: "sample",
       text: "sample text",
       img: "ensinger",
-      answer: "sample"
-    }
+      answer: "sample",
+    },
   }),
   asyncData: ({ query, store }) => ({
     chapter: query.chapter,
@@ -49,7 +49,7 @@ export default {
     currentData: store.getters["videos/getVideoByChapterAndScene"](
       query.chapter,
       query.scene
-    )
+    ),
   }),
   mounted() {
     console.log("current Data: " + this.currentData);
@@ -65,8 +65,8 @@ export default {
       } else {
         this.currentData = newData;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -98,9 +98,13 @@ img {
 
 .button {
   position: absolute;
+  font-family: Ubuntu;
+  color: black;
+  background-color: #a5a5a5;
+  border: 1px solid #6e6e6e;
   right: 5%;
   bottom: 5%;
-  box-shadow: 0px 17px 10px -7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .videoStyle {
