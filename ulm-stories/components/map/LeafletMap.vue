@@ -9,7 +9,7 @@
         v-for="(location, index) in allLocations"
         :key="index"
         :lat-lng="location.latlng"
-        @click="openLink(getLink(location))"
+        @click="openLink(location)"
         :icon="getMarker(location)"
       >
         <l-popup>
@@ -59,7 +59,9 @@ export default {
       const query = { chapter: npcInfo.characterID, scene: 0, direct: true };
       return { path, query };
     },
-    openLink(href) {
+    openLink(npcInfo) {
+      const href = this.getLink(npcInfo);
+      this.toggleVisit(npcInfo.characterID);
       this.$router.push(href);
     },
     getMarker(npcInfo) {

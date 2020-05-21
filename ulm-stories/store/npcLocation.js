@@ -60,6 +60,9 @@ export const state = () => ({
 export const mutations = {
   toggleVisit(state, location) {
     location.haveVisit = !location.haveVisit;
+  },
+  toggleActive(state, location) {
+    location.isActive = !location.isActive;
   }
 };
 export const actions = {
@@ -70,6 +73,7 @@ export const actions = {
     commit("toggleVisit", character);
   }
 };
+
 export const getters = {
-  allLocations: state => state.locations
+  allLocations: state => state.locations.filter(x => x.isActive)
 };

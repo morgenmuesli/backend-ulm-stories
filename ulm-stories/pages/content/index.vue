@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <NuxtChild :key="this.$route.query.scene" @nextPage="this.nextPage()" />
+    <NuxtChild :key="this.$route.query.scene" @nextPage="this.nextPage" />
   </div>
 </template>
 

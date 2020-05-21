@@ -185,7 +185,7 @@ export default {
 .bkg {
   width: 100%;
   height: 100%;
-  background-image: url("../../../assets/img/flappybird/background2.png");
+  background-image: url("../../../../assets/img/flappybird/background2.png");
   position: absolute;
   overflow: hidden;
 }
@@ -199,25 +199,26 @@ export default {
 }
 
 .bird-0 {
-  background: url("../../../assets/img/flappybird/schneider1.png") 50% 50%
+  background: url("../../../../assets/img/flappybird/schneider1.png") 50% 50%
     no-repeat;
 }
 .bird-1 {
-  background: url("../../../assets/img/flappybird/schneider2.png") 50% 50%
+  background: url("../../../../assets/img/flappybird/schneider2.png") 50% 50%
     no-repeat;
 }
 .bird-2 {
-  background: url("../../../assets/img/flappybird/schneider3.png") 50% 50%
+  background: url("../../../../assets/img/flappybird/schneider3.png") 50% 50%
     no-repeat;
 }
 
 .pipe-top {
-  background: url("../../../assets/img/flappybird/pipeup.svg") bottom no-repeat;
+  background: url("../../../../assets/img/flappybird/pipeup.svg") bottom
+    no-repeat;
   background-size: cover;
 }
 
 .pipe-bottom {
-  background: url("../../../assets/img/flappybird/pipedown.svg") no-repeat;
+  background: url("../../../../assets/img/flappybird/pipedown.svg") no-repeat;
   background-size: 100%;
 }
 
