@@ -7,10 +7,12 @@
     ></FlappySchneider>
     <Slider v-else-if="this.queryData.chapter === 'aicher'"></Slider>
     <PuzzleDND v-else-if="this.queryData.chapter === 'streicher'"></PuzzleDND>
+    <HiddenObject v-else-if="this.queryData.chapter === 'holl'"></HiddenObject>
   </div>
 </template>
 
 <script>
+import HiddenObject from "../../../components/content/games/hiddenobject/HiddenObject";
 import GAME_FIELD from "~/components/content/games/memorie/GameField";
 import Quiz from "~/components/content/games/quiz/Quiz";
 import FlappySchneider from "~/components/content/games/flappyschneider/FlappySchneider";
@@ -19,6 +21,7 @@ import Slider from "~/components/content/games/slider.vue";
 
 export default {
   components: {
+    HiddenObject,
     PuzzleDND,
     FlappySchneider,
     Quiz,
