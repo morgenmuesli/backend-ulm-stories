@@ -1,7 +1,13 @@
 <template
   ><div>
-    <Quiz v-if="this.queryData.chapter === 'ensinger'"></Quiz>
-    <memory v-else-if="this.queryData.chapter === 'ensinger'"></memory>
+    <Quiz
+      v-if="this.queryData.chapter === 'ensinger'"
+      @nextPage="nextPage"
+    ></Quiz>
+    <memory
+      v-else-if="this.queryData.chapter === 'schwanenwirt'"
+      @nextPage=""
+    ></memory>
     <FlappySchneider
       v-else-if="this.queryData.chapter === 'berblinger'"
     ></FlappySchneider>
@@ -30,7 +36,12 @@ export default {
   },
   asyncData: ({ query }) => ({
     queryData: query
-  })
+  }),
+  methods: {
+    nextPage() {
+      this.$emit("nextPage");
+    }
+  }
 };
 </script>
 
