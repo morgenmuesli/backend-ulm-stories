@@ -12,8 +12,8 @@
 
 <script>
 import GAME_FIELD from "~/components/content/games/memorie/GameField";
-import Quiz from "~/components/content/games/Quiz";
-import FlappySchneider from "~/components/content/games/FlappySchneider";
+import Quiz from "~/components/content/games/quiz/Quiz";
+import FlappySchneider from "~/components/content/games/flappyschneider/FlappySchneider";
 import PuzzleDND from "~/components/content/games/dndpuzzle/PuzzleDND";
 import Slider from "~/components/content/games/slider.vue";
 

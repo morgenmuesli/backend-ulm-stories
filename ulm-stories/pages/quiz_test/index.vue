@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Quiz from "~/components/content/games/Quiz";
+import Quiz from "~/components/content/games/quiz/Quiz";
 export default {
   name: "Map",
   components: {

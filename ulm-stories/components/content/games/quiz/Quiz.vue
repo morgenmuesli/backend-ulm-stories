@@ -78,7 +78,7 @@ export default {
   font-family: "Ubuntu", sans-serif;
 }
 .quiz {
-  background-image: url("../../../assets/img/background/ensinger.jpg");
+  background-image: url("../../../../assets/img/background/ensinger.jpg");
   height: 100vh;
   width: 100vw;
   background-size: cover;

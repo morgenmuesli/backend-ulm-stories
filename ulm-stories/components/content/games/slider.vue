@@ -3,6 +3,7 @@
     <header>
       <div class="board-frame">
         <Board ref="board" @solved="onSolved" />
+        <Button v-on:click="onSolved"></Button>
       </div>
     </header>
   </div>
@@ -23,7 +24,7 @@ export default {
   },
   methods: {
     onSolved() {
-      // TODO: do stuff
+      this.content.nextPage();
     }
   }
 };
