@@ -35,10 +35,8 @@ export default {
 .Tile {
   width: 10em;
   height: 10em;
-  background-color: lightblue;
+  background-color: whitesmoke;
   margin: 2px;
-}
-.Tile:hover {
-  box-shadow: 2px 2px 4px #000000;
+  border-radius: 3px;
 }
 </style>

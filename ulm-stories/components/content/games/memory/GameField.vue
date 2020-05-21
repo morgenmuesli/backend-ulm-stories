@@ -1,17 +1,16 @@
 <template>
-  <div>
+  <div class="memory">
     <h1>Memory</h1>
     <div class="field">
-      <div v-for="(item, index) in field" :key="index">
-        <Tile
-          :id="index"
-          :data-from-parent="item"
-          v-on:pressedTiled="pressedTile"
-        />
+      <div class="fielditems">
+        <div v-for="(item, index) in field" :key="index">
+          <Tile
+            :id="index"
+            :data-from-parent="item"
+            v-on:pressedTiled="pressedTile"
+          />
+        </div>
       </div>
-    </div>
-    <div v-if="!memoryStarted">
-      <button @click="createField(8)" class="start">Start</button>
     </div>
   </div>
 </template>
@@ -31,6 +30,9 @@ export default {
     keylog: false,
     memoryStarted: false
   }),
+  mounted() {
+    this.createField(8);
+  },
   methods: {
     createField(numberOfTiles) {
       this.memoryStarted = true;
@@ -103,37 +105,43 @@ export default {
 };
 </script>
 
-<style scoped>
-.field {
+<style scoped lang="scss">
+.memory {
+  background-image: url("../../../../assets/img/background/schwanenwirtin.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fielditems {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 2px;
-  margin-left: 4vw;
 }
 
 .start {
   display: block;
-  margin: 65% auto;
+  margin: 70% auto;
 }
 
 button {
-  padding: 10px;
-  width: 300px;
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  width: 80%;
   height: 60px;
-  margin-right: 10px;
+  background-color: whitesmoke;
   margin-bottom: 10px;
-  color: black;
-  background-color: lightskyblue;
-  font-size: 18px;
-  vertical-align: center;
-  horiz-align: center;
+  border-radius: 3px;
 }
 
 h1 {
+  font-family: "Ubuntu", sans-serif;
   font-size: 25px;
   font-weight: bold;
   text-align: center;
+  color: whitesmoke;
   line-height: 10vh;
 }
 </style>
