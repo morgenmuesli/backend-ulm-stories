@@ -1,34 +1,21 @@
 <template>
-  <div class="Quiz">
-    <div v-if="isQuizStarted">
-      <h1>
-        Quiz
-      </h1>
-
-      <h4>
-        {{ Question }}
-      </h4>
-      <div id="container">
-        <button @click="selectedAnswer(answer_one)" class="answer">
-          {{ answer_one }}
-        </button>
-        <button @click="selectedAnswer(answer_two)" class="answer">
-          {{ answer_two }}
-        </button>
-        <button @click="selectedAnswer(answer_three)" class="answer">
-          {{ answer_three }}
+  <div class="quiz">
+    <div
+      v-for="(element, index) in questions.slice(a, b)"
+      :key="index"
+      class="questions"
+    >
+      <h4>{{ element.question }}</h4>
+      <div class="answers">
+        <button
+          v-for="(item, index) in element.answers"
+          :key="index"
+          :class="select ? check(item) : ''"
+          @click="selectResponse"
+        >
+          {{ item.answer }}
         </button>
       </div>
-    </div>
-
-    <div v-if="!isQuizStarted">
-      <h1>
-        Quiz
-      </h1>
-
-      <button @click="startQuiz" class="start">
-        Start
-      </button>
     </div>
   </div>
 </template>
@@ -38,99 +25,91 @@ export default {
   name: "Quiz",
   data() {
     return {
-      isQuizStarted: false,
-      Question: null,
-      answer_one: null,
-      answer_two: null,
-      answer_three: null,
-      expectedAnswer: null,
-      question_two: false
+      questions: [
+        {
+          question: "Wie hoch ist das Ulmer Münster?",
+          answers: [
+            { answer: "16" },
+            { answer: "161", correct: true },
+            { answer: "600" }
+          ]
+        },
+        {
+          question: "Wie viele Treppen hat das Ulmer Münster?",
+          answers: [
+            { answer: "76" },
+            { answer: "768", correct: true },
+            { answer: "8000" }
+          ]
+        }
+      ],
+      a: 0,
+      b: 1,
+      select: false
     };
   },
   methods: {
-    startQuiz() {
-      this.isQuizStarted = true;
-      this.Question = "Wie hoch ist das Ulmer Münster?";
-      this.answer_one = 16;
-      this.answer_two = 161;
-      this.answer_three = 600;
-      this.expectedAnswer = 161;
-    },
-
-    selectedAnswer(answerSelected) {
-      if (answerSelected === this.expectedAnswer) {
-        alert("Richtig!");
-        if (this.question_two === false) {
-          this.question_two = true;
-          this.startQuiz_two();
-        } else {
-          alert("Gratulation du hast alle Fragen richtig beantwortet!");
-        }
+    check(status) {
+      if (status.correct) {
+        return "correct";
       } else {
-        alert("Falsche Antwort! Versuche es erneut!");
+        return "incorrect";
       }
     },
+    selectResponse() {
+      this.select = true;
+      setTimeout(() => this.nextQuestion(), 3000);
+    },
+    nextQuestion() {
+      this.a++;
+      this.b++;
+      this.select = false;
 
-    startQuiz_two() {
-      this.Question = "Wie viele Treppen hat das Ulmer Münster?";
-      this.answer_one = 76;
-      this.answer_two = 768;
-      this.answer_three = 8000;
-      this.expectedAnswer = 768;
+      if (this.a === 2) {
+        alert("Alle Fragen beantwortet!");
+      }
     }
   }
 };
 </script>
 
 <style lang="scss">
-.Quiz {
-  /*background-image: url("../../../assets/img/quiz/um.jpeg");*/
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+.quiz {
   background-image: url("../../../assets/img/background/ensinger.jpg");
   height: 100vh;
   width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-h1 {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 15vh;
-}
-
 h4 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
+  font-weight: bolder;
+  color: whitesmoke;
   text-align: center;
-  line-height: 50vh;
+  line-height: 60vh;
 }
-
+.answers {
+  text-align: center;
+}
 button {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
   font-size: 16px;
-  width: 300px;
+  font-family: "Ubuntu", sans-serif;
+  width: 80%;
   height: 60px;
-  color: black;
   background-color: whitesmoke;
-  display: inline-block;
+  margin-bottom: 10px;
   border-radius: 3px;
 }
-
-#container {
-  display: block;
-  margin-top: 7%;
+/* I present FUN with COLORS */
+button.correct {
+  border: 2px solid darkgreen;
+  background-color: lightgreen;
 }
 
-.answer {
-  display: block;
-  margin: auto auto 10px;
-}
-
-.start {
-  display: block;
-  margin: 65% auto;
+button.incorrect {
+  border: 2px solid darkred;
+  background-color: indianred;
 }
 </style>
