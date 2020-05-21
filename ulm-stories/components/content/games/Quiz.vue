@@ -86,7 +86,6 @@ export default {
 }
 h4 {
   font-weight: bolder;
-  font-family: "Ubuntu", sans-serif;
   color: whitesmoke;
   text-align: center;
   line-height: 60vh;

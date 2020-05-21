@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Board from "../components/content/games/slider-puzzle/Board";
+import Board from "../../components/content/games/slider-puzzle/Board";
 
 export default {
   name: "Slider",
@@ -18,7 +18,7 @@ export default {
   },
   mounted() {
     const size = { horizontal: 3, vertical: 3 };
-    const image = require("@/assets/img/slider/aicher.png");
+    const image = require("../../assets/img/slider/aicher.png");
     this.$refs.board.start({ image, size });
   },
   methods: {
@@ -30,7 +30,7 @@ export default {
 </script>
 <style scoped lang="scss">
 .board-frame {
-  background-image: url("../assets/img/background/aicher.jpg");
+  background-image: url("../../assets/img/background/aicher.jpg");
   height: 100vh;
   width: 100vw;
   background-size: cover;
