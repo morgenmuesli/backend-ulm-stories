@@ -5,6 +5,7 @@
     <FlappySchneider
       v-else-if="this.queryData.chapter === 'berblinger'"
     ></FlappySchneider>
+    <Slider v-else-if="this.queryData.chapter === 'aicher'"></Slider>
     <PuzzleDND v-else-if="this.queryData.chapter === 'streicher'"></PuzzleDND>
   </div>
 </template>
@@ -14,12 +15,14 @@ import GAME_FIELD from "~/components/content/games/memorie/GameField";
 import Quiz from "~/components/content/games/quiz/Quiz";
 import FlappySchneider from "~/components/content/games/flappyschneider/FlappySchneider";
 import PuzzleDND from "~/components/content/games/dndpuzzle/PuzzleDND";
+import Slider from "~/components/content/games/slider.vue";
 
 export default {
   components: {
     PuzzleDND,
     FlappySchneider,
     Quiz,
+    Slider,
     memory: GAME_FIELD
   },
   asyncData: ({ query }) => ({
