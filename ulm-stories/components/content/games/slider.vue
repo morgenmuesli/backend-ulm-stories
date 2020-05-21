@@ -23,9 +23,7 @@ export default {
     this.$refs.board.start({ image, size });
   },
   methods: {
-    onSolved() {
-      this.content.nextPage();
-    }
+    onSolved() {}
   }
 };
 </script>
