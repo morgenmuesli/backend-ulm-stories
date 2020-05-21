@@ -51,7 +51,6 @@ export default {
       return this.$store.state.geolocation.error;
     },
     toggleVisit(characterID) {
-      alert(characterID);
       this.$store.dispatch("npcLocation/visitlocation", characterID);
     },
     getLink(npcInfo) {
