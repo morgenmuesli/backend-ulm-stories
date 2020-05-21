@@ -1,15 +1,13 @@
 <template>
   <div class="memory">
     <h1>Memory</h1>
-    <div class="field">
-      <div class="fielditems">
-        <div v-for="(item, index) in field" :key="index">
-          <Tile
-            :id="index"
-            :data-from-parent="item"
-            v-on:pressedTiled="pressedTile"
-          />
-        </div>
+    <div class="fielditems">
+      <div v-for="(item, index) in field" :key="index">
+        <Tile
+          :id="index"
+          :data-from-parent="item"
+          v-on:pressedTiled="pressedTile"
+        />
       </div>
     </div>
   </div>
@@ -114,16 +112,15 @@ export default {
   background-repeat: no-repeat;
 }
 
+.field {
+}
+
 .fielditems {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   padding: 2px;
-}
-
-.start {
-  display: block;
-  margin: 70% auto;
 }
 
 button {
