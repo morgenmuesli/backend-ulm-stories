@@ -13,6 +13,7 @@ export default {
     return {};
   },
   methods: {
+    check() {},
     found() {
       this.select = true;
     }
