@@ -86,7 +86,8 @@ export default {
 }
 h4 {
   font-weight: bolder;
-  color: black;
+  font-family: "Ubuntu", sans-serif;
+  color: whitesmoke;
   text-align: center;
   line-height: 60vh;
 }
@@ -95,10 +96,9 @@ h4 {
 }
 button {
   font-size: 16px;
-  font-weight: bold;
-  width: 300px;
+  font-family: "Ubuntu", sans-serif;
+  width: 80%;
   height: 60px;
-  color: black;
   background-color: whitesmoke;
   margin-bottom: 10px;
   border-radius: 3px;
