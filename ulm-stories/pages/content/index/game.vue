@@ -6,14 +6,24 @@
     ></Quiz>
     <memory
       v-else-if="this.queryData.chapter === 'schwanenwirt'"
-      @nextPage=""
+      @nextPage="nextPage"
     ></memory>
     <FlappySchneider
       v-else-if="this.queryData.chapter === 'berblinger'"
+      @nextPage="nextPage"
     ></FlappySchneider>
-    <Slider v-else-if="this.queryData.chapter === 'aicher'"></Slider>
-    <PuzzleDND v-else-if="this.queryData.chapter === 'streicher'"></PuzzleDND>
-    <HiddenObject v-else-if="this.queryData.chapter === 'holl'"></HiddenObject>
+    <Slider
+      v-else-if="this.queryData.chapter === 'aicher'"
+      @nextPage="nextPage"
+    ></Slider>
+    <PuzzleDND
+      v-else-if="this.queryData.chapter === 'streicher'"
+      @nextPage="nextPage"
+    ></PuzzleDND>
+    <HiddenObject
+      v-else-if="this.queryData.chapter === 'holl'"
+      @nextPage="nextPage"
+    ></HiddenObject>
   </div>
 </template>
 

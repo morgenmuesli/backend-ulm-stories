@@ -1,9 +1,11 @@
 <template>
-  <crystal
-    ref="kristall"
-    :size="crystalSize"
-    :visible-characters="finishedList"
-  ></crystal>
+  <div class="container is-central">
+    <crystal
+      ref="kristall"
+      :size="crystalSize"
+      :visible-characters="finishedList"
+    ></crystal>
+  </div>
 </template>
 
 <script>
