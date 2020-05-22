@@ -865,6 +865,76 @@ export const state = () => ({
       text:
         "Also gut! Mehr als die Vergangenheit interessiert mich die Zukunft, denn in ihr gedenke ich zu leben. Erzähl mir von deinem Problem.",
       answer: "Weiter"
+    },
+    {
+      id: 7,
+      chapter: "prof0",
+      scene: 0,
+      video: "98_Einstein",
+      text:
+        "Du hast den jungen Ensinger wieder in seine Zeit zurück schicken können, stimmt‘s?"
+    },
+    {
+      id: 7,
+      chapter: "prof0",
+      scene: 1,
+      video: "98_Einstein",
+      text: "Das Chaos im Labor wurde nämlich gerade viel ruhiger!"
+    },
+    {
+      id: 7,
+      chapter: "prof0",
+      scene: 2,
+      video: "98_Einstein",
+      text:
+        "Mach weiter so! Schau auf der Karte nach, da müsste der nächste Ort frei geschaltet worden sein. Viel Erfolg und vergiss die Kristallscherben nicht!"
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 0,
+      video: "98_Einstein",
+      text: "Hast du alle Kristallstücke?"
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 1,
+      video: "98_Einstein",
+      text:
+        "Du bist super! Zum Glück habe ich dich in die Stadt geschickt! Ich wusste du schaffst es!"
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 2,
+      video: "98_Einstein",
+      text:
+        "Ich habe mittlerweile auch die Zeitmaschine reparieren können. Jetzt fehlt nur noch der Kristall für das Zeitmessgerät."
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 3,
+      video: "98_Einstein",
+      text:
+        "Und weißt du wieso das Experiment missglückt ist? Wir haben es an dem falschen Ort gemacht!"
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 4,
+      video: "98_Einstein",
+      text:
+        "Der Ort muss eine persönliche Bindung zu der Person haben, die wir durch die Zeit schicken wollen. Also lass uns an dem Elternhaus von Albert Einstein treffen."
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 5,
+      video: "98_Einstein",
+      text:
+        "Der Punkt ist in der Karte vermerkt. Ich bin ja so aufgeregt!! Wir sehen uns dort. Bis gleich!"
     }
   ]
 });

@@ -1,6 +1,8 @@
 import { TYPE } from "~/js/constants";
 
 export const state = () => ({
+  profIsCalling: false,
+  profState: 0,
   gameState: [
     { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.video },
     { id: 0, chapter: "ensinger", scene: 1, isFinish: false, type: TYPE.video },
@@ -423,8 +425,29 @@ export const state = () => ({
       id: 6,
       chapter: "einstein",
       scene: 12,
-      isFinish: true,
+      isFinish: false,
       type: TYPE.video
+    },
+    {
+      id: 7,
+      chapter: "prof0",
+      scene: 0,
+      isFinish: false,
+      type: TYPE.profcall
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 0,
+      isFinish: false,
+      type: TYPE.profcall
+    },
+    {
+      id: 9,
+      chapter: "prof2",
+      scene: 0,
+      isFinish: false,
+      type: TYPE.profcall
     }
   ]
 });
@@ -447,6 +470,9 @@ export const getters = {
       }
     }
     return true;
+  },
+  checkIfProfIsCalling(state) {
+    return state.profIsCalling;
   }
 };
 
