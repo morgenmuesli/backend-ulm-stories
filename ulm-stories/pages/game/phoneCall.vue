@@ -13,13 +13,17 @@
       <div class="container">
         <div
           :key="index"
-          v-for="(item, index) in messages"
           class="columns is-mobile "
+          v-for="(item, index) in messages"
         >
-          <div class="column is-four-fifths">
+          <div
+            class="column is-four-fifths"
+            :class="{ 'is-offset-one-fifth': item.isFromMe }"
+          >
             <div class="card">
               <div class="content">
-                <p>{{ item }}</p>
+                <video v-if="1 === 1" src="assets/video/sample.webm"></video>
+                <p>{{ item.msg }}</p>
               </div>
             </div>
           </div>
@@ -31,14 +35,15 @@
         <div class="columns is-center is-mobile">
           <div class="column is-three-quarters-mobile">
             <input
-              v-model="input"
               class="input"
               placeholder="Text input"
               type="text"
+              v-model="input"
+              @keyup.enter="send"
             />
           </div>
           <div class="column is-mobile">
-            <button class="button is-rounded">Send</button>
+            <button class="button is-rounded" @click="send">Send</button>
           </div>
         </div>
       </div>
@@ -51,16 +56,21 @@ export default {
   name: "PhoneCall",
   data: () => ({
     messages: [
-      "blubbber",
-      "fubar",
-      "blabla",
-      "nana",
-      "dada",
-      "upsala",
-      "penner"
+      { msg: "blubbber", isFromMe: false },
+      { msg: "sabber", isFromMe: false },
+      { msg: "wubba", isFromMe: false },
+      { msg: "dubba", isFromMe: false },
+      { msg: "dub", isFromMe: false },
+      { msg: "dub", isFromMe: false }
     ],
     input: "peter"
-  })
+  }),
+  methods: {
+    send() {
+      this.messages.push({ msg: this.input, isFromMe: true });
+      this.input = "";
+    }
+  }
 };
 </script>
 

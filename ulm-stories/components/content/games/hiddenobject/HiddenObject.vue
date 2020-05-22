@@ -1,7 +1,5 @@
 <template>
   <div class="hiddenO">
-    v-for="(item, index) in element.answers" :key="index" :class="select ?
-    check(item) : ''" @click="found" >
     <p></p>
   </div>
 </template>
