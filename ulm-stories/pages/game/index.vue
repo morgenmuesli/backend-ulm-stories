@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <LeafletMap :key="componentKey" />
+    <LeafletMap :key="componentKey" style="height: 100%; width: 100% " />
     <div v-if="checkIfProfIsCalling" @click="openProf" class="profcall">
-      blubber
+      <nuxt-link to="/game/phoneCall">Push me Hard!</nuxt-link>
     </div>
   </div>
 </template>
@@ -31,7 +31,9 @@ export default {
     forceRerender() {
       this.componentKey += 1;
     },
-    profCall() {}
+    profCall() {
+      this.$router.push();
+    }
   }
 };
 </script>
@@ -42,5 +44,12 @@ export default {
   padding: 0;
   width: 100%;
   height: 100%;
+}
+
+.profcall {
+  z-index: 10;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: red;
 }
 </style>

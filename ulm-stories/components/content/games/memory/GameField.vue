@@ -1,5 +1,6 @@
 <template>
   <div class="memory">
+    <won-component v-if="hasWon" :won="nextPage" id="won"></won-component>
     <h1>Memory</h1>
     <div class="fielditems">
       <div v-for="(item, index) in field" :key="index">
@@ -16,17 +17,19 @@
 <script>
 import _ from "lodash";
 import Tile from "~/components/content/games/memory/Tile";
+import WonComponent from "~/components/content/games/memory/wonComponent";
 
 export default {
   name: "GameField",
   // eslint-disable-next-line vue/no-unused-components
-  components: { Tile },
+  components: { WonComponent, Tile },
   data: () => ({
     field: [],
     count: 1,
     openTiles: [],
     keylog: false,
-    memoryStarted: false
+    memoryStarted: false,
+    hasWon: false
   }),
   mounted() {
     this.createField(8);
@@ -80,7 +83,7 @@ export default {
         if (pair.length > 1) {
           console.log(pair);
           if (this.checkWin()) {
-            setTimeout(() => alert("GEWONNEN"), 250);
+            this.hasWon = true;
           }
         } else {
           for (let i = 0; i < this.openTiles.length; i++) {
@@ -98,6 +101,9 @@ export default {
     createImagePath(number) {
       const path = "memory/" + number + ".jpg";
       return path;
+    },
+    nextPage() {
+      this.$emit("nextPage");
     }
   }
 };
@@ -110,6 +116,7 @@ export default {
   width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 2rem;
 }
 
 .field {
@@ -140,5 +147,11 @@ h1 {
   text-align: center;
   color: whitesmoke;
   line-height: 10vh;
+}
+#won {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
 }
 </style>

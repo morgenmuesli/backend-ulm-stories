@@ -67,7 +67,7 @@ export default {
 
       if (this.a === 2) {
         alert("Alle Fragen beantwortet!");
-        setTimeout(this.$emit("nextPage"), 1000);
+        this.$emit("nextPage");
       }
     }
   }

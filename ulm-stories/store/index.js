@@ -484,9 +484,13 @@ export const actions = {
     console.info("finish scene action ", data);
     const gameState = state.gameState.find(
       gameScene =>
-        gameScene.chapter === data.chapter && gameScene.scene === data.scene
+        gameScene.chapter === data.chapter &&
+        gameScene.scene === parseInt(data.scene)
     );
-    commit("toggleFinish", gameState);
+    if (gameState) {
+      commit("toggleFinish", gameState);
+    }
+
     if (getters.isChapterFinish(data.chapter)) {
       dispatch("npcLocation/visitlocation", data.chapter);
     }
