@@ -1,8 +1,14 @@
 <template>
-  <LeafletMap :key="componentKey" />
+  <div class="container">
+    <LeafletMap :key="componentKey" />
+    <div v-if="checkIfProfIsCalling" @click="openProf" class="profcall">
+      blubber
+    </div>
+  </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import LeafletMap from "~/components/map/LeafletMap";
 
 export default {
@@ -18,6 +24,9 @@ export default {
   mounted() {
     this.forceRerender();
   },
+  computed: {
+    ...mapGetters(["checkIfProfIsCalling"])
+  },
   methods: {
     forceRerender() {
       this.componentKey += 1;
@@ -27,9 +36,11 @@ export default {
 };
 </script>
 
-<style scoped>
-body {
+<style lang="scss" scoped>
+.container {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>

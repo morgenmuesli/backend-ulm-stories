@@ -441,13 +441,6 @@ export const state = () => ({
       scene: 0,
       isFinish: false,
       type: TYPE.profcall
-    },
-    {
-      id: 9,
-      chapter: "prof2",
-      scene: 0,
-      isFinish: false,
-      type: TYPE.profcall
     }
   ]
 });
@@ -480,6 +473,9 @@ export const mutations = {
   toggleFinish(state, gameState) {
     console.info("toggle finish  ", gameState);
     state.gameState.find(x => x === gameState).isFinish = true;
+  },
+  toggleProfCall(state) {
+    state.profIsCalling = !state.profIsCalling;
   }
 };
 

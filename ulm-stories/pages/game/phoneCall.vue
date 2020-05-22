@@ -54,6 +54,10 @@
 <script>
 export default {
   name: "PhoneCall",
+  middleware: "profcall",
+  mounted() {
+    console.log(this.$router.query);
+  },
   data: () => ({
     messages: [
       { msg: "blubbber", isFromMe: false },
