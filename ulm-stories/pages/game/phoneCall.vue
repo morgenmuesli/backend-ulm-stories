@@ -1,7 +1,13 @@
 <template>
   <div>
     <section class="header">
-      <div class="container">
+      <div class="container prof">
+        <figure class="image is-64x64">
+          <img
+            class="is-rounded"
+            src="../../assets/img/chatIcon/zweistein.jpg"
+          />
+        </figure>
         <div class="columns is-mobile">
           <div class="column ">
             <h3 title>Professor Zweistein</h3>
@@ -81,8 +87,16 @@ export default {
 <style lang="scss" scoped>
 h3 {
   color: white;
+  display: flex;
+  align-content: center;
+  font-size: larger;
 }
 
+.prof {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .main {
   height: 100vh;
   max-height: 100vh;
