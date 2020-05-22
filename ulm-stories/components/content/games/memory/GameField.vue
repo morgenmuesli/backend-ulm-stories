@@ -2,7 +2,7 @@
   <div class="memory">
     <won-component v-if="hasWon" :won="nextPage" id="won"></won-component>
     <h1>Memory</h1>
-    <div class="fielditems">
+    <div class="fielditems" ref="gamefield">
       <div v-for="(item, index) in field" :key="index">
         <Tile
           :id="index"
@@ -29,10 +29,13 @@ export default {
     openTiles: [],
     keylog: false,
     memoryStarted: false,
-    hasWon: false
+    hasWon: false,
+    tileSize: { width: 20 + "px", height: 20 + "px" }
   }),
   mounted() {
     this.createField(8);
+    const width = this.$refs.gamefield.clientWidth;
+    this.tileSize = { width: height / 2 + "px", height: width / 2 + "px" };
   },
   methods: {
     createField(numberOfTiles) {
