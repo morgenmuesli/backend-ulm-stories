@@ -3,13 +3,8 @@
     <section class="header">
       <div class="container">
         <div class="columns is-mobile">
-          <img
-            src="@/assets/img/chatIcon/zweistein.jpg"
-            alt=""
-            class="column is-one-fifths portait"
-          />
           <div class="column ">
-            <h1>Professor Zweistein</h1>
+            <h3 title>Professor Zweistein</h3>
           </div>
         </div>
       </div>
@@ -17,9 +12,9 @@
     <section>
       <div class="container">
         <div
-          v-for="(item, index) in messages"
-          class="columns is-mobile "
           :key="index"
+          class="columns is-mobile "
+          v-for="(item, index) in messages"
         >
           <div class="column is-four-fifths">
             <div class="card">
@@ -32,7 +27,21 @@
       </div>
     </section>
     <footer class="writingWindow">
-      <div class="container center"></div>
+      <div class="container">
+        <div class="columns is-center is-mobile">
+          <div class="column is-three-quarters-mobile">
+            <input
+              class="input"
+              placeholder="Text input"
+              type="text"
+              v-model="input"
+            />
+          </div>
+          <div class="column is-mobile">
+            <button class="button is-rounded">Send</button>
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
 </template>
@@ -49,20 +58,17 @@ export default {
       "dada",
       "upsala",
       "penner"
-    ]
+    ],
+    input: "peter"
   })
 };
 </script>
 
 <style lang="sass" scoped>
 
-h1
-  text-align: center
-  font-size: 1.5rem
-img
-  max-height: 100%
-.portait
-  max-height: 100%
+
+h3
+  color: white
 
 .main
   height: 100vh
@@ -84,11 +90,9 @@ img
 .header
   position: static
   top: 0
-  max-height: 10vh
   background-color: darkslateblue
   width: 100%
   display: flex
-
 
 
 .writingWindow

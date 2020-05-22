@@ -41,7 +41,13 @@ export const state = () => ({
       isFinish: false,
       type: TYPE.video
     },
-    { id: 0, chapter: "ensinger", scene: 15, isFinish: true, type: TYPE.video },
+    {
+      id: 0,
+      chapter: "ensinger",
+      scene: 15,
+      isFinish: false,
+      type: TYPE.video
+    },
     { id: 1, chapter: "aicher", scene: 0, isFinish: false, type: TYPE.video },
     { id: 1, chapter: "aicher", scene: 1, isFinish: false, type: TYPE.video },
     { id: 1, chapter: "aicher", scene: 2, isFinish: false, type: TYPE.video },
@@ -56,7 +62,7 @@ export const state = () => ({
     { id: 1, chapter: "aicher", scene: 11, isFinish: false, type: TYPE.video },
     { id: 1, chapter: "aicher", scene: 12, isFinish: false, type: TYPE.video },
     { id: 1, chapter: "aicher", scene: 13, isFinish: false, type: TYPE.video },
-    { id: 1, chapter: "aicher", scene: 14, isFinish: true, type: TYPE.game },
+    { id: 1, chapter: "aicher", scene: 14, isFinish: false, type: TYPE.game },
     {
       id: 2,
       chapter: "streicher",
@@ -152,7 +158,7 @@ export const state = () => ({
       id: 2,
       chapter: "streicher",
       scene: 13,
-      isFinish: true,
+      isFinish: false,
       type: TYPE.game
     },
     {
@@ -215,7 +221,7 @@ export const state = () => ({
       id: 3,
       chapter: "berblinger",
       scene: 8,
-      isFinish: true,
+      isFinish: false,
       type: TYPE.video
     },
     { id: 4, chapter: "holl", scene: 0, isFinish: false, type: TYPE.video },

@@ -266,9 +266,8 @@ export default {
   left: 48%;
 }
 .score-text {
-  position: absolute;
   left: 3%;
-  top: 0%;
+
   font-size: 1em;
   font-weight: bolder;
 }

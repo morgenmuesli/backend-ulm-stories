@@ -52,6 +52,10 @@ export default {
 
     this.chapter = this.$route.query.chapter;
     this.scene = this.$route.query.scene;
+    this.$store.dispatch("finishedScene", {
+      chapter: this.chapter,
+      scene: parseInt(this.scene)
+    });
     console.log("chapter&scene ", this.chapter, " ", this.scene);
     this.currentData = this.$store.getters["videos/getVideoByChapterAndScene"](
       this.$route.query.chapter,
@@ -65,6 +69,10 @@ export default {
   },
   methods: {
     updateData() {
+      this.$store.dispatch("finishedScene", {
+        chapter: this.chapter,
+        scene: parseInt(this.scene)
+      });
       console.log(this.currentData);
       this.scene = this.scene + 1;
 
