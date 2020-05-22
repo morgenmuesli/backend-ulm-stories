@@ -113,6 +113,7 @@ img {
   grid-area: text;
   border-radius: 20px;
   position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   &:after {
     content: "";
     position: absolute;
@@ -136,6 +137,7 @@ img {
   background-color: whitesmoke;
   right: 5%;
   bottom: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .videoStyle {
