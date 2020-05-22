@@ -70,7 +70,7 @@ export default {
         : require(`assets/img/mapmarker/${npcInfo.characterID}.png`); // false
       const marker = icon({
         iconUrl,
-        iconSize: [32, 37],
+        iconSize: [50, 50],
         iconAnchor: [16, 37]
       });
       return marker;
