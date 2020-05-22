@@ -19,12 +19,12 @@
       <div class="container">
         <div
           :key="index"
-          class="columns is-mobile "
           v-for="(item, index) in messages"
+          class="columns is-mobile "
         >
           <div
-            class="column is-four-fifths"
             :class="{ 'is-offset-one-fifth': item.isFromMe }"
+            class="column is-four-fifths"
           >
             <div class="card">
               <div class="content">
@@ -41,15 +41,23 @@
         <div class="columns is-center is-mobile">
           <div class="column is-three-quarters-mobile">
             <input
+              v-model="input"
+              @keyup.enter="send"
               class="input"
               placeholder="Text input"
               type="text"
-              v-model="input"
-              @keyup.enter="send"
             />
           </div>
           <div class="column is-mobile">
-            <button class="button is-rounded" @click="send">Send</button>
+            <button @click="send" class="button is-rounded">
+              <svg
+                version="1.1"
+                class="sendbtn"
+                src="../../assets/img/chatIcon/send_icon.svg"
+                height="64"
+                width="64"
+              />
+            </button>
           </div>
         </div>
       </div>
@@ -93,6 +101,7 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
+
 .main {
   height: 100vh;
   max-height: 100vh;
@@ -128,5 +137,9 @@ h3 {
   background-color: gray;
   position: fixed;
   bottom: 0;
+}
+
+.sendbtn path {
+  fill: #f00;
 }
 </style>
