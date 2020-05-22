@@ -1,6 +1,14 @@
 <template>
-  <div class="hiddenO">
-    <p></p>
+  <div>
+    <div class="hiddenO">
+      <img
+        id="collage"
+        src="../../../../assets/img/Collage/Collage_Handy.png"
+        alt="Collage"
+      />
+      <div id="found_me" @click="found"></div>
+    </div>
+    <div id="myModal" class="modal fade" role="dialog"></div>
   </div>
 </template>
 
@@ -11,9 +19,14 @@ export default {
     return {};
   },
   methods: {
-    check() {},
     found() {
-      this.select = true;
+      document.getElementById("found_me").style.borderColor = "red";
+      const modal = document.getElementById("myModal");
+      setTimeout(() => this.showModal(modal), 100);
+    },
+    showModal(modal) {
+      modal.style.zIndex = "1";
+      setTimeout(() => alert("You won"), 1000);
     }
   }
 };
@@ -21,10 +34,31 @@ export default {
 
 <style lang="scss">
 .hiddenO {
-  background-image: url("../../../../assets/img/Collage/Collage_Handy.png");
-  height: 100vh;
-  width: 100vw;
+  //background-image: url("../../../../assets/img/Collage/Collage_Handy.png");
+  height: 100%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+#collage {
+  width: auto;
+  height: auto;
+  display: block;
+}
+#found_me {
+  //display: none;
+  position: absolute;
+  right: 2%;
+  bottom: 39%;
+  width: 9%;
+  height: 5%;
+  border: 3px solid transparent;
+}
+#myModal {
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 </style>
