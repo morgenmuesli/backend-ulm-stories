@@ -356,7 +356,7 @@ export const state = () => ({
       chapter: "einstein",
       scene: 2,
       isFinish: false,
-      type: TYPE.game /* Kristall-Game */
+      type: TYPE.video
     },
     {
       id: 6,
@@ -418,13 +418,6 @@ export const state = () => ({
       id: 6,
       chapter: "einstein",
       scene: 11,
-      isFinish: false,
-      type: TYPE.video
-    },
-    {
-      id: 6,
-      chapter: "einstein",
-      scene: 12,
       isFinish: false,
       type: TYPE.video
     },

@@ -767,12 +767,12 @@ export const state = () => ({
       video: "88_Zweistein",
       text:
         "Machst du das bitte für mich? Dann kann ich schonmal die Daten eingeben.",
-      answer: "Weiter"
+      answer: "Das habe ich bereits."
     },
     {
       id: 6,
       chapter: "einstein",
-      scene: 3,
+      scene: 2,
       img: "einstein",
       video: "89_Zweistein",
       text: "Perfekt! Jetzt kommt der Kristall zurück in die Zeitmaschine.",
@@ -781,7 +781,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 4,
+      scene: 3,
       img: "einstein",
       video: "90_Zweistein",
       text:
@@ -791,7 +791,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 5,
+      scene: 4,
       img: "einstein",
       video: "91_Einstein",
       text: "Nanu, wo bin ich denn jetzt gelandet?",
@@ -800,7 +800,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 6,
+      scene: 5,
       img: "einstein",
       video: "92_Zweistein",
       text:
@@ -810,7 +810,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 7,
+      scene: 6,
       img: "einstein",
       video: "93_Einstein",
       text:
@@ -820,7 +820,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 8,
+      scene: 7,
       img: "einstein",
       video: "94_Einstein",
       text:
@@ -830,7 +830,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 9,
+      scene: 8,
       img: "einstein",
       video: "95_Zweistein",
       text: "Ich weiß! Das ist das letzte Mal. Versprochen!",
@@ -839,7 +839,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 10,
+      scene: 9,
       img: "einstein",
       video: "96_Einstein",
       text:
@@ -849,7 +849,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 11,
+      scene: 10,
       img: "einstein",
       video: "97_Zweistein",
       text:
@@ -859,7 +859,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 12,
+      scene: 11,
       img: "einstein",
       video: "98_Einstein",
       text:
