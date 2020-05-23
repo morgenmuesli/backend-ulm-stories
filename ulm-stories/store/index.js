@@ -479,6 +479,12 @@ export const getters = {
       }
     }
     return count;
+  },
+  getProfVideos(state, getters) {
+    const currentProfID = "prof" + state.profState;
+    console.debug(currentProfID);
+    const videos = getters["videos/getAllSortedVideosOfChapter"](currentProfID);
+    return videos.reverse();
   }
 };
 
@@ -487,8 +493,11 @@ export const mutations = {
     console.info("toggle finish  ", gameState);
     state.gameState.find(x => x === gameState).isFinish = true;
   },
-  toggleProfCall(state) {
-    state.profIsCalling = !state.profIsCalling;
+  toggleProfCall(state, value) {
+    state.profIsCalling = value;
+  },
+  changeProfState(state, value) {
+    state.profState = value;
   }
 };
 
@@ -513,8 +522,11 @@ export const actions = {
     const count = getters.countFinishChapters;
     console.debug("Count of chapters is ", count);
     console.debug("Count of finish chapters is ", count);
-    if (count === 1 || count === 6) {
-      commit("toggleProfCall");
+    if (count === 1) {
+      commit("toggleProfCall", true);
+    } else if (count === 6) {
+      commit("toggleProfCall", true);
+      commit("changeProfState", 2);
     }
   }
 };

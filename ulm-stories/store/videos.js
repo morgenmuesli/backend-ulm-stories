@@ -894,7 +894,8 @@ export const state = () => ({
       chapter: "prof1",
       scene: 0,
       video: "98_Einstein",
-      text: "Hast du alle Kristallstücke?"
+      text: "Hast du alle Kristallstücke?",
+      answer: "Ja hab ich!"
     },
     {
       id: 8,
@@ -953,7 +954,7 @@ export const getters = {
     const video = state.videos.find(
       a => a.chapter === chapter && a.scene === scene
     );
-    console.log(video);
+    console.debug(video);
     return video;
   }
 };

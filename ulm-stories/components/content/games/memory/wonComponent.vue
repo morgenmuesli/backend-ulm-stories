@@ -9,7 +9,6 @@
 
 <script>
 export default {
-  name: "wonComponent",
   props: ["won"]
 };
 </script>
