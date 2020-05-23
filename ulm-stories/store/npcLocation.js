@@ -5,7 +5,7 @@ export const state = () => ({
       characterName: "Albert Einstein",
       latlng: [48.396018, 9.991371],
       chapter: 7,
-      haveVisit: true,
+      haveVisit: false,
       isActive: false
     },
     {
@@ -22,7 +22,7 @@ export const state = () => ({
       latlng: [48.397866, 9.991598],
       chapter: 2,
       haveVisit: false,
-      isActive: true
+      isActive: false
     },
     {
       characterID: "streicher",
@@ -30,7 +30,7 @@ export const state = () => ({
       latlng: [48.397497, 9.993279],
       chapter: 3,
       haveVisit: false,
-      isActive: true
+      isActive: false
     },
     {
       characterID: "berblinger",
@@ -38,7 +38,7 @@ export const state = () => ({
       latlng: [48.397045, 9.99348],
       chapter: 4,
       haveVisit: false,
-      isActive: true
+      isActive: false
     },
     {
       characterID: "holl",
@@ -46,7 +46,7 @@ export const state = () => ({
       latlng: [48.396973, 9.991561],
       chapter: 5,
       haveVisit: false,
-      isActive: true
+      isActive: false
     },
     {
       characterID: "schwanenwirtin",
@@ -54,7 +54,7 @@ export const state = () => ({
       latlng: [48.396282, 9.990509],
       chapter: 6,
       haveVisit: false,
-      isActive: true
+      isActive: false
     }
   ]
 });
@@ -74,7 +74,8 @@ export const actions = {
     commit("toggleVisit", character);
   },
   activateMultipleLocations({ state, getters, commit }, payload) {
-    const chars = state.locations.filter(x => payload.includes(x.chapter));
+    const chars = state.locations.filter(x => payload.includes(x.characterID));
+    console.debug(chars);
     for (let i = 0; i < chars.length; i++) {
       commit("toggleActive", chars[i]);
     }

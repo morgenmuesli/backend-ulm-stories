@@ -518,14 +518,22 @@ export const actions = {
       dispatch("npcLocation/visitlocation", data.chapter);
     }
   },
-  updateProfCalling({ commit, getters }) {
+  updateProfCalling({ commit, getters, dispatch }) {
     const count = getters.countFinishChapters;
     console.debug("Count of chapters is ", count);
     console.debug("Count of finish chapters is ", count);
     if (count === 1) {
       commit("toggleProfCall", true);
+      dispatch("npcLocation/activateMultipleLocations", [
+        "aicher",
+        "streicher",
+        "schwanenwirtin",
+        "holl",
+        "berblinger"
+      ]);
     } else if (count === 6) {
       commit("toggleProfCall", true);
+      dispatch("npcLocation/activateMultipleLocations", ["einstein"]);
       commit("changeProfState", 2);
     }
   }

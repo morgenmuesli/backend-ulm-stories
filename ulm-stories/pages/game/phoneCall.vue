@@ -1,6 +1,7 @@
 <template>
   <div>
     <section class="header">
+      <nuxt-link to="/game">Zurück</nuxt-link>
       <div class="container prof">
         <figure class="image is-64x64">
           <img
