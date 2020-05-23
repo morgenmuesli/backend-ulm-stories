@@ -62,8 +62,8 @@ export const mutations = {
   toggleVisit(state, location) {
     location.haveVisit = !location.haveVisit;
   },
-  toggleActive(state, location) {
-    location.isActive = !location.isActive;
+  setActive(state, location) {
+    location.isActive = true;
   }
 };
 export const actions = {
@@ -77,7 +77,7 @@ export const actions = {
     const chars = state.locations.filter(x => payload.includes(x.characterID));
     console.debug(chars);
     for (let i = 0; i < chars.length; i++) {
-      commit("toggleActive", chars[i]);
+      commit("setActive", chars[i]);
     }
   }
 };
