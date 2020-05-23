@@ -59,9 +59,11 @@ export default {
       return { path, query };
     },
     openLink(npcInfo) {
-      const href = this.getLink(npcInfo);
-      this.toggleVisit(npcInfo.characterID);
-      this.$router.push(href);
+      if (!npcInfo.haveVisit) {
+        const href = this.getLink(npcInfo);
+        this.toggleVisit(npcInfo.characterID);
+        this.$router.push(href);
+      }
     },
     getMarker(npcInfo) {
       // check if npcInfo is true

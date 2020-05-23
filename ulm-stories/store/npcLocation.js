@@ -72,6 +72,12 @@ export const actions = {
       item => item.characterID === characterID
     );
     commit("toggleVisit", character);
+  },
+  activateMultipleLocations({ state, getters, commit }, payload) {
+    const chars = state.locations.filter(x => payload.includes(x.chapter));
+    for (let i = 0; i < chars.length; i++) {
+      commit("toggleActive", chars[i]);
+    }
   }
 };
 

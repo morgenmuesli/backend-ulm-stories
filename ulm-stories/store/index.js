@@ -466,6 +466,19 @@ export const getters = {
   },
   checkIfProfIsCalling(state) {
     return state.profIsCalling;
+  },
+  getChaptersAsSet(state) {
+    const chapters = state.gameState.map(x => x.chapter);
+    return new Set(chapters);
+  },
+  countFinishChapters: (state, getters) => {
+    let count = 0;
+    for (const chapter of getters.getChaptersAsSet) {
+      if (getters.isChapterFinish(chapter)) {
+        count++;
+      }
+    }
+    return count;
   }
 };
 
@@ -482,6 +495,7 @@ export const mutations = {
 export const actions = {
   finishedScene({ state, commit, dispatch, getters }, data) {
     console.info("finish scene action ", data);
+
     const gameState = state.gameState.find(
       gameScene =>
         gameScene.chapter === data.chapter &&
@@ -493,6 +507,14 @@ export const actions = {
 
     if (getters.isChapterFinish(data.chapter)) {
       dispatch("npcLocation/visitlocation", data.chapter);
+    }
+  },
+  updateProfCalling({ commit, getters }) {
+    const count = getters.countFinishChapters;
+    console.debug("Count of chapters is ", count);
+    console.debug("Count of finish chapters is ", count);
+    if (count === 1 || count === 6) {
+      commit("toggleProfCall");
     }
   }
 };

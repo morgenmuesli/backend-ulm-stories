@@ -35,7 +35,7 @@ export default {
   mounted() {
     this.createField(8);
     const width = this.$refs.gamefield.clientWidth;
-    this.tileSize = { width: height / 2 + "px", height: width / 2 + "px" };
+    this.tileSize = { width: width / 2 + "px", height: width / 2 + "px" };
   },
   methods: {
     createField(numberOfTiles) {

@@ -21,12 +21,14 @@ export default {
   data: () => ({
     componentKey: 0
   }),
-  mounted() {
-    this.forceRerender();
-  },
   computed: {
     ...mapGetters(["checkIfProfIsCalling"])
   },
+  mounted() {
+    this.forceRerender();
+    this.$store.dispatch("updateProfCalling");
+  },
+
   methods: {
     forceRerender() {
       this.componentKey += 1;
