@@ -1,7 +1,9 @@
 <template>
   <div class="container is-center">
     <div class="centerElement ">
-      <h1 class="title">Super du hast es geschafft!!!</h1>
+      <img class="zweistein" src="../../../../assets/img/winScreen/prof.png" />
+      <h1 class="titleone">Super!</h1>
+      <h2 class="titletwo">Du hast es geschafft!</h2>
       <Button @click="won" class="button">Weiter</Button>
     </div>
   </div>
@@ -20,11 +22,31 @@ export default {
   display: flex;
   justify-content: center;
   align-content: center;
-  background-color: rgba(101, 138, 34, 0.8);
+  background-color: rgba(60, 171, 116, 0.9);
 }
 .centerElement {
   margin: auto auto;
-  text-align: center;
   padding: 2rem;
+  text-align: center;
+}
+
+img {
+  width: 60%;
+  height: 60%;
+}
+
+.titleone {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.titletwo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: whitesmoke;
+  margin-bottom: 10px;
 }
 </style>

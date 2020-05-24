@@ -57,12 +57,6 @@ export default {
     },
     pressedTile(event) {
       if (!this.keylog) {
-        console.log(
-          "Tile was pressed id:",
-          event.id,
-          " number: ",
-          event.number
-        );
         this.field[event.id].isOpen = true;
 
         this.openTiles.push(event.id);
@@ -84,7 +78,6 @@ export default {
           item => item.number === number && item.isOpen
         );
         if (pair.length > 1) {
-          console.log(pair);
           if (this.checkWin()) {
             this.hasWon = true;
           }

@@ -8,8 +8,8 @@
       <h4>{{ element.question }}</h4>
       <div class="answers">
         <button
-          v-for="(item, index) in element.answers"
-          :key="index"
+          v-for="(item, indices) in element.answers"
+          :key="indices"
           :class="select ? check(item) : ''"
           @click="selectResponse"
         >
