@@ -43,8 +43,8 @@ export default {
 }
 #collage {
   position: fixed;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: block;
   overflow: hidden;
 }
@@ -52,7 +52,7 @@ export default {
   //display: none;
   position: absolute;
   right: 2%;
-  bottom: 29%;
+  bottom: 39%;
   width: 9%;
   height: 5%;
   border: 3px solid transparent;
