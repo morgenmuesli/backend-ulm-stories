@@ -22,7 +22,10 @@ export default {
       width: "100%"
     }
   }),
-  mounted() {}
+  mounted() {
+    const set = this.$store.getters.getChaptersAsSet;
+    this.finishedList = Array.from(set);
+  }
 };
 </script>
 

@@ -75,27 +75,55 @@ export default {
 
     this.currentMessages = this.$store.getters.getProfVideos;
 
-    this.$store.commit("toggleProfCall", false);
+    this.$store.commit("changeProfCallFlag", false);
     this.popMessages();
   },
   data: () => ({
     displayMessages: [],
     currentMessages: [],
+    waitForAnswerMessage: null,
     input: "peter"
   }),
   methods: {
     send() {
       this.displayMessages.push({ text: this.input, isFromMe: true });
+      if (this.waitForAnswerMessage) {
+        setTimeout(
+          () => this.displayMessages.push(this.waitForAnswerMessage),
+          2000
+        );
+        this.waitForAnswerMessage = null;
+      }
       this.input = "";
     },
     popMessages() {
+      /**
+       *  pop messages and displays them. If there is an Answer it stores the message in a helper and waits for the user to answer.
+       *  If the user didn't answer the message will appear automatic after 10 Seconds
+       */
       const nextMessage = this.currentMessages.pop();
       if (nextMessage) {
         if (_.has(nextMessage, "answer")) {
           this.input = nextMessage.answer;
+          this.waitForAnswerMessage = nextMessage;
+          this.autoSend();
+        } else {
+          this.displayMessages.push(nextMessage);
         }
-        this.displayMessages.push(nextMessage);
       }
+    },
+    async autoSend() {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          if (this.waitForAnswerMessage) {
+            this.displayMessages.push({
+              text: this.waitForAnswerMessage.answer,
+              isFromMe: true
+            });
+            this.displayMessages.push(this.waitForAnswerMessage);
+          }
+        }, 15000);
+      });
     }
   }
 };

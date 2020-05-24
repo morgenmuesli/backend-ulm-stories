@@ -486,8 +486,11 @@ export const mutations = {
     console.info("toggle finish  ", gameState);
     state.gameState.find(x => x === gameState).isFinish = true;
   },
-  toggleProfCall(state, value) {
+  changeProfCallFlag(state, value) {
     state.profIsCalling = value;
+  },
+  toggleProfCall(state) {
+    state.profIsCalling = !state.profIsCalling;
   },
   changeProfState(state, value) {
     state.profState = value;
@@ -516,7 +519,7 @@ export const actions = {
     console.debug("Count of chapters is ", count);
     console.debug("Count of finish chapters is ", count);
     if (count === 1) {
-      commit("toggleProfCall", true);
+      commit("toggleProfCall");
       dispatch("npcLocation/activateMultipleLocations", [
         "aicher",
         "streicher",
@@ -525,7 +528,7 @@ export const actions = {
         "berblinger"
       ]);
     } else if (count === 6) {
-      commit("toggleProfCall", true);
+      commit("toggleProfCall");
       dispatch("npcLocation/activateMultipleLocations", ["einstein"]);
       commit("changeProfState", 2);
     }
