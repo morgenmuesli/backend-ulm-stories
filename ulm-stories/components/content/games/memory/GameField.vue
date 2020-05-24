@@ -1,8 +1,8 @@
 <template>
   <div class="memory">
-    <won-component v-if="hasWon" :won="nextPage" id="won"></won-component>
+    <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
     <h1>Memory</h1>
-    <div class="field" ref="gamefield">
+    <div ref="gamefield" class="field">
       <div v-for="(item, index) in field" :key="index">
         <Tile
           :id="index"

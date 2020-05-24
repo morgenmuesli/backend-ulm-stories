@@ -35,21 +35,24 @@ export default {
 <style lang="scss">
 .hiddenO {
   //background-image: url("../../../../assets/img/Collage/Collage_Handy.png");
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: auto;
   background-size: cover;
   background-repeat: no-repeat;
+  //overflow: hidden;
 }
 #collage {
+  position: fixed;
   width: auto;
   height: auto;
   display: block;
+  overflow: hidden;
 }
 #found_me {
   //display: none;
   position: absolute;
   right: 2%;
-  bottom: 39%;
+  bottom: 29%;
   width: 9%;
   height: 5%;
   border: 3px solid transparent;

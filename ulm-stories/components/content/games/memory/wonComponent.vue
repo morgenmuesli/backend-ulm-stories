@@ -2,7 +2,7 @@
   <div class="container is-center">
     <div class="centerElement ">
       <h1 class="title">Super du hast es geschafft!!!</h1>
-      <Button class="button" @click="won">Weiter</Button>
+      <Button @click="won" class="button">Weiter</Button>
     </div>
   </div>
 </template>

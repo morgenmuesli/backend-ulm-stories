@@ -20,20 +20,20 @@
       <div class="container chatRoom">
         <div
           :key="index"
-          class="columns is-mobile "
           v-for="(item, index) in displayMessages"
+          class="columns is-mobile "
         >
           <div
-            class="column is-four-fifths"
             :class="{ 'is-offset-one-fifth': item.isFromMe }"
+            class="column is-four-fifths"
           >
             <div class="card">
               <div class="content">
                 <video
                   v-if="item.video"
                   :src="require('@/assets/webm/' + item.video + '.webm')"
-                  autoplay
                   @ended="popMessages"
+                  autoplay
                 ></video>
                 <p>{{ item.text }}</p>
               </div>
@@ -47,15 +47,15 @@
         <div class="columns is-center is-mobile">
           <div class="column is-three-quarters-mobile">
             <input
+              v-model="input"
+              @keyup.enter="send"
               class="input"
               placeholder="Text input"
               type="text"
-              v-model="input"
-              @keyup.enter="send"
             />
           </div>
           <div class="column is-mobile">
-            <button id="send" class="button is-rounded" @click="send">
+            <button id="send" @click="send" class="button is-rounded">
               Send
             </button>
           </div>
@@ -70,6 +70,12 @@ import _ from "lodash";
 export default {
   name: "PhoneCall",
   middleware: "profcall",
+  data: () => ({
+    displayMessages: [],
+    currentMessages: [],
+    waitForAnswerMessage: null,
+    input: "peter"
+  }),
   mounted() {
     console.log(this.$router.query);
 
@@ -78,12 +84,6 @@ export default {
     this.$store.commit("changeProfCallFlag", false);
     this.popMessages();
   },
-  data: () => ({
-    displayMessages: [],
-    currentMessages: [],
-    waitForAnswerMessage: null,
-    input: "peter"
-  }),
   methods: {
     send() {
       this.displayMessages.push({ text: this.input, isFromMe: true });
@@ -112,6 +112,7 @@ export default {
         }
       }
     },
+    // eslint-disable-next-line require-await
     async autoSend() {
       return new Promise(resolve => {
         setTimeout(() => {
