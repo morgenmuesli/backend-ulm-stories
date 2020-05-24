@@ -2,7 +2,7 @@
   <div class="memory">
     <won-component v-if="hasWon" :won="nextPage" id="won"></won-component>
     <h1>Memory</h1>
-    <div class="fielditems" ref="gamefield">
+    <div class="field" ref="gamefield">
       <div v-for="(item, index) in field" :key="index">
         <Tile
           :id="index"
@@ -123,9 +123,7 @@ export default {
 }
 
 .field {
-}
-
-.fielditems {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
