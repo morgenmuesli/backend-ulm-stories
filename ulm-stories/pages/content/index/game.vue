@@ -5,7 +5,7 @@
       @nextPage="nextPage"
     ></Quiz>
     <memory
-      v-else-if="this.queryData.chapter === 'schwanenwirt'"
+      v-else-if="this.queryData.chapter === 'schwanenwirtin'"
       @nextPage="nextPage"
     ></memory>
     <FlappySchneider
@@ -29,7 +29,7 @@
 
 <script>
 import HiddenObject from "../../../components/content/games/hiddenobject/HiddenObject";
-import GAME_FIELD from "~/components/content/games/memorie/GameField";
+import GAME_FIELD from "~/components/content/games/memory/GameField";
 import Quiz from "~/components/content/games/quiz/Quiz";
 import FlappySchneider from "~/components/content/games/flappyschneider/FlappySchneider";
 import PuzzleDND from "~/components/content/games/dndpuzzle/PuzzleDND";

@@ -1,6 +1,7 @@
 <template>
   <div>
     <section class="header">
+      <nuxt-link to="/game">Zurück</nuxt-link>
       <div class="container prof">
         <figure class="image is-64x64">
           <img
@@ -16,20 +17,26 @@
       </div>
     </section>
     <section>
-      <div class="container">
+      <div class="container chatRoom">
         <div
           :key="index"
-          v-for="(item, index) in messages"
+          v-for="(item, index) in displayMessages"
           class="columns is-mobile "
         >
           <div
+            class="column is-four-fifths"
             :class="{ 'is-offset-one-fifth': item.isFromMe }"
             class="column is-four-fifths"
           >
             <div class="card">
               <div class="content">
-                <video v-if="1 === 1" src="assets/video/sample.webm"></video>
-                <p>{{ item.msg }}</p>
+                <video
+                  v-if="item.video"
+                  :src="require('@/assets/webm/' + item.video + '.webm')"
+                  @ended="popMessages"
+                  autoplay
+                ></video>
+                <p>{{ item.text }}</p>
               </div>
             </div>
           </div>
@@ -37,7 +44,7 @@
       </div>
     </section>
     <footer class="writingWindow">
-      <div class="container">
+      <div id="sendContainer" class="container">
         <div class="columns is-center is-mobile">
           <div class="column is-three-quarters-mobile">
             <input
@@ -46,17 +53,22 @@
               class="input"
               placeholder="Text input"
               type="text"
+              v-model="input"
+              @keyup.enter="send"
             />
           </div>
           <div class="column is-mobile">
-            <button @click="send" class="button is-rounded">
-              <svg
-                version="1.1"
-                class="sendbtn"
-                src="../../assets/img/chatIcon/send_icon.svg"
-                height="64"
-                width="64"
-              />
+<!--            <button @click="send" class="button is-rounded">-->
+<!--              <svg-->
+<!--                version="1.1"-->
+<!--                class="sendbtn"-->
+<!--                src="../../assets/img/chatIcon/send_icon.svg"-->
+<!--                height="64"-->
+<!--                width="64"-->
+<!--              />-->
+<!--            </button>-->
+            <button id="send" @click="send" class="button is-rounded">
+              Send
             </button>
           </div>
         </div>
@@ -66,23 +78,65 @@
 </template>
 
 <script>
+import _ from "lodash";
 export default {
   name: "PhoneCall",
+  middleware: "profcall",
   data: () => ({
-    messages: [
-      { msg: "blubbber", isFromMe: false },
-      { msg: "sabber", isFromMe: false },
-      { msg: "wubba", isFromMe: false },
-      { msg: "dubba", isFromMe: false },
-      { msg: "dub", isFromMe: false },
-      { msg: "dub", isFromMe: false }
-    ],
+    displayMessages: [],
+    currentMessages: [],
+    waitForAnswerMessage: null,
     input: "peter"
   }),
+  mounted() {
+    console.log(this.$router.query);
+
+    this.currentMessages = this.$store.getters.getProfVideos;
+
+    this.$store.commit("changeProfCallFlag", false);
+    this.popMessages();
+  },
   methods: {
     send() {
-      this.messages.push({ msg: this.input, isFromMe: true });
+      this.displayMessages.push({ text: this.input, isFromMe: true });
+      if (this.waitForAnswerMessage) {
+        setTimeout(
+          () => this.displayMessages.push(this.waitForAnswerMessage),
+          2000
+        );
+        this.waitForAnswerMessage = null;
+      }
       this.input = "";
+    },
+    popMessages() {
+      /**
+       *  pop messages and displays them. If there is an Answer it stores the message in a helper and waits for the user to answer.
+       *  If the user didn't answer the message will appear automatic after 10 Seconds
+       */
+      const nextMessage = this.currentMessages.pop();
+      if (nextMessage) {
+        if (_.has(nextMessage, "answer")) {
+          this.input = nextMessage.answer;
+          this.waitForAnswerMessage = nextMessage;
+          this.autoSend();
+        } else {
+          this.displayMessages.push(nextMessage);
+        }
+      }
+    },
+    // eslint-disable-next-line require-await
+    async autoSend() {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          if (this.waitForAnswerMessage) {
+            this.displayMessages.push({
+              text: this.waitForAnswerMessage.answer,
+              isFromMe: true
+            });
+            this.displayMessages.push(this.waitForAnswerMessage);
+          }
+        }, 15000);
+      });
     }
   }
 };
@@ -100,6 +154,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10vh;
 }
 
 .main {
@@ -109,14 +164,13 @@ h3 {
 }
 
 .chatRoom {
-  overflow-y: scroll;
-  max-width: 100%;
 }
 
 .card {
   box-sizing: border-box;
   border-radius: 0.1em 1.5em 0.5em 3em;
   padding-left: 3em;
+  max-width: 100%;
 }
 
 .container {
@@ -137,9 +191,10 @@ h3 {
   background-color: gray;
   position: fixed;
   bottom: 0;
+  padding-right: 2rem;
 }
-
-.sendbtn path {
-  fill: #f00;
+#send {
+  max-width: 100%;
+  margin-right: 2rem;
 }
 </style>

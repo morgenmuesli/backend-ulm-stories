@@ -147,7 +147,7 @@ export default {
           this.__swapTile(item);
         }
         if (this.checkWin()) {
-          setTimeout(alert("You won"), 2000);
+          this.hasWon = true;
         }
       } else if (item.containedItem !== -1) {
         this.selectedItem = {

@@ -1,11 +1,13 @@
 <template>
-  <div @click="pressTile" :class="{ open: isOpen }" class="Tile">
-    <img
-      v-if="dataFromParent.isOpen"
-      :src="require(`@/assets/img/${this.dataFromParent.path}`)"
-      width="100%"
-      height="100%"
-    />
+  <div class="itemfield">
+    <div @click="pressTile" :class="{ open: isOpen }" class="Tile">
+      <img
+        v-if="dataFromParent.isOpen"
+        :src="require(`@/assets/img/${dataFromParent.path}`)"
+        width="100%"
+        height="100%"
+      />
+    </div>
   </div>
 </template>
 
@@ -31,10 +33,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.itemfield {
+  width: 45vw;
+  height: 45vw;
+}
+
 .Tile {
-  width: 10em;
-  height: 10em;
+  width: 98%;
+  height: 98%;
   background-color: whitesmoke;
   margin: 2px;
   border-radius: 3px;

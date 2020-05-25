@@ -767,12 +767,12 @@ export const state = () => ({
       video: "88_Zweistein",
       text:
         "Machst du das bitte für mich? Dann kann ich schonmal die Daten eingeben.",
-      answer: "Weiter"
+      answer: "Das habe ich bereits."
     },
     {
       id: 6,
       chapter: "einstein",
-      scene: 3,
+      scene: 2,
       img: "einstein",
       video: "89_Zweistein",
       text: "Perfekt! Jetzt kommt der Kristall zurück in die Zeitmaschine.",
@@ -781,7 +781,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 4,
+      scene: 3,
       img: "einstein",
       video: "90_Zweistein",
       text:
@@ -791,7 +791,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 5,
+      scene: 4,
       img: "einstein",
       video: "91_Einstein",
       text: "Nanu, wo bin ich denn jetzt gelandet?",
@@ -800,7 +800,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 6,
+      scene: 5,
       img: "einstein",
       video: "92_Zweistein",
       text:
@@ -810,7 +810,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 7,
+      scene: 6,
       img: "einstein",
       video: "93_Einstein",
       text:
@@ -820,7 +820,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 8,
+      scene: 7,
       img: "einstein",
       video: "94_Einstein",
       text:
@@ -830,7 +830,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 9,
+      scene: 8,
       img: "einstein",
       video: "95_Zweistein",
       text: "Ich weiß! Das ist das letzte Mal. Versprochen!",
@@ -839,7 +839,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 10,
+      scene: 9,
       img: "einstein",
       video: "96_Einstein",
       text:
@@ -849,7 +849,7 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 11,
+      scene: 10,
       img: "einstein",
       video: "97_Zweistein",
       text:
@@ -859,12 +859,83 @@ export const state = () => ({
     {
       id: 6,
       chapter: "einstein",
-      scene: 12,
+      scene: 11,
       img: "einstein",
       video: "98_Einstein",
       text:
         "Also gut! Mehr als die Vergangenheit interessiert mich die Zukunft, denn in ihr gedenke ich zu leben. Erzähl mir von deinem Problem.",
       answer: "Weiter"
+    },
+    {
+      id: 7,
+      chapter: "prof0",
+      scene: 0,
+      video: "98_Einstein",
+      text:
+        "Du hast den jungen Ensinger wieder in seine Zeit zurück schicken können, stimmt‘s?"
+    },
+    {
+      id: 7,
+      chapter: "prof0",
+      scene: 1,
+      video: "98_Einstein",
+      text: "Das Chaos im Labor wurde nämlich gerade viel ruhiger!"
+    },
+    {
+      id: 7,
+      chapter: "prof0",
+      scene: 2,
+      video: "98_Einstein",
+      text:
+        "Mach weiter so! Schau auf der Karte nach, da müsste der nächste Ort frei geschaltet worden sein. Viel Erfolg und vergiss die Kristallscherben nicht!"
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 0,
+      video: "98_Einstein",
+      text: "Hast du alle Kristallstücke?",
+      answer: "Ja hab ich!"
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 1,
+      video: "98_Einstein",
+      text:
+        "Du bist super! Zum Glück habe ich dich in die Stadt geschickt! Ich wusste du schaffst es!"
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 2,
+      video: "98_Einstein",
+      text:
+        "Ich habe mittlerweile auch die Zeitmaschine reparieren können. Jetzt fehlt nur noch der Kristall für das Zeitmessgerät."
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 3,
+      video: "98_Einstein",
+      text:
+        "Und weißt du wieso das Experiment missglückt ist? Wir haben es an dem falschen Ort gemacht!"
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 4,
+      video: "98_Einstein",
+      text:
+        "Der Ort muss eine persönliche Bindung zu der Person haben, die wir durch die Zeit schicken wollen. Also lass uns an dem Elternhaus von Albert Einstein treffen."
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 5,
+      video: "98_Einstein",
+      text:
+        "Der Punkt ist in der Karte vermerkt. Ich bin ja so aufgeregt!! Wir sehen uns dort. Bis gleich!"
     }
   ]
 });
@@ -883,7 +954,7 @@ export const getters = {
     const video = state.videos.find(
       a => a.chapter === chapter && a.scene === scene
     );
-    console.log(video);
+    console.debug(video);
     return video;
   }
 };

@@ -16,6 +16,10 @@ export default {
   mounted() {
     console.log("scene: ", this.current_scene);
     console.log("chapter: ", this.current_chapter);
+    this.$store.dispatch("finishedScene", {
+      chapter: this.current_chapter,
+      scene: parseInt(this.current_scene)
+    });
   },
   methods: {
     ...mapActions(["finishedScene"]),
@@ -27,7 +31,7 @@ export default {
         direct: true
       };
       const chapter = this.current_chapter;
-      const scene = this.current_scene;
+      const scene = query.scene;
       this.finishedScene({ chapter, scene });
       this.$router.push({ path, query });
     }

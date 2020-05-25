@@ -8,8 +8,8 @@
       <h4>{{ element.question }}</h4>
       <div class="answers">
         <button
-          v-for="(item, index) in element.answers"
-          :key="index"
+          v-for="(item, indices) in element.answers"
+          :key="indices"
           :class="select ? check(item) : ''"
           @click="selectResponse"
         >
@@ -67,7 +67,8 @@ export default {
 
       if (this.a === 2) {
         alert("Alle Fragen beantwortet!");
-        setTimeout(this.$emit("nextPage"), 1000);
+        this.$store.dispatch("");
+        this.$emit("nextPage");
       }
     }
   }

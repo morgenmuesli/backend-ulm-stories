@@ -1,5 +1,6 @@
 export const TYPE = {
   video: "VIDEO",
   game: "GAME",
-  image: "IMAGE"
+  image: "IMAGE",
+  profcall: "PROFCALL"
 };

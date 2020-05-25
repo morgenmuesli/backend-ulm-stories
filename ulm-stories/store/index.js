@@ -1,6 +1,8 @@
 import { TYPE } from "~/js/constants";
 
 export const state = () => ({
+  profIsCalling: false,
+  profState: 0,
   gameState: [
     { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.video },
     { id: 0, chapter: "ensinger", scene: 1, isFinish: false, type: TYPE.video },
@@ -354,7 +356,7 @@ export const state = () => ({
       chapter: "einstein",
       scene: 2,
       isFinish: false,
-      type: TYPE.game /* Kristall-Game */
+      type: TYPE.video
     },
     {
       id: 6,
@@ -420,11 +422,18 @@ export const state = () => ({
       type: TYPE.video
     },
     {
-      id: 6,
-      chapter: "einstein",
-      scene: 12,
-      isFinish: true,
-      type: TYPE.video
+      id: 7,
+      chapter: "prof0",
+      scene: 0,
+      isFinish: false,
+      type: TYPE.profcall
+    },
+    {
+      id: 8,
+      chapter: "prof1",
+      scene: 0,
+      isFinish: false,
+      type: TYPE.profcall
     }
   ]
 });
@@ -447,6 +456,28 @@ export const getters = {
       }
     }
     return true;
+  },
+  checkIfProfIsCalling(state) {
+    return state.profIsCalling;
+  },
+  getChaptersAsSet(state) {
+    const chapters = state.gameState.map(x => x.chapter);
+    return new Set(chapters);
+  },
+  countFinishChapters: (state, getters) => {
+    let count = 0;
+    for (const chapter of getters.getChaptersAsSet) {
+      if (getters.isChapterFinish(chapter)) {
+        count++;
+      }
+    }
+    return count;
+  },
+  getProfVideos(state, getters) {
+    const currentProfID = "prof" + state.profState;
+    console.debug(currentProfID);
+    const videos = getters["videos/getAllSortedVideosOfChapter"](currentProfID);
+    return videos.reverse();
   }
 };
 
@@ -454,19 +485,52 @@ export const mutations = {
   toggleFinish(state, gameState) {
     console.info("toggle finish  ", gameState);
     state.gameState.find(x => x === gameState).isFinish = true;
+  },
+  changeProfCallFlag(state, value) {
+    state.profIsCalling = value;
+  },
+  toggleProfCall(state) {
+    state.profIsCalling = !state.profIsCalling;
+  },
+  changeProfState(state, value) {
+    state.profState = value;
   }
 };
 
 export const actions = {
   finishedScene({ state, commit, dispatch, getters }, data) {
     console.info("finish scene action ", data);
+
     const gameState = state.gameState.find(
       gameScene =>
-        gameScene.chapter === data.chapter && gameScene.scene === data.scene
+        gameScene.chapter === data.chapter &&
+        gameScene.scene === parseInt(data.scene)
     );
-    commit("toggleFinish", gameState);
+    if (gameState) {
+      commit("toggleFinish", gameState);
+    }
+
     if (getters.isChapterFinish(data.chapter)) {
       dispatch("npcLocation/visitlocation", data.chapter);
+    }
+  },
+  updateProfCalling({ commit, getters, dispatch }) {
+    const count = getters.countFinishChapters;
+    console.debug("Count of chapters is ", count);
+    console.debug("Count of finish chapters is ", count);
+    if (count === 1) {
+      commit("toggleProfCall");
+      dispatch("npcLocation/activateMultipleLocations", [
+        "aicher",
+        "streicher",
+        "schwanenwirtin",
+        "holl",
+        "berblinger"
+      ]);
+    } else if (count === 6) {
+      commit("toggleProfCall");
+      dispatch("npcLocation/activateMultipleLocations", ["einstein"]);
+      commit("changeProfState", 2);
     }
   }
 };
