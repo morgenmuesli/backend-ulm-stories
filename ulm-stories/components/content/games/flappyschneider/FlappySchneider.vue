@@ -241,6 +241,7 @@ export default {
   margin-top: 0;
   overflow: hidden;
   font-weight: bold;
+  background: whitesmoke;
 }
 
 .score,
