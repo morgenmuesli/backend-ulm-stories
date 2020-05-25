@@ -164,7 +164,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
 .bkg-main {
   margin-top: 2%;
   width: 100vw;
@@ -234,13 +235,12 @@ export default {
 }
 
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Ubuntu", sans-serif;
   text-align: center;
-  color: #2c3e50;
+  color: #272727;
   margin-top: 0;
   overflow: hidden;
+  font-weight: bold;
 }
 
 .score,
@@ -249,7 +249,6 @@ export default {
   left: 3%;
   margin-top: -12%;
   font-size: 2em;
-  font-weight: bolder;
 }
 .score-max {
   left: 48%;
@@ -258,13 +257,11 @@ export default {
   margin-top: 12%;
   left: 3%;
   font-size: 1em;
-  font-weight: bolder;
 }
 .end {
   position: absolute;
   left: 3%;
   top: 0%;
   font-size: 2em;
-  font-weight: bolder;
 }
 </style>
