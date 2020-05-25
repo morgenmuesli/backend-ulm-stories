@@ -26,7 +26,7 @@ export default {
     },
     showModal(modal) {
       modal.style.zIndex = "1";
-      setTimeout(() => alert("You won"), 1000);
+      this.$emit("nextPage");
     }
   }
 };

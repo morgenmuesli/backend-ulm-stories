@@ -111,8 +111,8 @@ export default {
       }, 4000);
     },
     stop() {
-      window.location = "ulm-stories/pages/index.vue";
       this.$confetti.stop();
+      this.$emit("nextPage");
     },
     gameLoop() {
       this.game.bird.vBird += this.game.bird.dt * this.game.bird.g;
@@ -167,7 +167,7 @@ export default {
         ) {
           this.game.score = i + 1;
         }
-        if (this.game.score === 8) {
+        if (this.game.score >= 8) {
           this.start();
         }
       });

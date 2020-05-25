@@ -74,14 +74,10 @@ export default {
     displayMessages: [],
     currentMessages: [],
     waitForAnswerMessage: null,
-    input: "peter"
+    input: "Schreib etwas"
   }),
   mounted() {
-    console.log(this.$router.query);
-
     this.currentMessages = this.$store.getters.getProfVideos;
-
-    this.$store.commit("changeProfCallFlag", false);
     this.popMessages();
   },
   methods: {

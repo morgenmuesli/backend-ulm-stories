@@ -50,7 +50,7 @@ export const state = () => ({
     },
     {
       characterID: "schwanenwirtin",
-      characterName: "Schwanenwirten",
+      characterName: "Schwanenwirtin",
       latlng: [48.396282, 9.990509],
       chapter: 6,
       haveVisit: false,
@@ -60,9 +60,11 @@ export const state = () => ({
 });
 export const mutations = {
   toggleVisit(state, location) {
-    location.haveVisit = !location.haveVisit;
+    console.debug("TOGGLE VISIT", location.characterID);
+    location.haveVisit = true;
   },
   setActive(state, location) {
+    console.debug("set ", location.characterID, " active");
     location.isActive = true;
   }
 };

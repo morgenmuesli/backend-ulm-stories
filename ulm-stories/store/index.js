@@ -4,6 +4,7 @@ export const state = () => ({
   profIsCalling: false,
   profState: 0,
   gameState: [
+    { id: -1, chapter: "intro", scene: 0, isFinish: false, type: TYPE.intro },
     { id: 0, chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.video },
     { id: 0, chapter: "ensinger", scene: 1, isFinish: false, type: TYPE.video },
     { id: 0, chapter: "ensinger", scene: 2, isFinish: false, type: TYPE.video },
@@ -499,19 +500,22 @@ export const mutations = {
 
 export const actions = {
   finishedScene({ state, commit, dispatch, getters }, data) {
-    console.info("finish scene action ", data);
+    console.debug("finish scene action ", data);
 
     const gameState = state.gameState.find(
       gameScene =>
         gameScene.chapter === data.chapter &&
         gameScene.scene === parseInt(data.scene)
     );
+    console.debug("Gamestate= ", gameState);
     if (gameState) {
       commit("toggleFinish", gameState);
     }
 
     if (getters.isChapterFinish(data.chapter)) {
+      console.debug("CHAPTER IS FINISH: ", data.chapter);
       dispatch("npcLocation/visitlocation", data.chapter);
+      dispatch("updateProfCalling");
     }
   },
   updateProfCalling({ commit, getters, dispatch }) {

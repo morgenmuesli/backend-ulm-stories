@@ -19,6 +19,7 @@ export default {
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+
     script: [{ src: "cordova.js" }, { src: "js/plugins/LaunchMyApp.js" }]
   },
   /*
@@ -31,7 +32,8 @@ export default {
   css: [
     // Load a Node.js module directly (here it's a Sass file)
     // SCSS file in the project
-    "@/assets/style/main"
+    "@/assets/style/main",
+    "@/assets/style/leaflet/leaflet.css"
   ],
   /*
    ** Plugins to load before mounting the App

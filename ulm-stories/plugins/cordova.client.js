@@ -1,7 +1,6 @@
-/* eslint-disable */
 export default (ctx, inject) => {
   const { app } = ctx;
-  /* eslint-enable */
+
   const cordovaApp = {
     // Application Constructor
     initialize() {
@@ -12,70 +11,12 @@ export default (ctx, inject) => {
       );
     },
 
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
     onDeviceReady() {
-      console.log("navigator.geolocation works well");
-
-      /**
-       * initialize all different stuff here:
-       * e.g.
-       *  - sentry
-       *  - firebase
-       *  - adjust
-       *  - push notifications
-       *  - fabric
-       *  - custom url schema
-       *  - facebook
-       *  - universal links
-       *  - google analytics
-       *  - ...
-       *
-       *  context to "app" is avaialble, but beware only the app scope of a plugin (which means if any other plugin
-       *  extends the app scope, it could be that it is not available yet)
-       */
-
       try {
         this.initStatusBar();
       } catch (err) {
         // console.error('status bar failed', err)
       }
-
-      try {
-        this.initWKWebView();
-      } catch (err) {
-        // console.error('init WKWebView failed', err)
-      }
-
-      /* eslint-disable */
-      try {
-        this.initCustomUrlScheme();
-      } catch (err) {}
-      /* eslint-enable */
-    },
-
-    initCustomUrlScheme() {
-      window.handleOpenURL = url => {
-        alert("DeepLink: " + url);
-      };
-    },
-
-    initStatusBar() {
-      window.StatusBar.overlaysWebView(false);
-      window.StatusBar.backgroundColorByHexString("#009896");
-    },
-
-    initWKWebView() {
-      /* window.WkWebView.allowsBackForwardNavigationGestures(false)
-      EventBus.$on('OpenInsidePages', count => {
-        if (count > 0) {
-          window.WkWebView.allowsBackForwardNavigationGestures(true)
-        } else {
-          window.WkWebView.allowsBackForwardNavigationGestures(false)
-        }
-      }) */
     }
   };
 

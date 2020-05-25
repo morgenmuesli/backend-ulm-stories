@@ -1,10 +1,10 @@
 <template>
   <div id="map-wrap" style="height: 100%; width: 100%">
-    <l-map :zoom="13" :center="userLocation()">
+    <l-map :zoom="13" :center="userLocation">
       <l-tile-layer
         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
       ></l-tile-layer>
-      <l-marker :lat-lng="userLocation()"></l-marker>
+      <l-marker :lat-lng="userLocation"></l-marker>
       <l-marker
         v-for="(location, index) in allLocations"
         :key="index"
@@ -24,17 +24,17 @@
 
 <script>
 import { mapGetters } from "vuex";
+import "leaflet/dist/leaflet.css";
 import L, { icon } from "leaflet";
 export default {
   name: "LeafletMap",
   data() {
-    return {};
+    return {
+      componentKey: 0
+    };
   },
   computed: {
-    ...mapGetters("npcLocation", ["allLocations"])
-  },
-  mounted() {},
-  methods: {
+    ...mapGetters("npcLocation", ["allLocations"]),
     userLocation() {
       return {
         lat: this.$store.state.geolocation.lat,
@@ -49,9 +49,16 @@ export default {
     },
     error() {
       return this.$store.state.geolocation.error;
-    },
-    toggleVisit(characterID) {
-      this.$store.dispatch("npcLocation/visitlocation", characterID);
+    }
+  },
+  mounted() {
+    this.forceRerender();
+    console.debug("Load map");
+  },
+
+  methods: {
+    forceRerender() {
+      this.componentKey += 1;
     },
     getLink(npcInfo) {
       const path = "/content/";
@@ -61,7 +68,6 @@ export default {
     openLink(npcInfo) {
       if (!npcInfo.haveVisit) {
         const href = this.getLink(npcInfo);
-        this.toggleVisit(npcInfo.characterID);
         this.$router.push(href);
       }
     },
@@ -77,6 +83,7 @@ export default {
       });
       return marker;
     },
+
     checkDistanceToNpc(userLocation, allLocations) {
       for (const location in allLocations) {
         // check if user is under 1m away from location
