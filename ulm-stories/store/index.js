@@ -427,6 +427,9 @@ export const getters = {
   countFinishChapters: (state, getters) => {
     let count = 0;
     for (const chapter of getters.getChaptersAsSet) {
+      if (chapter === "intro") {
+        continue;
+      }
       if (getters.isChapterFinish(chapter)) {
         count++;
       }
@@ -438,6 +441,14 @@ export const getters = {
     console.debug(currentProfID);
     const videos = getters["videos/getAllSortedVideosOfChapter"](currentProfID);
     return videos.reverse();
+  },
+  checkIfLocationsAreFinish: (state, getters) => multipleLocations => {
+    for (const chapter of multipleLocations) {
+      if (!getters.isChapterFinish(chapter)) {
+        return false;
+      }
+    }
+    return true;
   }
 };
 
@@ -480,10 +491,7 @@ export const actions = {
     }
   },
   updateProfCalling({ commit, getters, dispatch }) {
-    const count = getters.countFinishChapters;
-    console.debug("Count of chapters is ", count);
-    console.debug("Count of finish chapters is ", count);
-    if (count === 2) {
+    if (getters.isChapterFinish("ensinger")) {
       commit("toggleProfCall");
       dispatch("npcLocation/activateMultipleLocations", [
         "aicher",
@@ -492,7 +500,15 @@ export const actions = {
         "holl",
         "berblinger"
       ]);
-    } else if (count === 7) {
+    } else if (
+      getters.checkIfLocationsAreFinish([
+        "aicher",
+        "streicher",
+        "schwanenwirtin",
+        "holl",
+        "berblinger"
+      ])
+    ) {
       commit("toggleProfCall");
       dispatch("npcLocation/activateMultipleLocations", ["einstein"]);
       commit("changeProfState", 2);

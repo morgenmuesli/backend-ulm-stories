@@ -52,7 +52,7 @@ export default {
     },
     hasWon: false
   }),
-  props: ["wincallback"],
+  props: { wincallback: Function },
 
   computed: {
     /**

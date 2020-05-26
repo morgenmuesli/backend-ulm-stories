@@ -8,7 +8,12 @@
 import PuzzleDND from "~/components/content/games/dndpuzzle/PuzzleDND";
 export default {
   name: "PuzzleWrapper",
-  components: { PuzzleDND }
+  components: { PuzzleDND },
+  methods: {
+    nextPage: () => {
+      this.$emit("nextPage");
+    }
+  }
 };
 </script>
 
