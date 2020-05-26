@@ -75,9 +75,8 @@ export default {
 </script>
 
 <style lang="scss">
-* {
-  font-family: "Ubuntu", sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+
 .quiz {
   background-image: url("../../../../assets/img/background/ensinger.jpg");
   height: 100vh;
@@ -90,6 +89,8 @@ h4 {
   color: whitesmoke;
   text-align: center;
   line-height: 60vh;
+  font-family: Ubuntu, sans-serif;
+  text-shadow: 0 0 5px #272727;
 }
 .answers {
   text-align: center;
@@ -97,11 +98,13 @@ h4 {
 button {
   font-size: 16px;
   font-family: "Ubuntu", sans-serif;
+  color: #272727;
   width: 80%;
   height: 60px;
   background-color: whitesmoke;
   margin-bottom: 10px;
-  border-radius: 3px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /* I present FUN with COLORS */
 button.correct {

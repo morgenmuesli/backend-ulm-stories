@@ -96,7 +96,7 @@ export default {
 
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
 
 .containerApp {
   display: block;
@@ -116,6 +116,7 @@ img {
   background: whitesmoke;
   padding: 25px;
   font-family: Kalam, cursive;
+  color: #272727;
   font-size: 20px;
   text-align: left;
   grid-area: text;
@@ -143,7 +144,9 @@ img {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   background-color: whitesmoke;
+  color: #272727;
   right: 5%;
+  height: 60px;
   bottom: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
