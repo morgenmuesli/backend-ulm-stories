@@ -1,12 +1,21 @@
 <template>
   <div>
     <section class="header">
-      <nuxt-link to="/game">Zurück</nuxt-link>
-      <div class="container prof">
+      <nuxt-link to="/game">
+        <img
+          src="../../assets/img/icons/svg/back.svg"
+          alt="return to map"
+          height="48"
+          width="48"
+          class="back-btn"
+        />
+      </nuxt-link>
+      <div class="container prof is-fixed-top">
         <figure class="image is-64x64">
           <img
             class="is-rounded"
             src="../../assets/img/chatIcon/zweistein.jpg"
+            alt="prof icon"
           />
         </figure>
         <div class="columns is-mobile">
@@ -24,7 +33,6 @@
           class="columns is-mobile "
         >
           <div
-            class="column is-four-fifths"
             :class="{ 'is-offset-one-fifth': item.isFromMe }"
             class="column is-four-fifths"
           >
@@ -46,27 +54,19 @@
     <footer class="writingWindow">
       <div id="sendContainer" class="container">
         <div class="columns is-center is-mobile">
-          <div class="column is-three-quarters-mobile">
+          <div
+            class="column is-three-quarters-mobile"
+            style="margin-top: 2vh; padding-left: 5%"
+          >
             <input
               v-model="input"
               @keyup.enter="send"
               class="input"
               placeholder="Text input"
               type="text"
-              v-model="input"
-              @keyup.enter="send"
             />
           </div>
-          <div class="column is-mobile">
-<!--            <button @click="send" class="button is-rounded">-->
-<!--              <svg-->
-<!--                version="1.1"-->
-<!--                class="sendbtn"-->
-<!--                src="../../assets/img/chatIcon/send_icon.svg"-->
-<!--                height="64"-->
-<!--                width="64"-->
-<!--              />-->
-<!--            </button>-->
+          <div class="column is-mobile" style="margin-top: 2vh">
             <button id="send" @click="send" class="button is-rounded">
               Send
             </button>
@@ -139,11 +139,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
 h3 {
   color: white;
   display: flex;
   align-content: center;
   font-size: larger;
+  font-family: Ubuntu, sans-serif;
 }
 
 .prof {
@@ -151,6 +157,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   margin-bottom: 10vh;
+  padding: 1rem;
 }
 
 .main {
@@ -160,35 +167,50 @@ h3 {
 }
 
 .chatRoom {
+  width: 100vw;
+  height: 90vh;
+  background: url("../../assets/img/background/ensinger.jpg") fixed;
+  background-size: cover;
+  overflow: auto;
+  padding-top: 125px;
 }
 
 .card {
   box-sizing: border-box;
   border-radius: 0.1em 1.5em 0.5em 3em;
-  padding-left: 3em;
+  padding-left: 15%;
+  padding-bottom: 10%;
   max-width: 100%;
+  margin: 1rem;
 }
 
-.container {
-  margin: 1em;
+.content {
 }
 
 .header {
-  position: static;
+  position: fixed;
   top: 0;
-  background-color: darkslateblue;
+  background-color: #272727;
+  opacity: 0.95;
   width: 100%;
+  height: 125px;
   display: flex;
+  z-index: 1;
 }
 
 .writingWindow {
   width: 100%;
   height: 10vh;
-  background-color: gray;
+  background-color: #272727;
   position: fixed;
   bottom: 0;
   padding-right: 2rem;
 }
+
+.back-btn {
+  fill: #ff0000;
+}
+
 #send {
   max-width: 100%;
   margin-right: 2rem;

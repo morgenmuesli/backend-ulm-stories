@@ -90,7 +90,6 @@ h4 {
   text-align: center;
   line-height: 60vh;
   font-family: Ubuntu, sans-serif;
-  font-size: 20px;
   text-shadow: 0 0 5px #272727;
 }
 .answers {
@@ -104,7 +103,7 @@ button {
   height: 60px;
   background-color: whitesmoke;
   margin-bottom: 10px;
-  border-radius: 3px;
+  border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /* I present FUN with COLORS */
