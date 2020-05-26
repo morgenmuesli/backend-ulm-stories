@@ -2,13 +2,7 @@
   <div>
     <section class="header">
       <nuxt-link to="/game">
-        <img
-          src="../../assets/img/icons/svg/back.svg"
-          alt="return to map"
-          height="48"
-          width="48"
-          class="back-btn"
-        />
+        <icon name="back" style="width: 48px; height: 48px" />
       </nuxt-link>
       <div class="container prof is-fixed-top">
         <figure class="image is-64x64">
@@ -67,9 +61,7 @@
             />
           </div>
           <div class="column is-mobile" style="margin-top: 2vh">
-            <button id="send" @click="send" class="button is-rounded">
-              Send
-            </button>
+            <icon @click="send" name="send" style="height: 48px; width: 48px" />
           </div>
         </div>
       </div>
@@ -79,8 +71,10 @@
 
 <script>
 import _ from "lodash";
+import Icon from "../../components/icon";
 export default {
   name: "PhoneCall",
+  components: { Icon },
   middleware: "profcall",
   data: () => ({
     displayMessages: [],
@@ -205,10 +199,6 @@ h3 {
   position: fixed;
   bottom: 0;
   padding-right: 2rem;
-}
-
-.back-btn {
-  fill: #ff0000;
 }
 
 #send {
