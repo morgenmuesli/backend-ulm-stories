@@ -90,7 +90,7 @@ export default {
 
       for (let i = 0; i < this.totalTiles; ++i) {
         if (this.tiles[i].styles.order !== this.tiles[i].position) {
-          return true;
+          return false;
         }
       }
 
@@ -233,7 +233,7 @@ export default {
       return canvas.toDataURL();
     },
     nextPage() {
-      this.$emit("nextPage");
+      this.$emit("solved");
       this.$confetti.stop();
     }
   }
