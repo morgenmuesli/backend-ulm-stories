@@ -3,7 +3,6 @@
     <header>
       <div class="board-frame">
         <Board ref="board" @solved="onSolved" />
-        <Button v-on:click="onSolved"></Button>
       </div>
     </header>
   </div>

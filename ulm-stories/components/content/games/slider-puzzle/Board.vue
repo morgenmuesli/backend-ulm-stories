@@ -268,10 +268,13 @@ export default {
   position: absolute;
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
-  color: black;
+  height: 60px;
+  width: 80%;
+  color: #272727;
   background-color: whitesmoke;
-  right: 5%;
-  bottom: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: center;
 }
 .controls {
   margin-top: 30px;
