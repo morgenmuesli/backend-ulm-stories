@@ -1,6 +1,8 @@
 <template>
   <div class="memory">
-    <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
+    <div v-if="won">
+      <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
+    </div>
     <h1 style="text-shadow: 0 0 5px #272727">
       Memory
     </h1>
@@ -26,6 +28,7 @@ export default {
   // eslint-disable-next-line vue/no-unused-components
   components: { WonComponent, Tile },
   data: () => ({
+    won: false,
     field: [],
     count: 1,
     openTiles: [],
@@ -82,6 +85,8 @@ export default {
         if (pair.length > 1) {
           if (this.checkWin()) {
             this.hasWon = true;
+            this.won = true;
+            this.$confetti.start();
           }
         } else {
           for (let i = 0; i < this.openTiles.length; i++) {

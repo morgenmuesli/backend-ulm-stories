@@ -1,6 +1,9 @@
 <template>
   <div ref="puzzleFrame" class="frame">
-    <div :style="frameSize" class="puzzle">
+    <div v-if="won">
+      <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
+    </div>
+    <div :style="frameSize" v-if="playing" class="puzzle">
       <div
         v-for="(item, index) in puzzleList"
         :key="index"
@@ -27,11 +30,16 @@
 
 <script>
 import _ from "lodash";
+import wonComponent from "~/components/content/games/wonComponent";
 
 export default {
   name: "PuzzleDND",
+  components: { wonComponent },
   props: { wincallback: Function },
   data: () => ({
+    playing: true,
+    won: false,
+
     puzzleList: [],
     tileList: [],
     selectedItem: null,
@@ -149,8 +157,10 @@ export default {
           this.__swapTile(item);
         }
         if (this.checkWin()) {
+          this.playing = false;
+          this.won = true;
           this.hasWon = true;
-          this.wincallback();
+          this.$confetti.start();
         }
       } else if (item.containedItem !== -1) {
         this.selectedItem = {
@@ -158,6 +168,10 @@ export default {
           style: item.style
         };
       }
+    },
+    nextPage() {
+      this.$confetti.stop();
+      this.wincallback();
     }
   }
 };
