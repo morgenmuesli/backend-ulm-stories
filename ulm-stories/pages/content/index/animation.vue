@@ -5,10 +5,10 @@
         v-bind:src="
           require('@/assets/webm/' + this.currentData.video + '.webm')
         "
+        @ended="nextPage"
         class="videoStyle"
         autoplay
         type='video/webm"'
-        @ended="nextPage"
       ></video>
     </div>
   </div>

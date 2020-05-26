@@ -30,6 +30,7 @@ import _ from "lodash";
 
 export default {
   name: "PuzzleDND",
+  props: { wincallback: Function },
   data: () => ({
     puzzleList: [],
     tileList: [],
@@ -52,7 +53,6 @@ export default {
     },
     hasWon: false
   }),
-  props: { wincallback: Function },
 
   computed: {
     /**
