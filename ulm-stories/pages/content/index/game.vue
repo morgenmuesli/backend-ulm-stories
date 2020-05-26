@@ -16,10 +16,10 @@
       v-else-if="this.queryData.chapter === 'aicher'"
       @nextPage="nextPage"
     ></Slider>
-    <PuzzleDND
+    <PuzzleWrapper
       v-else-if="this.queryData.chapter === 'streicher'"
       @nextPage="nextPage"
-    ></PuzzleDND>
+    ></PuzzleWrapper>
     <HiddenObject
       v-else-if="this.queryData.chapter === 'holl'"
       @nextPage="nextPage"
@@ -32,13 +32,13 @@ import HiddenObject from "../../../components/content/games/hiddenobject/HiddenO
 import GAME_FIELD from "~/components/content/games/memory/GameField";
 import Quiz from "~/components/content/games/quiz/Quiz";
 import FlappySchneider from "~/components/content/games/flappyschneider/FlappySchneider";
-import PuzzleDND from "~/components/content/games/dndpuzzle/PuzzleDND";
 import Slider from "~/components/content/games/slider.vue";
+import PuzzleWrapper from "~/components/content/games/dndpuzzle/PuzzleWrapper";
 
 export default {
   components: {
+    PuzzleWrapper,
     HiddenObject,
-    PuzzleDND,
     FlappySchneider,
     Quiz,
     Slider,

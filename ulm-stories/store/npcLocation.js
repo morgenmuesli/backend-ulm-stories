@@ -73,7 +73,10 @@ export const actions = {
     const character = state.locations.find(
       item => item.characterID === characterID
     );
-    commit("toggleVisit", character);
+
+    if (character) {
+      commit("toggleVisit", character);
+    }
   },
   activateMultipleLocations({ state, getters, commit }, payload) {
     const chars = state.locations.filter(x => payload.includes(x.characterID));

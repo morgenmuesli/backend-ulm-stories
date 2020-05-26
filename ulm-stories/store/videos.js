@@ -39,7 +39,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 4,
-      img: "ensinger",
+      img: "handy",
       video: "01_Zweistein",
       text:
         "Oh nein, irgendwas ist schiefgelaufen. Alles steht in Flammen und die Uhren scheinen alle rückwärts zu laufen.",
@@ -49,7 +49,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 5,
-      img: "ensinger",
+      img: "handy",
       video: "02_Zweistein",
       text: "Ich messe jede Menge Schwankungen im Ulm-Zeit Kontinuum.",
       answer: "Weiter"
@@ -57,7 +57,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 6,
-      img: "ensinger",
+      img: "handy",
       video: "03_Zweistein",
       text:
         "Ach du meine Güte!! Der Kristall des Zeitmessgeräts ist in 6 Teile zersprungen.",
@@ -66,7 +66,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 7,
-      img: "ensinger",
+      img: "handy",
       video: "04_Zweistein",
       text: "Und jetzt sind sie auch noch plötzlich verschwunden!",
       answer: "Weiter"
@@ -74,7 +74,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 8,
-      img: "ensinger",
+      img: "handy",
       video: "05_Zweistein",
       text: "Warte, ich kann die Einzelteile mit dem Computer orten...",
       answer: "Weiter"
@@ -82,7 +82,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 9,
-      img: "ensinger",
+      img: "handy",
       video: "06_Zweistein",
       text: "Oje, die haben sich über das ganze Ulmer Stadtgebiet verteilt...",
       answer: "Weiter"
@@ -90,7 +90,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 10,
-      img: "ensinger",
+      img: "handy",
       video: "07_Zweistein",
       text:
         "Du musst in die Stadt und die Kristallscherben finden, während ich hier im Labor versuche die Katastrophe in den Griff zu bekommen. Ich benötige die Einzelteile um das Chaos hier zu stoppen- und das Ulm-Zeit-Kontinuum wieder zu stabilisieren.",
@@ -99,7 +99,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 11,
-      img: "ensinger",
+      img: "handy",
       video: "08_Zweistein",
       text:
         "Ich benötige die Einzelteile um das Chaos hier zu stoppen- und das Ulm-Zeit-Kontinuum wieder zu stabilisieren.",
@@ -108,7 +108,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 12,
-      img: "ensinger",
+      img: "handy",
       video: "09_Zweistein",
       text:
         "Wenn uns das nicht gelingt ... oh, ich darf gar nicht an die Folgen denken…",
@@ -117,7 +117,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 13,
-      img: "ensinger",
+      img: "handy",
       video: "010_Zweistein",
       text:
         "Du musst sofort los! Starte Am Münster – da habe ich das stärkste Signal!",
@@ -126,7 +126,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 14,
-      img: "ensinger",
+      img: "handy",
       video: "011_Zweistein",
       text:
         "Hier! Benutze dieses Ortungsgerät. Die roten Punkte zeigen dir, an welche Orte du dich begeben musst.",
@@ -135,7 +135,7 @@ export const state = () => ({
     {
       chapter: "intro",
       scene: 15,
-      img: "ensinger",
+      img: "handy",
       video: "011_Zweistein",
       text:
         "Du musst sofort los! Starte Am Münster – da habe ich das stärkste Signal!",
