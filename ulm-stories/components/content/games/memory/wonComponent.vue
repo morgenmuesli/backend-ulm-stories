@@ -11,11 +11,15 @@
 
 <script>
 export default {
-  props: ["won"]
+  props: ["won"],
+  mounted() {
+    this.$confetti.start();
+  }
 };
 </script>
 
 <style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
 .container {
   width: 100vw;
   height: 100vh;

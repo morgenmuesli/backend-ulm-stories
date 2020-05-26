@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
+	 height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+<g id="Ebene_1" display="none">
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="300" y1="150.5" x2="0" y2="150.5"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="149.5" y1="0" x2="149.5" y2="301"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="249.5" y1="1" x2="249.5" y2="302"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="49.5" y1="0" x2="49.5" y2="301"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="50.5" x2="300" y2="50.5"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="0" y1="250.5" x2="300" y2="250.5"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="199.5" y1="0" x2="199.5" y2="301"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="300" y1="100.5" x2="0" y2="100.5"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="300" y1="200.5" x2="0" y2="200.5"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="300" y1="80.5" x2="0" y2="80.5"/>
+	<line display="inline" fill="none" stroke="#000000" stroke-miterlimit="10" x1="300" y1="120.5" x2="0" y2="120.5"/>
+</g>
+<g id="Ebene_2">
+	<rect x="213" y="146" fill="#FFFFFF" width="10" height="9"/>
+	<path fill="#FFFFFF" d="M249,154.998c0,6.628-6.828,12.002-15.25,12.002s-15.25-5.374-15.25-12.002
+		c0-6.625,6.828-11.998,15.25-11.998S249,148.373,249,154.998z"/>
+	<ellipse fill="#FFFFFF" cx="254.667" cy="161.916" rx="17" ry="40.583"/>
+	<rect x="245" y="119" fill="#FFFFFF" width="11" height="96"/>
+	<rect x="110" y="92" fill="#FFFFFF" width="95" height="51"/>
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-width="8" stroke-miterlimit="10" points="27,116.196 107,58.695 107,173.695 	"/>
+	<ellipse fill="#FFFFFF" cx="216.558" cy="123.13" rx="38.451" ry="26.043"/>
+	<path fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" d="M109.892,91.729c0,0,255.116-31.786,127.25,149.576
+		"/>
+	<path fill="none" stroke="#000000" stroke-width="8" stroke-miterlimit="10" d="M109.892,141.586c0,0,178.273-20.566,127.25,99.718
+		"/>
+	<polygon fill="#FFFFFF" points="102,96.25 112.071,95.625 112.172,137.438 102,137.875 	"/>
+</g>
+</svg>

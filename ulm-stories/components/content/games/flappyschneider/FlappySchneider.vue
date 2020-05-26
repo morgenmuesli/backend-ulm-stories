@@ -1,11 +1,11 @@
 <template>
   <div id="app">
+    <div v-if="playing">
+      <div class="score">Meter: {{ game.score }}0</div>
+      <div class="score-max">Rekord: {{ max }}0</div>
+      <div class="score-text">Du musst 70 Meter überwinden!</div>
+    </div>
     <div @click="upperBird" class="bkg-main">
-      <div v-if="playing">
-        <div class="score">Meter: {{ game.score }}0</div>
-        <div class="score-max">Rekord: {{ max }}0</div>
-        <div class="score-text">Du musst 70 Meter überwinden!</div>
-      </div>
       <div v-if="win" class="end">Du hast es geschafft!</div>
       <div :style="styleBgr" class="bkg">
         <div v-if="playing" class="pipe-group">
@@ -86,7 +86,7 @@ export default {
       return {
         width: this.game.bgr.width + "px",
         right: 0,
-        height: 1920
+        height: 1280
       };
     }
   },
@@ -102,18 +102,6 @@ export default {
     }, 1000);
   },
   methods: {
-    start() {
-      this.$confetti.start();
-      this.playing = false;
-      this.win = true;
-      setTimeout(() => {
-        this.stop();
-      }, 4000);
-    },
-    stop() {
-      window.location = "ulm-stories/pages/index.vue";
-      this.$confetti.stop();
-    },
     gameLoop() {
       this.game.bird.vBird += this.game.bird.dt * this.game.bird.g;
       this.game.bird.yBird += this.game.bird.dt * this.game.bird.vBird;
@@ -168,7 +156,7 @@ export default {
           this.game.score = i + 1;
         }
         if (this.game.score === 8) {
-          this.start();
+          this.$emit("nextPage");
         }
       });
     }
@@ -176,8 +164,10 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
 .bkg-main {
+  margin-top: 2%;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -245,37 +235,34 @@ export default {
 }
 
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Ubuntu", sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 20%;
+  color: #272727;
+  margin-top: 0;
   overflow: hidden;
+  font-weight: bold;
+  background: whitesmoke;
 }
 
 .score,
 .score-max {
   position: absolute;
   left: 3%;
-  top: 3%;
+  margin-top: -12%;
   font-size: 2em;
-  font-weight: bolder;
 }
 .score-max {
   left: 48%;
 }
 .score-text {
+  margin-top: 12%;
   left: 3%;
-
   font-size: 1em;
-  font-weight: bolder;
 }
 .end {
   position: absolute;
   left: 3%;
   top: 0%;
   font-size: 2em;
-  font-weight: bolder;
 }
 </style>
