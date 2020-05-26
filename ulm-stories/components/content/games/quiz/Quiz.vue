@@ -1,5 +1,8 @@
 <template>
   <div class="quiz">
+    <div v-if="won">
+      <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
+    </div>
     <div
       v-for="(element, index) in questions.slice(a, b)"
       :key="index"
@@ -21,10 +24,15 @@
 </template>
 
 <script>
+import wonComponent from "~/components/content/games/wonComponent";
 export default {
   name: "Quiz",
+  components: { wonComponent },
   data() {
     return {
+      playing: true,
+      hasWon: false,
+      won: false,
       questions: [
         {
           question: "Wie hoch ist das Ulmer Münster?",
@@ -66,9 +74,15 @@ export default {
       this.select = false;
 
       if (this.a === 2) {
-        alert("Alle Fragen beantwortet!");
-        this.$emit("nextPage");
+        this.playing = false;
+        this.won = true;
+        this.hasWon = true;
+        this.$confetti.start();
       }
+    },
+    nextPage() {
+      this.$emit("nextPage");
+      this.$confetti.stop();
     }
   }
 };
