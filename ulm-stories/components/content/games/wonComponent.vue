@@ -11,10 +11,7 @@
 
 <script>
 export default {
-  props: ["won"],
-  mounted() {
-    this.$confetti.start();
-  }
+  props: ["won"]
 };
 </script>
 

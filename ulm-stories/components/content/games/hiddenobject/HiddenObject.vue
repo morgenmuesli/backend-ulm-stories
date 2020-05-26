@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="hiddenO">
+    <div v-if="won">
+      <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
+    </div>
+    <div class="hiddenO" v-if="playing">
       <img
         id="collage"
         src="../../../../assets/img/Collage/Collage_Handy.png"
@@ -13,10 +16,16 @@
 </template>
 
 <script>
+import wonComponent from "~/components/content/games/wonComponent";
 export default {
   name: "HiddenObject",
+  components: { wonComponent },
   data() {
-    return {};
+    return {
+      hasWon: false,
+      won: false,
+      playing: true
+    };
   },
   methods: {
     found() {
@@ -25,8 +34,14 @@ export default {
       setTimeout(() => this.showModal(modal), 100);
     },
     showModal(modal) {
-      modal.style.zIndex = "1";
+      this.won = true;
+      this.hasWon = true;
+      this.playing = false;
+      this.$confetti.start();
+    },
+    nextPage() {
       this.$emit("nextPage");
+      this.$confetti.stop();
     }
   }
 };
