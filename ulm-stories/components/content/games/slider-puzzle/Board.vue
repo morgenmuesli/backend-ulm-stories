@@ -1,26 +1,32 @@
 <template>
   <div class="board">
     <div class="frame-wrapper">
-      <p v-if="valid" class="win">You Win!</p>
-      <div
-        v-if="showingOriginal && image"
-        @click="showingOriginal = false"
-        :style="{ background: `url(${image})` }"
-        class="original"
-      ></div>
-      <div :style="frameSize" class="frame">
-        <Tile
-          ref="tiles"
-          v-for="tile in tiles"
-          :key="tile.position"
-          :tile="tile"
-          @moving="moveTile"
-        />
+      <div v-if="won">
+        <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
       </div>
-    </div>
+      <div v-if="playing">
+        <div
+          v-if="showingOriginal && image"
+          @click="showingOriginal = false"
+          :style="{ background: `url(${image})` }"
+          class="original"
+        ></div>
+        <div :style="frameSize" class="frame">
+          <Tile
+            ref="tiles"
+            v-for="tile in tiles"
+            :key="tile.position"
+            :tile="tile"
+            @moving="moveTile"
+          />
+        </div>
 
-    <div class="controls">
-      <Button v-on:click="shuffleTiles" class="button">Erneut mischen</Button>
+        <div class="controls">
+          <Button v-on:click="shuffleTiles" class="button"
+            >Erneut mischen</Button
+          >
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -28,14 +34,18 @@
 <script>
 import _ from "lodash";
 import Tile from "./Tile";
+import wonComponent from "~/components/content/games/wonComponent";
 
 let backupTiles = null;
 
 export default {
-  components: { Tile },
+  components: { Tile, wonComponent },
 
   data() {
     return {
+      playing: true,
+      hasWon: false,
+      won: false,
       image: null,
       showingOriginal: false,
       size: {
@@ -80,7 +90,7 @@ export default {
 
       for (let i = 0; i < this.totalTiles; ++i) {
         if (this.tiles[i].styles.order !== this.tiles[i].position) {
-          return false;
+          return true;
         }
       }
 
@@ -90,7 +100,10 @@ export default {
   watch: {
     valid() {
       if (this.valid) {
-        this.$emit("solved");
+        this.playing = false;
+        this.won = true;
+        this.hasWon = true;
+        this.$confetti.start();
       }
     }
   },
@@ -218,6 +231,10 @@ export default {
       canvas.height = size.height;
       ctx.drawImage(image, 0, 0, size.width, size.height);
       return canvas.toDataURL();
+    },
+    nextPage() {
+      this.$emit("nextPage");
+      this.$confetti.stop();
     }
   }
 };
