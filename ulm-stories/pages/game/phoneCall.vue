@@ -61,7 +61,12 @@
             />
           </div>
           <div class="column is-mobile" style="margin-top: 2vh">
-            <icon @click="send" name="send" style="height: 48px; width: 48px" />
+            <icon
+              id="send"
+              v-on:click="send"
+              name="send"
+              style="height: 48px; width: 48px"
+            />
           </div>
         </div>
       </div>

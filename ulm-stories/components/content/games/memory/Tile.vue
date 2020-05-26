@@ -35,8 +35,8 @@ export default {
 
 <style scoped lang="scss">
 .itemfield {
-  width: 45vw;
-  height: 45vw;
+  width: 20vh;
+  height: 20vh;
 }
 
 .Tile {
