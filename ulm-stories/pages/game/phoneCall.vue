@@ -3,7 +3,7 @@
     <section class="header">
       <nuxt-link to="/game">
         <img
-          src="../../assets/img/icons/svg/back.svg"
+          src="../../assets/img/icons/svg/blackandwhite/back.svg"
           alt="return to map"
           height="48"
           width="48"

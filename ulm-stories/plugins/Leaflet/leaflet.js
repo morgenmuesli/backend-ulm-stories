@@ -2,6 +2,7 @@
 import Vue from "vue";
 
 import Vue2Leaflet from "vue2-leaflet";
+import "leaflet/dist/leaflet.css";
 
 const VueLeaflet = {
   install(Vue, options) {

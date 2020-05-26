@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <LeafletMap style="height: 100%; width: 100% " />
+  <div class="mapfield">
+    <LeafletMap :rerenderkey="rerenderkey" />
     <div v-show="profCall" class="profcall">
       <nuxt-link to="/game/phoneCall">Push me Hard!</nuxt-link>
     </div>
@@ -17,26 +17,30 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     LeafletMap
   },
-  data: () => ({}),
+  data: () => ({
+    rerenderkey: 0
+  }),
   computed: {
     profCall() {
       return this.$store.state.profIsCalling;
     }
   },
   mounted() {
-    this.$store.dispatch("updateProfCalling");
+    this.forceRerender();
   },
 
-  methods: {}
+  methods: {
+    forceRerender() {
+      this.rerenderkey += 1;
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.container {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+.mapfield {
   height: 100%;
+  width: 100%;
 }
 
 .profcall {

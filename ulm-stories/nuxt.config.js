@@ -33,7 +33,8 @@ export default {
     // Load a Node.js module directly (here it's a Sass file)
     // SCSS file in the project
     "@/assets/style/main",
-    "@/assets/style/leaflet/leaflet.css"
+    "@/assets/style/leaflet/leaflet.css",
+    "leaflet/dist/leaflet.css"
   ],
   /*
    ** Plugins to load before mounting the App

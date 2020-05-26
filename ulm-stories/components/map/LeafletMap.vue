@@ -1,38 +1,32 @@
 <template>
-  <div id="map-wrap" style="height: 100%; width: 100%">
-    <l-map :zoom="13" :center="userLocation">
-      <l-tile-layer
-        url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-      ></l-tile-layer>
-      <l-marker :lat-lng="userLocation"></l-marker>
-      <l-marker
-        v-for="(location, index) in allLocations"
-        :key="index"
-        :lat-lng="location.latlng"
-        @click="openLink(location)"
-        :icon="getMarker(location)"
-      >
-        <l-popup>
-          <nuxt-link :to="getLink(location)"
-            >{{ location.characterName }}
-          </nuxt-link>
-        </l-popup>
-      </l-marker>
-    </l-map>
-  </div>
+  <l-map id="leafletmap" :zoom="13" :center="userLocation">
+    <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
+    <l-marker :lat-lng="userLocation"></l-marker>
+    <l-marker
+      v-for="(location, index) in allLocations"
+      :key="index"
+      :lat-lng="location.latlng"
+      @click="openLink(location)"
+      :icon="getMarker(location)"
+    >
+      <l-popup>
+        <nuxt-link :to="getLink(location)"
+          >{{ location.characterName }}
+        </nuxt-link>
+      </l-popup>
+    </l-marker>
+  </l-map>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import "leaflet/dist/leaflet.css";
 import L, { icon } from "leaflet";
 export default {
   name: "LeafletMap",
   data() {
-    return {
-      componentKey: 0
-    };
+    return {};
   },
+  props: { rerenderkey: Number },
   computed: {
     ...mapGetters("npcLocation", ["allLocations"]),
     userLocation() {
@@ -51,15 +45,9 @@ export default {
       return this.$store.state.geolocation.error;
     }
   },
-  mounted() {
-    this.forceRerender();
-    console.debug("Load map");
-  },
+  mounted() {},
 
   methods: {
-    forceRerender() {
-      this.componentKey += 1;
-    },
     getLink(npcInfo) {
       const path = "/content/";
       const query = { chapter: npcInfo.characterID, scene: 0, direct: true };
@@ -101,4 +89,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#leafletmap {
+  width: 100%;
+  height: 100%;
+}
+</style>
