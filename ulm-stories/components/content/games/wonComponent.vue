@@ -1,7 +1,7 @@
 <template>
   <div class="container is-center">
     <div class="centerElement ">
-      <img class="zweistein" src="../../../../assets/img/winScreen/prof.png" />
+      <img class="zweistein" src="../../../assets/img/winScreen/prof.png" />
       <h1 class="titleone">Super!</h1>
       <h2 class="titletwo">Du hast es geschafft!</h2>
       <Button @click="won" class="button">Weiter</Button>

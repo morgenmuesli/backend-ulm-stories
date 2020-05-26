@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div v-if="won">
+      <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
+    </div>
     <div v-if="playing">
       <div class="score">Meter: {{ game.score }}0</div>
       <div class="score-max">Rekord: {{ max }}0</div>
@@ -40,15 +43,18 @@
 <script>
 import Vue from "vue";
 import VueConfetti from "vue-confetti";
+import wonComponent from "~/components/content/games/wonComponent";
 
 Vue.use(VueConfetti);
 export default {
   name: "FlappySchneider",
+  components: { wonComponent },
   data() {
     return {
       max: 0,
       playing: true,
-      win: false,
+      hasWon: false,
+      won: false,
       defoult: {
         score: 0,
         pipes: [],
@@ -59,7 +65,7 @@ export default {
           dt: 0.025,
 
           xBird: 1650,
-          yBird: 100,
+          yBird: 150,
 
           g: 300,
 
@@ -115,7 +121,7 @@ export default {
       this.checkDue();
     },
     upperBird() {
-      this.game.bird.vBird = -100;
+      this.game.bird.vBird = -130;
       this.game.bird.wingState = 2;
       setTimeout(() => {
         this.game.bird.wingState = 0;
@@ -127,7 +133,7 @@ export default {
     addPipe() {
       this.game.pipes.push({
         position: this.game.bgr.width,
-        topPipeHeight: 100 + Math.random() * 100
+        topPipeHeight: 100 + Math.random() * 60
       });
     },
     bottomPipeHeight(pipe) {
@@ -156,9 +162,16 @@ export default {
           this.game.score = i + 1;
         }
         if (this.game.score >= 8) {
-          this.start();
+          this.playing = false;
+          this.won = true;
+          this.hasWon = true;
+          this.$confetti.start();
         }
       });
+    },
+    nextPage() {
+      this.$emit("nextPage");
+      this.$confetti.stop();
     }
   }
 };

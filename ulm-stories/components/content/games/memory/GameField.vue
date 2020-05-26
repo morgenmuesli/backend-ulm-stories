@@ -19,7 +19,7 @@
 <script>
 import _ from "lodash";
 import Tile from "~/components/content/games/memory/Tile";
-import WonComponent from "~/components/content/games/memory/wonComponent";
+import WonComponent from "~/components/content/games/wonComponent";
 
 export default {
   name: "GameField",
@@ -101,6 +101,7 @@ export default {
       return path;
     },
     nextPage() {
+      this.$confetti.stop();
       this.$emit("nextPage");
     }
   }
