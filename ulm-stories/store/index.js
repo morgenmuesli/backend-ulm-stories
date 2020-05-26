@@ -473,15 +473,17 @@ export const actions = {
 
     if (getters.isChapterFinish(data.chapter)) {
       console.debug("CHAPTER IS FINISH: ", data.chapter);
-      dispatch("npcLocation/visitlocation", data.chapter);
-      dispatch("updateProfCalling");
+      if (data.chapter !== "intro") {
+        dispatch("npcLocation/visitlocation", data.chapter);
+        dispatch("updateProfCalling");
+      }
     }
   },
   updateProfCalling({ commit, getters, dispatch }) {
     const count = getters.countFinishChapters;
     console.debug("Count of chapters is ", count);
     console.debug("Count of finish chapters is ", count);
-    if (count === 1) {
+    if (count === 2) {
       commit("toggleProfCall");
       dispatch("npcLocation/activateMultipleLocations", [
         "aicher",
@@ -490,7 +492,7 @@ export const actions = {
         "holl",
         "berblinger"
       ]);
-    } else if (count === 6) {
+    } else if (count === 7) {
       commit("toggleProfCall");
       dispatch("npcLocation/activateMultipleLocations", ["einstein"]);
       commit("changeProfState", 2);

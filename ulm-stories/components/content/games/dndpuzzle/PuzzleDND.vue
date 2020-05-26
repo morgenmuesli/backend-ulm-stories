@@ -49,8 +49,10 @@ export default {
 
       display: "flex",
       flexWrap: "wrap"
-    }
+    },
+    hasWon: false
   }),
+  props: ["wincallback"],
 
   computed: {
     /**
@@ -148,6 +150,7 @@ export default {
         }
         if (this.checkWin()) {
           this.hasWon = true;
+          this.wincallback();
         }
       } else if (item.containedItem !== -1) {
         this.selectedItem = {
