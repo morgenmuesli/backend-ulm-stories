@@ -57,6 +57,7 @@ export default {
       type: String,
       default: "white"
     },
+
     name: String
   }
 };
