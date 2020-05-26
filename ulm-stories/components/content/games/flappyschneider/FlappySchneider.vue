@@ -155,8 +155,8 @@ export default {
         ) {
           this.game.score = i + 1;
         }
-        if (this.game.score === 8) {
-          this.$emit("nextPage");
+        if (this.game.score >= 8) {
+          this.start();
         }
       });
     }

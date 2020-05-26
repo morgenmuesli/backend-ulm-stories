@@ -1,14 +1,13 @@
 <template>
   <div class="container">
-    <LeafletMap :key="componentKey" style="height: 100%; width: 100% " />
-    <div v-if="checkIfProfIsCalling" @click="openProf" class="profcall">
+    <LeafletMap style="height: 100%; width: 100% " />
+    <div v-show="profCall" class="profcall">
       <nuxt-link to="/game/phoneCall">Push me Hard!</nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 import LeafletMap from "~/components/map/LeafletMap";
 
 export default {
@@ -18,25 +17,17 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     LeafletMap
   },
-  data: () => ({
-    componentKey: 0
-  }),
+  data: () => ({}),
   computed: {
-    ...mapGetters(["checkIfProfIsCalling"])
+    profCall() {
+      return this.$store.state.profIsCalling;
+    }
   },
   mounted() {
-    this.forceRerender();
     this.$store.dispatch("updateProfCalling");
   },
 
-  methods: {
-    forceRerender() {
-      this.componentKey += 1;
-    },
-    profCall() {
-      this.$router.push();
-    }
-  }
+  methods: {}
 };
 </script>
 

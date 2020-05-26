@@ -35,8 +35,8 @@ export default function({ redirect, query, store }) {
           chapter: query.chapter,
           scene: query.scene
         });
-      case TYPE.image:
-        return redirect(`/content/image`, {
+      case TYPE.animation:
+        return redirect(`/content/animation`, {
           chapter: query.chapter,
           scene: query.scene
         });

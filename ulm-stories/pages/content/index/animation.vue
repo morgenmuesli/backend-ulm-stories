@@ -8,6 +8,7 @@
         class="videoStyle"
         autoplay
         type='video/webm"'
+        @ended="nextPage"
       ></video>
     </div>
   </div>
@@ -19,13 +20,32 @@ export default {
   data: () => ({
     currentData: {
       video: "sample",
-      text: "sample text",
-      img: "ensinger",
-      answer: "sample",
-      chapter: "ensinger",
+      chapter: "intro",
       scene: 0
+    },
+    chapter: "intro",
+    scene: 0
+  }),
+  mounted() {
+    console.debug("HELLO FROM ANIMATION");
+    this.chapter = this.$route.query.chapter;
+    this.scene = parseInt(this.$route.query.scene);
+    this.currentData = this.$store.getters["videos/getAnimationByChapter"](
+      this.chapter
+    );
+  },
+  methods: {
+    nextPage() {
+      const path = "/content/";
+      const query = {
+        chapter: this.chapter,
+        scene: this.scene + 1,
+        direct: true
+      };
+
+      this.$router.push({ path, query });
     }
-  })
+  }
 };
 </script>
 

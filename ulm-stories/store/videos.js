@@ -1,7 +1,147 @@
 export const state = () => ({
   videos: [
     {
-      id: 0,
+      chapter: "intro",
+      scene: 0,
+      img: "ensinger",
+      video: "Intro1",
+      text:
+        "Du besuchst deinen Onkel, Professor Alfred Zweistein, in seinem Labor.",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 1,
+      img: "ensinger",
+      video: "Intro2",
+      text:
+        "Professor Zweistein arbeitet gerade auf Hochtouren an einer neuen Art der Energiegewinnung. Da er jedoch nicht mehr weiterweiß, benötigt er Hilfe.",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 2,
+      img: "ensinger",
+      video: "Intro3",
+      text:
+        "Deshalb versucht er Professor Albert Einstein mit seiner selbst gebauten Zeitmaschine in unsere Zeit zu holen. Doch da ... passiert es...",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro_animation",
+      scene: 3,
+      img: "ensinger",
+      video: "startanimation",
+      text: null,
+      answer: null
+    },
+
+    {
+      chapter: "intro",
+      scene: 4,
+      img: "ensinger",
+      video: "01_Zweistein",
+      text:
+        "Oh nein, irgendwas ist schiefgelaufen. Alles steht in Flammen und die Uhren scheinen alle rückwärts zu laufen.",
+      answer: "Weiter"
+    },
+
+    {
+      chapter: "intro",
+      scene: 5,
+      img: "ensinger",
+      video: "02_Zweistein",
+      text: "Ich messe jede Menge Schwankungen im Ulm-Zeit Kontinuum.",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 6,
+      img: "ensinger",
+      video: "03_Zweistein",
+      text:
+        "Ach du meine Güte!! Der Kristall des Zeitmessgeräts ist in 6 Teile zersprungen.",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 7,
+      img: "ensinger",
+      video: "04_Zweistein",
+      text: "Und jetzt sind sie auch noch plötzlich verschwunden!",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 8,
+      img: "ensinger",
+      video: "05_Zweistein",
+      text: "Warte, ich kann die Einzelteile mit dem Computer orten...",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 9,
+      img: "ensinger",
+      video: "06_Zweistein",
+      text: "Oje, die haben sich über das ganze Ulmer Stadtgebiet verteilt...",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 10,
+      img: "ensinger",
+      video: "07_Zweistein",
+      text:
+        "Du musst in die Stadt und die Kristallscherben finden, während ich hier im Labor versuche die Katastrophe in den Griff zu bekommen. Ich benötige die Einzelteile um das Chaos hier zu stoppen- und das Ulm-Zeit-Kontinuum wieder zu stabilisieren.",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 11,
+      img: "ensinger",
+      video: "08_Zweistein",
+      text:
+        "Ich benötige die Einzelteile um das Chaos hier zu stoppen- und das Ulm-Zeit-Kontinuum wieder zu stabilisieren.",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 12,
+      img: "ensinger",
+      video: "09_Zweistein",
+      text:
+        "Wenn uns das nicht gelingt ... oh, ich darf gar nicht an die Folgen denken…",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 13,
+      img: "ensinger",
+      video: "010_Zweistein",
+      text:
+        "Du musst sofort los! Starte Am Münster – da habe ich das stärkste Signal!",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 14,
+      img: "ensinger",
+      video: "011_Zweistein",
+      text:
+        "Hier! Benutze dieses Ortungsgerät. Die roten Punkte zeigen dir, an welche Orte du dich begeben musst.",
+      answer: "Weiter"
+    },
+    {
+      chapter: "intro",
+      scene: 15,
+      img: "ensinger",
+      video: "011_Zweistein",
+      text:
+        "Du musst sofort los! Starte Am Münster – da habe ich das stärkste Signal!",
+      answer: "Weiter"
+    },
+    {
       chapter: "ensinger",
       scene: 0,
       img: "ensinger",
@@ -11,7 +151,24 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
+      chapter: "ensinger",
+      scene: 0,
+      img: "ensinger",
+      video: "1_Ensinger",
+      text:
+        "Siehst du den glitzernden Stein, der als Turmspitze benutzt wird? Genau diese Kristallscherben suchen wir!",
+      answer: "Weiter"
+    },
+    {
+      chapter: "ensinger",
+      scene: 0,
+      img: "ensinger",
+      video: "1_Ensinger",
+      text:
+        "Siehst du den glitzernden Stein, der als Turmspitze benutzt wird? Genau diese Kristallscherben suchen wir!",
+      answer: "Weiter"
+    },
+    {
       chapter: "ensinger",
       scene: 1,
       img: "ensinger",
@@ -21,7 +178,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 2,
       img: "ensinger",
@@ -31,7 +187,6 @@ export const state = () => ({
       answer: "Den Experiment-Unfall erklären."
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 3,
       img: "ensinger",
@@ -41,7 +196,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 4,
       img: "ensinger",
@@ -51,7 +205,6 @@ export const state = () => ({
       answer: "Wer ist dein Vater?"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 5,
       img: "ensinger",
@@ -61,7 +214,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 6,
       img: "ensinger",
@@ -71,7 +223,6 @@ export const state = () => ({
       answer: "Du stehst vor dem Ulmer Münster."
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 7,
       img: "ensinger",
@@ -81,7 +232,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 8,
       img: "ensinger",
@@ -91,7 +241,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 9,
       img: "ensinger",
@@ -100,7 +249,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 10,
       img: "ensinger",
@@ -110,7 +258,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 11,
       img: "ensinger",
@@ -119,7 +266,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 13,
       img: "ensinger",
@@ -128,7 +274,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 14,
       img: "ensinger",
@@ -138,7 +283,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 0,
       chapter: "ensinger",
       scene: 15,
       img: "ensinger",
@@ -148,7 +292,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 0,
       img: "aicher",
@@ -157,7 +300,6 @@ export const state = () => ({
       answer: "Den Experiment-Unfall erklären."
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 1,
       img: "aicher",
@@ -167,7 +309,6 @@ export const state = () => ({
       answer: "Wovon sprichst du?"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 2,
       img: "aicher",
@@ -177,7 +318,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 3,
       img: "aicher",
@@ -187,7 +327,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 4,
       img: "aicher",
@@ -197,7 +336,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 5,
       img: "aicher",
@@ -207,7 +345,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 6,
       img: "aicher",
@@ -217,7 +354,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 7,
       img: "aicher",
@@ -227,7 +363,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 8,
       img: "aicher",
@@ -237,7 +372,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 9,
       img: "aicher",
@@ -247,7 +381,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 10,
       img: "aicher",
@@ -257,7 +390,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 11,
       img: "aicher",
@@ -267,7 +399,6 @@ export const state = () => ({
       answer: "Ja, habe ich!"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 12,
       img: "aicher",
@@ -277,7 +408,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 1,
       chapter: "aicher",
       scene: 13,
       img: "aicher",
@@ -287,7 +417,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 0,
       img: "streicher",
@@ -297,7 +426,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 1,
       img: "streicher",
@@ -307,7 +435,6 @@ export const state = () => ({
       answer: "Agathe antworten"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 2,
       img: "streicher",
@@ -317,7 +444,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 3,
       img: "streicher",
@@ -327,7 +453,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 4,
       img: "streicher",
@@ -337,7 +462,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 5,
       img: "streicher",
@@ -347,7 +471,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 6,
       img: "streicher",
@@ -357,7 +480,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 7,
       img: "streicher",
@@ -367,7 +489,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 8,
       img: "streicher",
@@ -377,7 +498,6 @@ export const state = () => ({
       answer: "Auf dem Floß!"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 9,
       img: "streicher",
@@ -387,7 +507,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 10,
       img: "streicher",
@@ -397,7 +516,6 @@ export const state = () => ({
       answer: "Klar, gerne!"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 11,
       img: "streicher",
@@ -406,7 +524,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 2,
       chapter: "streicher",
       scene: 12,
       img: "streicher",
@@ -416,7 +533,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 3,
       chapter: "berblinger",
       scene: 0,
       img: "berblinger",
@@ -426,7 +542,6 @@ export const state = () => ({
       answer: "Antworten"
     },
     {
-      id: 3,
       chapter: "berblinger",
       scene: 1,
       img: "berblinger",
@@ -436,7 +551,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 3,
       chapter: "berblinger",
       scene: 2,
       img: "berblinger",
@@ -446,7 +560,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 3,
       chapter: "berblinger",
       scene: 3,
       img: "berblinger",
@@ -456,7 +569,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 3,
       chapter: "berblinger",
       scene: 4,
       img: "berblinger",
@@ -466,7 +578,6 @@ export const state = () => ({
       answer: "Ich kann dir helfen!"
     },
     {
-      id: 3,
       chapter: "berblinger",
       scene: 5,
       img: "berblinger",
@@ -475,7 +586,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 3,
       chapter: "berblinger",
       scene: 7,
       img: "berblinger",
@@ -485,7 +595,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 3,
       chapter: "berblinger",
       scene: 8,
       img: "berblinger",
@@ -494,7 +603,6 @@ export const state = () => ({
       answer: "Weiter!"
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 0,
       img: "holl",
@@ -503,7 +611,6 @@ export const state = () => ({
       answer: "Ich suche nach dem Kristall."
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 1,
       img: "holl",
@@ -513,7 +620,6 @@ export const state = () => ({
       answer: "Experimentunfall erklären."
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 2,
       img: "holl",
@@ -522,7 +628,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 3,
       img: "holl",
@@ -531,7 +636,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 4,
       img: "holl",
@@ -541,7 +645,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 5,
       img: "holl",
@@ -551,7 +654,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 6,
       img: "holl",
@@ -561,7 +663,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 7,
       img: "holl",
@@ -571,7 +672,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 8,
       img: "holl",
@@ -581,7 +681,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 9,
       img: "holl",
@@ -591,7 +690,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 10,
       img: "holl",
@@ -600,7 +698,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 4,
       chapter: "holl",
       scene: 11,
       img: "holl",
@@ -610,7 +707,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 0,
       img: "schwanenwirtin",
@@ -620,7 +716,6 @@ export const state = () => ({
       answer: "Ja, das kann ich!"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 1,
       img: "schwanenwirtin",
@@ -630,7 +725,6 @@ export const state = () => ({
       answer: "Gäste?"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 2,
       img: "schwanenwirtin",
@@ -640,7 +734,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 3,
       img: "schwanenwirtin",
@@ -650,7 +743,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 4,
       img: "schwanenwirtin",
@@ -660,7 +752,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 5,
       img: "schwanenwirtin",
@@ -670,7 +761,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 6,
       img: "schwanenwirtin",
@@ -680,7 +770,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 7,
       img: "schwanenwirtin",
@@ -690,7 +779,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 8,
       img: "schwanenwirtin",
@@ -700,7 +788,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 9,
       img: "schwanenwirtin",
@@ -710,7 +797,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 10,
       img: "schwanenwirtin",
@@ -720,7 +806,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 11,
       img: "schwanenwirtin",
@@ -730,7 +815,6 @@ export const state = () => ({
       answer: "Ein Glas, ein ..."
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 12,
       img: "schwanenwirtin",
@@ -740,7 +824,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 5,
       chapter: "schwanenwirtin",
       scene: 14,
       img: "schwanenwirtin",
@@ -750,7 +833,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 0,
       img: "einstein",
@@ -760,7 +842,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 1,
       img: "einstein",
@@ -770,7 +851,6 @@ export const state = () => ({
       answer: "Das habe ich bereits."
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 2,
       img: "einstein",
@@ -779,7 +859,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 3,
       img: "einstein",
@@ -789,7 +868,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 4,
       img: "einstein",
@@ -798,7 +876,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 5,
       img: "einstein",
@@ -808,7 +885,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 6,
       img: "einstein",
@@ -818,7 +894,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 7,
       img: "einstein",
@@ -828,7 +903,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 8,
       img: "einstein",
@@ -837,7 +911,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 9,
       img: "einstein",
@@ -847,7 +920,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 10,
       img: "einstein",
@@ -857,7 +929,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 6,
       chapter: "einstein",
       scene: 11,
       img: "einstein",
@@ -867,7 +938,6 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      id: 7,
       chapter: "prof0",
       scene: 0,
       video: "98_Einstein",
@@ -875,14 +945,12 @@ export const state = () => ({
         "Du hast den jungen Ensinger wieder in seine Zeit zurück schicken können, stimmt‘s?"
     },
     {
-      id: 7,
       chapter: "prof0",
       scene: 1,
       video: "98_Einstein",
       text: "Das Chaos im Labor wurde nämlich gerade viel ruhiger!"
     },
     {
-      id: 7,
       chapter: "prof0",
       scene: 2,
       video: "98_Einstein",
@@ -890,7 +958,6 @@ export const state = () => ({
         "Mach weiter so! Schau auf der Karte nach, da müsste der nächste Ort frei geschaltet worden sein. Viel Erfolg und vergiss die Kristallscherben nicht!"
     },
     {
-      id: 8,
       chapter: "prof1",
       scene: 0,
       video: "98_Einstein",
@@ -898,7 +965,6 @@ export const state = () => ({
       answer: "Ja hab ich!"
     },
     {
-      id: 8,
       chapter: "prof1",
       scene: 1,
       video: "98_Einstein",
@@ -906,7 +972,6 @@ export const state = () => ({
         "Du bist super! Zum Glück habe ich dich in die Stadt geschickt! Ich wusste du schaffst es!"
     },
     {
-      id: 8,
       chapter: "prof1",
       scene: 2,
       video: "98_Einstein",
@@ -914,7 +979,6 @@ export const state = () => ({
         "Ich habe mittlerweile auch die Zeitmaschine reparieren können. Jetzt fehlt nur noch der Kristall für das Zeitmessgerät."
     },
     {
-      id: 8,
       chapter: "prof1",
       scene: 3,
       video: "98_Einstein",
@@ -922,7 +986,6 @@ export const state = () => ({
         "Und weißt du wieso das Experiment missglückt ist? Wir haben es an dem falschen Ort gemacht!"
     },
     {
-      id: 8,
       chapter: "prof1",
       scene: 4,
       video: "98_Einstein",
@@ -930,7 +993,6 @@ export const state = () => ({
         "Der Ort muss eine persönliche Bindung zu der Person haben, die wir durch die Zeit schicken wollen. Also lass uns an dem Elternhaus von Albert Einstein treffen."
     },
     {
-      id: 8,
       chapter: "prof1",
       scene: 5,
       video: "98_Einstein",
@@ -946,15 +1008,17 @@ export const getters = {
     return videosOfChapter.sort((a, b) => a.id - b.id);
   },
 
-  getVideoByVideoId: state => videoID => {
-    return state.videos.find(a => a.id === videoID);
-  },
   getVideoByChapterAndScene: state => (chapter, scene) => {
     scene = parseInt(scene);
     const video = state.videos.find(
       a => a.chapter === chapter && a.scene === scene
     );
     console.debug(video);
+    return video;
+  },
+  getAnimationByChapter: state => chapter => {
+    const video = state.videos.find(a => a.chapter === chapter + "_animation");
+    console.debug("animation: " + video);
     return video;
   }
 };

@@ -9,7 +9,7 @@ export default function(req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Vary", "Origin");
 
-  // remove _pwa_assets from path
+  // remove /nuxtfiles from path
   req.originalUrl = req.originalUrl.replace("/nuxtfiles", "");
 
   return serveAssets(req, res, next);
