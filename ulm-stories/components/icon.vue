@@ -36,8 +36,8 @@
       >
         <g id="Ebene_2">
           <polygon
-            fill="none"
             :stroke="color"
+            fill="none"
             stroke-width="8"
             stroke-miterlimit="10"
             points="150.001,81.259 40.709,117.04

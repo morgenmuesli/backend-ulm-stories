@@ -23,10 +23,10 @@ import { mapGetters } from "vuex";
 import L, { icon } from "leaflet";
 export default {
   name: "LeafletMap",
+  props: { rerenderkey: Number },
   data() {
     return {};
   },
-  props: { rerenderkey: Number },
   computed: {
     ...mapGetters("npcLocation", ["allLocations"]),
     userLocation() {
