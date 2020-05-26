@@ -3,5 +3,6 @@ export const TYPE = {
   game: "GAME",
   image: "IMAGE",
   profcall: "PROFCALL",
-  intro: "INTRO"
+  intro: "INTRO",
+  animation: "ANIMATION"
 };

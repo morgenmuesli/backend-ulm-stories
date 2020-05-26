@@ -102,18 +102,6 @@ export default {
     }, 1000);
   },
   methods: {
-    start() {
-      this.$confetti.start();
-      this.playing = false;
-      this.win = true;
-      setTimeout(() => {
-        this.stop();
-      }, 4000);
-    },
-    stop() {
-      this.$confetti.stop();
-      this.$emit("nextPage");
-    },
     gameLoop() {
       this.game.bird.vBird += this.game.bird.dt * this.game.bird.g;
       this.game.bird.yBird += this.game.bird.dt * this.game.bird.vBird;

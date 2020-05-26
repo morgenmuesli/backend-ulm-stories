@@ -2,7 +2,15 @@
   <div class="container">
     <div class="menu">
       <ul class="menu-list">
-        <li><nuxt-link to="/game">Start Game</nuxt-link></li>
+        <li>
+          <nuxt-link
+            :to="{
+              path: '/content',
+              query: { chapter: 'intro', scene: 0, direct: true }
+            }"
+            >Start Game</nuxt-link
+          >
+        </li>
         <li><nuxt-link to="/preferences">Einstellungen</nuxt-link></li>
         <li><nuxt-link to="/about">Über uns</nuxt-link></li>
         <li><nuxt-link to="/slider_test">Slider Test</nuxt-link></li>
