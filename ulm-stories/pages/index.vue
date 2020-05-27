@@ -67,7 +67,7 @@ export default {};
   font-family: "Ubuntu", sans-serif;
   font-weight: bolder;
   color: #272727;
-  font-size: x-large;
+  font-size: larger;
 }
 .miu {
   padding: 5%;

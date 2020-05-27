@@ -312,6 +312,12 @@ export const state = () => ({
       type: TYPE.game
     },
     {
+      chapter: "schwanenwirtin",
+      scene: 14,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
       chapter: "einstein",
       scene: 0,
       isFinish: false,
