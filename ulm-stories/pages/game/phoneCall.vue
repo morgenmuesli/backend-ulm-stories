@@ -32,16 +32,22 @@
           >
             <div class="card">
               <div class="content">
-                <img
-                  v-if="item.img"
-                  :src="require('@/assets/img/background/' + item.img + '.jpg')"
-                />
-                <video
-                  v-if="item.video"
-                  :src="require('@/assets/webm/' + item.video + '.webm')"
-                  @ended="popMessages"
-                  autoplay
-                ></video>
+                <div class="img-video">
+                  <img
+                    v-if="item.img"
+                    :src="
+                      require('@/assets/img/background/' + item.img + '.jpg')
+                    "
+                    style=""
+                  />
+                  <video
+                    v-if="item.video"
+                    :src="require('@/assets/webm/' + item.video + '.webm')"
+                    @ended="popMessages"
+                    autoplay
+                    style="position: absolute; bottom: 1.75%; right:0"
+                  ></video>
+                </div>
                 <p>{{ item.text }}</p>
               </div>
             </div>
@@ -151,8 +157,9 @@ h3 {
   color: white;
   display: flex;
   align-content: center;
-  font-size: larger;
-  font-family: Ubuntu, sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: x-large;
 }
 
 .prof {
@@ -181,12 +188,16 @@ h3 {
 .card {
   box-sizing: border-box;
   border-radius: 0.1em 1.5em 0.5em 3em;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: bolder;
   padding: 10%;
   max-width: 100%;
   margin: 1rem;
 }
 
-.content {
+.img-video {
+  position: relative;
 }
 
 .header {
@@ -197,7 +208,7 @@ h3 {
   width: 100%;
   height: 125px;
   display: flex;
-  z-index: 1;
+  z-index: 5;
 }
 
 .writingWindow {
