@@ -424,6 +424,18 @@ export const getters = {
     const chapters = state.gameState.map(x => x.chapter);
     return new Set(chapters);
   },
+  getFinishedChapter(state, getters) {
+    const finishedList = [];
+    for (const chapter of getters.getChaptersAsSet) {
+      if (chapter === "intro") {
+        continue;
+      }
+      if (getters.isChapterFinish(chapter)) {
+        finishedList.push(chapter);
+      }
+    }
+    return finishedList;
+  },
   countFinishChapters: (state, getters) => {
     let count = 0;
     for (const chapter of getters.getChaptersAsSet) {

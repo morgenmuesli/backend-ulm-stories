@@ -1,6 +1,15 @@
 <template>
-  <div class="container center">
-    <PuzzleDND win-call-back="" />
+  <div>
+    <div v-if="won">
+      <won-component
+        id="won"
+        v-if="this.hasWon"
+        :won="this.nextPage"
+      ></won-component>
+    </div>
+    <div class="container center">
+      <PuzzleDND wincallback="won" />
+    </div>
   </div>
 </template>
 
@@ -9,8 +18,14 @@ import PuzzleDND from "~/components/content/games/dndpuzzle/PuzzleDND";
 export default {
   name: "PuzzleWrapper",
   components: { PuzzleDND },
+  data: () => ({
+    hasWon: false
+  }),
   methods: {
-    nextPage: () => {
+    won() {
+      this.hasWon = true;
+    },
+    nextPage() {
       this.$emit("nextPage");
     }
   }

@@ -88,5 +88,14 @@ export const actions = {
 };
 
 export const getters = {
-  allLocations: state => state.locations.filter(x => x.isActive)
+  allLocations: state => state.locations.filter(x => x.isActive),
+  finishedChapter: state => {
+    const finishedList = [];
+    for (const loc of state.locations) {
+      if (loc.haveVisit) {
+        finishedList.push(loc.characterID);
+      }
+    }
+    return finishedList;
+  }
 };

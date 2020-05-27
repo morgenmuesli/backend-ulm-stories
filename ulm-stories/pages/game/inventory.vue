@@ -3,7 +3,7 @@
     <crystal
       ref="kristall"
       :size="crystalSize"
-      :visible-characters="finishedList"
+      :visible-characters="finishedChapter"
     ></crystal>
   </div>
 </template>
@@ -16,15 +16,18 @@ export default {
     crystal
   },
   data: () => ({
-    finishedList: ["holl", "ensinger", "berblinger", "aicher", "berblinger"],
+    finishedList: [],
     crystalSize: {
-      height: "100%",
-      width: "100%"
+      height: "70%",
+      width: "70%"
     }
   }),
-  mounted() {
-    const set = this.$store.getters.getChaptersAsSet;
-    this.finishedList = Array.from(set);
+  computed: {
+    finishedChapter() {
+      const finishedList = this.$store.getters["npcLocation/finishedChapter"];
+      console.debug(finishedList);
+      return this.$store.getters["npcLocation/finishedChapter"];
+    }
   }
 };
 </script>
