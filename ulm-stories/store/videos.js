@@ -993,7 +993,7 @@ export const state = () => ({
       chapter: "prof1",
       scene: 0,
       img: "handy",
-      video: "98_Einstein",
+      video: "81_ZweisteinO",
       text: "Hast du alle Kristallstücke?",
       answer: "Ja hab ich!"
     },
@@ -1001,7 +1001,7 @@ export const state = () => ({
       chapter: "prof1",
       scene: 1,
       img: "handy",
-      video: "98_Einstein",
+      video: "82_ZweisteinO",
       text:
         "Du bist super! Zum Glück habe ich dich in die Stadt geschickt! Ich wusste du schaffst es!"
     },
@@ -1009,7 +1009,7 @@ export const state = () => ({
       chapter: "prof1",
       scene: 2,
       img: "handy",
-      video: "98_Einstein",
+      video: "83_ZweisteinO",
       text:
         "Ich habe mittlerweile auch die Zeitmaschine reparieren können. Jetzt fehlt nur noch der Kristall für das Zeitmessgerät."
     },
@@ -1017,7 +1017,7 @@ export const state = () => ({
       chapter: "prof1",
       scene: 3,
       img: "handy",
-      video: "98_Einstein",
+      video: "84_ZweisteinO",
       text:
         "Und weißt du wieso das Experiment missglückt ist? Wir haben es an dem falschen Ort gemacht!"
     },
@@ -1025,7 +1025,7 @@ export const state = () => ({
       chapter: "prof1",
       scene: 4,
       img: "handy",
-      video: "98_Einstein",
+      video: "85_ZweisteinO",
       text:
         "Der Ort muss eine persönliche Bindung zu der Person haben, die wir durch die Zeit schicken wollen. Also lass uns an dem Elternhaus von Albert Einstein treffen."
     },
@@ -1033,7 +1033,7 @@ export const state = () => ({
       chapter: "prof1",
       scene: 5,
       img: "handy",
-      video: "98_Einstein",
+      video: "86_ZweisteinO",
       text:
         "Der Punkt ist in der Karte vermerkt. Ich bin ja so aufgeregt!! Wir sehen uns dort. Bis gleich!"
     }
