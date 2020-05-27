@@ -32,6 +32,10 @@
           >
             <div class="card">
               <div class="content">
+                <img
+                  v-if="item.img"
+                  :src="require('@/assets/img/background/' + item.img + '.jpg')"
+                />
                 <video
                   v-if="item.video"
                   :src="require('@/assets/webm/' + item.video + '.webm')"
@@ -62,10 +66,10 @@
           </div>
           <div class="column is-mobile" style="margin-top: 2vh">
             <icon
-              id="send"
               v-on:click="send"
               name="send"
-              style="height: 48px; width: 48px"
+              class="send-btn"
+              style="height: 48px; width: 48px; "
             />
           </div>
         </div>
@@ -177,8 +181,7 @@ h3 {
 .card {
   box-sizing: border-box;
   border-radius: 0.1em 1.5em 0.5em 3em;
-  padding-left: 15%;
-  padding-bottom: 10%;
+  padding: 10%;
   max-width: 100%;
   margin: 1rem;
 }
@@ -204,10 +207,5 @@ h3 {
   position: fixed;
   bottom: 0;
   padding-right: 2rem;
-}
-
-#send {
-  max-width: 100%;
-  margin-right: 2rem;
 }
 </style>

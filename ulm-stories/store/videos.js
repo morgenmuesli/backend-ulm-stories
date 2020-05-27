@@ -15,7 +15,7 @@ export const state = () => ({
       img: "labor_ganz",
       video: "Intro2",
       text:
-        "Professor Zweistein arbeitet gerade auf Hochtouren an einer neuen Art der Energiegewinnung. Da er jedoch nicht mehr weiterweiß, benötigt er Hilfe.",
+        "Professor Zweistein arbeitet gerade auf Hochtouren an einer neuen Art der Energiegewinnung. Da er jedoch nicht mehr weiter weiß, benötigt er Hilfe.",
       answer: "Weiter"
     },
     {
@@ -940,26 +940,30 @@ export const state = () => ({
     {
       chapter: "prof0",
       scene: 0,
-      video: "98_Einstein",
+      img: "handy",
+      video: "16_Prof",
       text:
         "Du hast den jungen Ensinger wieder in seine Zeit zurück schicken können, stimmt‘s?"
     },
     {
       chapter: "prof0",
       scene: 1,
-      video: "98_Einstein",
+      img: "handy",
+      video: "17_Prof",
       text: "Das Chaos im Labor wurde nämlich gerade viel ruhiger!"
     },
     {
       chapter: "prof0",
       scene: 2,
-      video: "98_Einstein",
+      img: "handy",
+      video: "18_Prof",
       text:
         "Mach weiter so! Schau auf der Karte nach, da müsste der nächste Ort frei geschaltet worden sein. Viel Erfolg und vergiss die Kristallscherben nicht!"
     },
     {
       chapter: "prof1",
       scene: 0,
+      img: "handy",
       video: "98_Einstein",
       text: "Hast du alle Kristallstücke?",
       answer: "Ja hab ich!"
@@ -967,6 +971,7 @@ export const state = () => ({
     {
       chapter: "prof1",
       scene: 1,
+      img: "handy",
       video: "98_Einstein",
       text:
         "Du bist super! Zum Glück habe ich dich in die Stadt geschickt! Ich wusste du schaffst es!"
@@ -974,6 +979,7 @@ export const state = () => ({
     {
       chapter: "prof1",
       scene: 2,
+      img: "handy",
       video: "98_Einstein",
       text:
         "Ich habe mittlerweile auch die Zeitmaschine reparieren können. Jetzt fehlt nur noch der Kristall für das Zeitmessgerät."
@@ -981,6 +987,7 @@ export const state = () => ({
     {
       chapter: "prof1",
       scene: 3,
+      img: "handy",
       video: "98_Einstein",
       text:
         "Und weißt du wieso das Experiment missglückt ist? Wir haben es an dem falschen Ort gemacht!"
@@ -988,6 +995,7 @@ export const state = () => ({
     {
       chapter: "prof1",
       scene: 4,
+      img: "handy",
       video: "98_Einstein",
       text:
         "Der Ort muss eine persönliche Bindung zu der Person haben, die wir durch die Zeit schicken wollen. Also lass uns an dem Elternhaus von Albert Einstein treffen."
@@ -995,6 +1003,7 @@ export const state = () => ({
     {
       chapter: "prof1",
       scene: 5,
+      img: "handy",
       video: "98_Einstein",
       text:
         "Der Punkt ist in der Karte vermerkt. Ich bin ja so aufgeregt!! Wir sehen uns dort. Bis gleich!"
