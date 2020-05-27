@@ -1,10 +1,14 @@
 <template>
   <div>
-    <section class="header">
+    <section class="header container">
       <nuxt-link to="/game">
-        <icon name="back" style="width: 48px; height: 48px" />
+        <icon
+          name="back"
+          style="width: 48px; height: 48px"
+          class="is-one-fifth"
+        />
       </nuxt-link>
-      <div class="container prof is-fixed-top">
+      <div class="prof is-fixed-top is-half is-offset-one-fifth">
         <figure class="image is-64x64">
           <img
             class="is-rounded"
@@ -38,14 +42,13 @@
                     :src="
                       require('@/assets/img/background/' + item.img + '.jpg')
                     "
-                    style=""
                   />
                   <video
                     v-if="item.video"
                     :src="require('@/assets/webm/' + item.video + '.webm')"
                     @ended="popMessages"
                     autoplay
-                    style="position: absolute; bottom: 1.75%; right:0"
+                    style="position: absolute; bottom: 2%; right:0"
                   ></video>
                 </div>
                 <p>{{ item.text }}</p>
@@ -59,7 +62,7 @@
       <div id="sendContainer" class="container">
         <div class="columns is-center is-mobile">
           <div
-            class="column is-three-quarters-mobile"
+            class="column is-four-fifths-mobile"
             style="margin-top: 2vh; padding-left: 5%"
           >
             <input
@@ -70,7 +73,7 @@
               type="text"
             />
           </div>
-          <div class="column is-mobile" style="margin-top: 2vh">
+          <div class="column is-one-quarter" style="margin-top: 2vh">
             <icon
               v-on:click="send"
               name="send"
