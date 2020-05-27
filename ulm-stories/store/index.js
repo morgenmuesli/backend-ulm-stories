@@ -339,7 +339,7 @@ export const state = () => ({
       chapter: "einstein",
       scene: 4,
       isFinish: false,
-      type: TYPE.video
+      type: TYPE.animation
     },
     {
       chapter: "einstein",
@@ -380,6 +380,24 @@ export const state = () => ({
     {
       chapter: "einstein",
       scene: 11,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      chapter: "einstein",
+      scene: 12,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      chapter: "einstein",
+      scene: 13,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      chapter: "einstein",
+      scene: 14,
       isFinish: false,
       type: TYPE.video
     },
@@ -498,13 +516,13 @@ export const actions = {
       console.debug("CHAPTER IS FINISH: ", data.chapter);
       if (data.chapter !== "intro") {
         dispatch("npcLocation/visitlocation", data.chapter);
-        dispatch("updateProfCalling");
+        dispatch("updateProfCalling", data.chapter);
       }
     }
   },
-  updateProfCalling({ commit, getters, dispatch }) {
-    if (getters.isChapterFinish("ensinger")) {
-      commit("toggleProfCall");
+  updateProfCalling({ commit, getters, dispatch }, chapter) {
+    if (chapter === "ensinger") {
+      commit("changeProfCallFlag", true);
       dispatch("npcLocation/activateMultipleLocations", [
         "aicher",
         "streicher",
@@ -521,7 +539,7 @@ export const actions = {
         "berblinger"
       ])
     ) {
-      commit("toggleProfCall");
+      commit("changeProfCallFlag", true);
       dispatch("npcLocation/activateMultipleLocations", ["einstein"]);
       commit("changeProfState", 2);
     }

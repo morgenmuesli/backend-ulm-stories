@@ -1,31 +1,35 @@
 <template>
   <div>
-    <div v-if="won">
+    <div>
       <won-component
         id="won"
         v-if="this.hasWon"
-        :won="this.nextPage"
+        :won="nextPage"
       ></won-component>
     </div>
     <div class="container center">
-      <PuzzleDND wincallback="won" />
+      <PuzzleDND :wincallback="winning" />
     </div>
   </div>
 </template>
 
 <script>
+import wonComponent from "~/components/content/games/wonComponent";
 import PuzzleDND from "~/components/content/games/dndpuzzle/PuzzleDND";
 export default {
   name: "PuzzleWrapper",
-  components: { PuzzleDND },
+  components: { PuzzleDND, wonComponent },
   data: () => ({
     hasWon: false
   }),
   methods: {
-    won() {
+    winning() {
       this.hasWon = true;
+      console.info("start confetti");
+      this.$confetti.start();
     },
     nextPage() {
+      this.$confetti.stop();
       this.$emit("nextPage");
     }
   }

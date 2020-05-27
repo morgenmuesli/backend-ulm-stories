@@ -35,7 +35,6 @@ export const state = () => ({
       text: null,
       answer: null
     },
-
     {
       chapter: "intro",
       scene: 4,
@@ -871,13 +870,21 @@ export const state = () => ({
       chapter: "einstein",
       scene: 4,
       img: "einstein",
+      video: "schlussanimation",
+      text: null,
+      answer: null
+    },
+    {
+      chapter: "einstein",
+      scene: 5,
+      img: "einstein",
       video: "91_Einstein",
       text: "Nanu, wo bin ich denn jetzt gelandet?",
       answer: "Weiter"
     },
     {
       chapter: "einstein",
-      scene: 5,
+      scene: 6,
       img: "einstein",
       video: "92_Zweistein",
       text:
@@ -886,7 +893,7 @@ export const state = () => ({
     },
     {
       chapter: "einstein",
-      scene: 6,
+      scene: 7,
       img: "einstein",
       video: "93_Einstein",
       text:
@@ -895,7 +902,7 @@ export const state = () => ({
     },
     {
       chapter: "einstein",
-      scene: 7,
+      scene: 8,
       img: "einstein",
       video: "94_Einstein",
       text:
@@ -904,7 +911,7 @@ export const state = () => ({
     },
     {
       chapter: "einstein",
-      scene: 8,
+      scene: 9,
       img: "einstein",
       video: "95_Zweistein",
       text: "Ich weiß! Das ist das letzte Mal. Versprochen!",
@@ -912,7 +919,7 @@ export const state = () => ({
     },
     {
       chapter: "einstein",
-      scene: 9,
+      scene: 10,
       img: "einstein",
       video: "96_Einstein",
       text:
@@ -921,7 +928,7 @@ export const state = () => ({
     },
     {
       chapter: "einstein",
-      scene: 10,
+      scene: 11,
       img: "einstein",
       video: "97_Zweistein",
       text:
@@ -930,11 +937,33 @@ export const state = () => ({
     },
     {
       chapter: "einstein",
-      scene: 11,
+      scene: 12,
       img: "einstein",
       video: "98_Einstein",
       text:
         "Also gut! Mehr als die Vergangenheit interessiert mich die Zukunft, denn in ihr gedenke ich zu leben. Erzähl mir von deinem Problem.",
+      answer: "Weiter"
+    },
+    {
+      chapter: "einstein",
+      scene: 13,
+      img: "einstein",
+      video: "99_Einstein",
+      text:
+        "Die beiden Erfinder fingen an über Relativität und andere verwirrende Dinge zu diskutieren. Dabei schienen sie ganz die Zeit zu vergessen … ",
+      answer: "Weiter"
+    },
+    {
+      chapter: "einstein",
+      scene: 14,
+      img: "einstein",
+      video: "100_Schwanenwirtin_End",
+      text:
+        "Glückwunsch! Du hast die Story  durchgespielt. Wenn du mehr über Albert Einstein und seine Arbeit erfahren möchtest,  folge diesem Link. https://www.ulm.de/tourismus/stadtgeschichte/koepfe/einstein-der-relative-ulmer \n" +
+        " \n" +
+        "Viel Spaß in Ulm! \n" +
+        " \n" +
+        " ",
       answer: "Weiter"
     },
     {

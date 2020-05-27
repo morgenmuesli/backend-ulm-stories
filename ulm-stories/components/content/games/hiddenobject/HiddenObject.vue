@@ -3,7 +3,7 @@
     <div v-if="won">
       <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
     </div>
-    <div class="hiddenO" v-if="playing">
+    <div v-if="playing" class="hiddenO">
       <img
         id="collage"
         src="../../../../assets/img/Collage/Collage_Handy.png"
