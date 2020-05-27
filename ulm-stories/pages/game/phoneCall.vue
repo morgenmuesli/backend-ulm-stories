@@ -196,7 +196,9 @@ h3 {
   font-weight: bolder;
   padding: 10%;
   max-width: 100%;
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .img-video {

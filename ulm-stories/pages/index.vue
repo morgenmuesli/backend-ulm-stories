@@ -13,13 +13,7 @@
         </li>
         <li><nuxt-link to="/preferences">Einstellungen</nuxt-link></li>
         <li><nuxt-link to="/about">Über uns</nuxt-link></li>
-        <li><nuxt-link to="/slider_test">Slider Test</nuxt-link></li>
-        <li>
-          <nuxt-link to="/flappy_schneider_test"
-            >Flappy Schneider Test</nuxt-link
-          >
-        </li>
-        <li><nuxt-link to="/memory_test">Memory Test</nuxt-link></li>
+        <li><nuxt-link to="/impressum">Impressum</nuxt-link></li>
       </ul>
     </div>
   </div>
@@ -38,5 +32,6 @@ export default {};
 }
 .menu-list {
   font-size: 42px;
+  font-family: "Ubuntu", sans-serif;
 }
 </style>
