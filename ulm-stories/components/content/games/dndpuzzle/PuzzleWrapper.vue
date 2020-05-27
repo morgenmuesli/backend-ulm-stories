@@ -38,8 +38,10 @@ export default {
 
 <style scoped>
 .container {
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
-  justify-items: center;
+  align-content: center;
 }
 </style>

@@ -867,7 +867,7 @@ export const state = () => ({
       answer: "Weiter"
     },
     {
-      chapter: "einstein",
+      chapter: "einstein_animation",
       scene: 4,
       img: "einstein",
       video: "schlussanimation",

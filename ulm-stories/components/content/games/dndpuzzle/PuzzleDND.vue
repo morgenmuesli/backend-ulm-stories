@@ -1,23 +1,23 @@
 <template>
-  <div ref="puzzleFrame" class="frame">
-    <div :style="frameSize" v-if="playing" class="puzzle">
+  <div class="frame" ref="puzzleFrame">
+    <div :style="frameSize" class="puzzle" v-if="playing">
       <div
-        v-for="(item, index) in puzzleList"
         :key="index"
         :style="item.style"
         @click="clickOnPuzzle(item)"
         class="puzzleTile"
+        v-for="(item, index) in puzzleList"
       >
         <p></p>
       </div>
     </div>
     <div class="dragList" style="width: 100%">
       <div
-        v-for="(item, index) in tileList"
         :key="index"
         :style="item.style"
         @click="selectItem(item)"
         class="tile"
+        v-for="(item, index) in tileList"
       >
         <p></p>
       </div>
@@ -27,6 +27,7 @@
 
 <script>
 import _ from "lodash";
+
 export default {
   name: "PuzzleDND",
   props: { wincallback: Function },
