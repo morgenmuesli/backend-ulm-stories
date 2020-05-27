@@ -339,7 +339,7 @@ export const state = () => ({
       chapter: "einstein",
       scene: 4,
       isFinish: false,
-      type: TYPE.video
+      type: TYPE.animation
     },
     {
       chapter: "einstein",
@@ -380,6 +380,24 @@ export const state = () => ({
     {
       chapter: "einstein",
       scene: 11,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      chapter: "einstein",
+      scene: 12,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      chapter: "einstein",
+      scene: 13,
+      isFinish: false,
+      type: TYPE.video
+    },
+    {
+      chapter: "einstein",
+      scene: 14,
       isFinish: false,
       type: TYPE.video
     },
