@@ -142,13 +142,16 @@ img {
 .button {
   position: absolute;
   font-family: "Ubuntu", sans-serif;
+  font-weight: bolder;
   font-size: 16px;
   background-color: whitesmoke;
   color: #272727;
   right: 5%;
+  width: fit-content;
   height: 60px;
   bottom: 5%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
 .videoStyle {

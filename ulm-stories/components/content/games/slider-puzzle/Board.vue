@@ -284,14 +284,15 @@ export default {
 .button {
   position: absolute;
   font-family: "Ubuntu", sans-serif;
+  font-weight: bolder;
   font-size: 16px;
   height: 60px;
-  width: 80%;
+  width: fit-content;
   color: #272727;
   background-color: whitesmoke;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: flex;
-  justify-content: center;
+  bottom: 5%;
+  right: 5%;
 }
 .controls {
   margin-top: 30px;

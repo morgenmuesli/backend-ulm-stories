@@ -314,7 +314,7 @@ export const state = () => ({
       img: "aicher",
       video: "21_Aicher",
       text:
-        "Ein Piktogramm ist ein kleine Zeichnung, meistens in einer einzigen Farbe.",
+        "Ein Piktogramm ist eine kleine Zeichnung, meistens in einer einzigen Farbe.",
       answer: "Weiter"
     },
     {

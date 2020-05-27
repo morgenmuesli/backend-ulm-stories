@@ -112,6 +112,7 @@ h4 {
 button {
   font-size: 16px;
   font-family: "Ubuntu", sans-serif;
+  font-weight: bolder;
   color: #272727;
   width: 80%;
   height: 60px;
