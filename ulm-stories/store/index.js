@@ -516,13 +516,13 @@ export const actions = {
       console.debug("CHAPTER IS FINISH: ", data.chapter);
       if (data.chapter !== "intro") {
         dispatch("npcLocation/visitlocation", data.chapter);
-        dispatch("updateProfCalling");
+        dispatch("updateProfCalling", data.chapter);
       }
     }
   },
-  updateProfCalling({ commit, getters, dispatch }) {
-    if (getters.isChapterFinish("ensinger")) {
-      commit("toggleProfCall");
+  updateProfCalling({ commit, getters, dispatch }, chapter) {
+    if (chapter === "ensinger") {
+      commit("changeProfCallFlag", true);
       dispatch("npcLocation/activateMultipleLocations", [
         "aicher",
         "streicher",
@@ -539,7 +539,7 @@ export const actions = {
         "berblinger"
       ])
     ) {
-      commit("toggleProfCall");
+      commit("changeProfCallFlag", true);
       dispatch("npcLocation/activateMultipleLocations", ["einstein"]);
       commit("changeProfState", 2);
     }
