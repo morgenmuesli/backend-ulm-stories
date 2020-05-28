@@ -4,7 +4,7 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Über uns:
+            Über uns
           </h1>
           <h2 class="subtitle">
             Hey, wir sind Anastasia, Christoph, Daria, Pascal und Sandra.<br />
