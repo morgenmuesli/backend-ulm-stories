@@ -79,7 +79,7 @@ export const state = () => ({
 
 export const getters = {
   checkifProfIsCalling(state, getters) {
-    if (getters.getNewProfMessages) {
+    if (getters.getNewProfMessages.length > 0) {
       console.debug("PROF IS CALLING");
       return true;
     }
