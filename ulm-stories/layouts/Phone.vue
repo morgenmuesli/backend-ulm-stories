@@ -5,11 +5,21 @@
       <nav class="level bottom-menu is-mobile">
         <p class="level-item has-text-centered">
           <nuxt-link to="/game/inventory" class="link is-info"
-            ><icon name="inventory" color="white" style=""></icon
+            ><icon
+              name="inventory"
+              color="red"
+              style="width: 48px; height: 48px"
+            ></icon
           ></nuxt-link>
         </p>
         <p class="level-item has-text-centered">
-          <nuxt-link to="/game/phoneCall" class="link is-info"></nuxt-link>
+          <nuxt-link to="/game/phoneCall" class="link is-info"
+            ><icon
+              name="newMessage"
+              color="red"
+              style="height: 48px; width: 48px"
+            ></icon
+          ></nuxt-link>
         </p>
       </nav>
     </div>
@@ -45,7 +55,7 @@ export default {
     background-color: lightgray;
     height: 10%;
     position: relative;
-    bottom: 0;
+    z-index: 5;
   }
 }
 </style>

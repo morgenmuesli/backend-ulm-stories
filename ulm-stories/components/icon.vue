@@ -92,6 +92,52 @@
         </g>
       </svg>
     </template>
+    <template v-else-if="name === 'newMessage'">
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 300 300"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve"
+        xmlns:serif="http://www.serif.com/"
+        style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;"
+      >
+        <g :style="{ stroke: color }">
+          <path
+            d="M254,131L254,220C254,233.75 242.721,245 228.971,245L32.983,245C19.233,245 8,233.75 8,220L8,120.275C8,106.525 19.233,95 32.983,95L218,95"
+            style="fill:none;fill-rule:nonzero;stroke-width:10px;"
+          />
+          <path
+            d="M7,136.552L131.96,170.138"
+            style="fill:none;fill-rule:nonzero;stroke-width:9px;"
+          />
+          <path
+            d="M254.952,136.718L129.992,170.138"
+            style="fill:none;fill-rule:nonzero;stroke-width:9px;"
+          />
+          <path
+            d="M259.804,105L247.153,105L243.145,67L263.807,67L259.804,105Z"
+            :style="{ fill: color }"
+          />
+          <ellipse
+            cx="253.314"
+            cy="95.259"
+            rx="39.686"
+            ry="40.259"
+            style="fill:none;stroke-width:9px;"
+          />
+          <rect
+            :style="{ fill: color }"
+            x="247"
+            y="110"
+            width="13"
+            height="13"
+          />
+        </g>
+      </svg>
+    </template>
   </div>
 </template>
 
