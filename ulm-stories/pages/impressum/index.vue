@@ -18,7 +18,7 @@
       Sandra Menhorn<br />
     </p>
     <div class="logo">
-      <img src="../../assets/img/logo/logo.png" height="150px" width="150px" />
+      <img src="../../assets/img/logo/logo.png" height="120px" width="120px" />
     </div>
     <p>
       <strong>Kontakt:</strong> <br />
@@ -89,11 +89,66 @@
       ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich
       ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von
       Werbeinformationen, etwa durch Spam-Mails, vor.<br />
-      <br /><br />Website Impressum erstellt durch
+      <br />Website Impressum erstellt durch
       <a href="https://www.impressum-generator.de">impressum-generator.de</a>
       von der
       <a href="https://www.kanzlei-hasselbach.de/">Kanzlei Hasselbach</a>
     </p>
+    <br />
+    <br /><strong>Bildrechte</strong><br /><br />
+    <div>
+      <img
+        src="../../assets/img/bildrechte/bauume.png"
+        height="150px"
+        width="150px"
+      />
+    </div>
+    <a
+      href="https://www.freepik.com/free-vector/three-scenes-river-lake_1503029.htm#page=1&query=river%20vector&position=3"
+      >[brgfx] - Freepik</a
+    >
+    <br />
+    <br />
+    <div>
+      <img
+        src="../../assets/img/bildrechte/steine.png"
+        height="150px"
+        width="150px"
+      />
+    </div>
+    <a
+      href="https://www.freepik.com/free-vector/set-different-tree-design_3875712.htm#page=1&position=6"
+    >
+      [brgfx] - Freepik
+    </a>
+    <br />
+    <br />
+    <div>
+      <img
+        src="../../assets/img/bildrechte/labor.png"
+        height="150px"
+        width="150px"
+      />
+    </div>
+    <a
+      href="https://www.freepik.com/free-vector/chemistry-cabinet-classroom-laboratory-interior_7743513.htm#query=upklyak%20chemistry&position=0"
+    >
+      [upklyak] - Freepik</a
+    >
+    <br />
+    <br />
+    <div>
+      <img
+        src="../../assets/img/bildrechte/piktogramm.png"
+        height="150px"
+        width="150px"
+      />
+    </div>
+    <a
+      href="https://de.m.wikipedia.org/wiki/Datei:Archery_pictogram_black_(1972_Summer_Olympics_style).svg"
+    >
+      [Otl Aicher] - Wikipedia
+    </a>
   </div>
 </template>
 
