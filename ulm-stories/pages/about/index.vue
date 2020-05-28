@@ -49,10 +49,12 @@ export default {
 .title {
   font-family: "Ubuntu", sans-serif;
   font-size: 30px;
+  color: #272727;
 }
 .subtitle {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
+  color: #272727;
 }
 .list {
   list-style-type: disc;

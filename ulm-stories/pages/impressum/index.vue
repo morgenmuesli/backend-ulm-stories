@@ -174,5 +174,6 @@ export default {
 }
 .impressum {
   padding: 10%;
+  color: #272727;
 }
 </style>
