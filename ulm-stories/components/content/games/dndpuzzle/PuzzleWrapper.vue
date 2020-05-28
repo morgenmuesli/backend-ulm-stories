@@ -49,10 +49,12 @@ export default {
   padding: 2rem;
 }
 .won {
-  z-index: 10;
+  z-index: 20;
   top: 0;
   left: 0;
   position: absolute;
+  height: 100vh;
+  width: 100vw;
 }
 
 p {

@@ -15,13 +15,13 @@
         <nuxt-link to="/game/phoneCall" class="link is-info">
           <icon
             v-if="profIsCalling"
-            name="message"
+            name="newMessage"
             color="white"
             style="height: 48px; width: 48px"
           ></icon>
           <icon
             v-else
-            name="newMessage"
+            name="message"
             color="white"
             style="height: 48px; width: 48px"
           ></icon>
@@ -53,6 +53,7 @@ export default {
   },
   mounted() {
     this.forceRerender();
+    this.$store.dispatch("updateProfCalling");
   },
 
   methods: {
