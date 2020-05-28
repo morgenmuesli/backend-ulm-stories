@@ -169,4 +169,7 @@ export default {
   font-size: 20px;
   font-weight: bold;
 }
+.impressum {
+  padding: 10%;
+}
 </style>
