@@ -73,9 +73,12 @@
               type="text"
             />
           </div>
-          <div class="column is-one-quarter" style="margin-top: 2vh">
+          <div
+            class="column is-one-quarter"
+            style="margin-top: 2vh"
+            @click="send"
+          >
             <icon
-              v-on:click="send"
               name="send"
               class="send-btn"
               style="height: 48px; width: 48px; "
