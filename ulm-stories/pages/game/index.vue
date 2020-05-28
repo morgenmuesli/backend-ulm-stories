@@ -6,7 +6,7 @@
         <nuxt-link to="/game/inventory" class="link is-info">
           <icon
             name="inventory"
-            color="black"
+            color="white"
             style="width: 48px; height: 48px"
           ></icon>
         </nuxt-link>
@@ -15,7 +15,7 @@
         <nuxt-link to="/game/phoneCall" class="link is-info">
           <icon
             name="message"
-            color="black"
+            color="white"
             style="height: 48px; width: 48px"
           ></icon>
         </nuxt-link>
@@ -59,11 +59,12 @@ export default {
 }
 
 .bottom-menu {
-  background-color: lightgray;
+  background-color: #272727;
   height: 10%;
   position: absolute;
   z-index: 401;
   bottom: 0;
   width: 100%;
+  opacity: 0.9;
 }
 </style>
