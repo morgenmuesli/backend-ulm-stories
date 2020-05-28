@@ -9,9 +9,9 @@
       ></icon>
     </nuxt-link>
     <div class="impressum">
-      <h1>Impressum</h1>
+      <h2 class="imp">Impressum</h2>
       <p>Angaben gemäß § 5 TMG</p>
-      <h2 class="titleTwo">Herausgeber</h2>
+      <h1 class="titleTwo">Herausgeber</h1>
       <p>
         Universität Ulm <br />
         James-Franck-Ring 1<br />
@@ -187,6 +187,11 @@ export default {
   font-size: 30px;
 }
 .titleTwo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.imp {
   font-family: "Ubuntu", sans-serif;
   font-size: 20px;
   font-weight: bold;
