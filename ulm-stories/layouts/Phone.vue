@@ -5,8 +5,8 @@
       <nav class="level bottom-menu is-mobile">
         <p class="level-item has-text-centered">
           <nuxt-link to="/game/inventory" class="link is-info"
-            >Inventar</nuxt-link
-          >
+            ><icon name="inventory" color="white" style=""></icon
+          ></nuxt-link>
         </p>
         <p class="level-item has-text-centered">
           <nuxt-link to="/game/phoneCall" class="link is-info"></nuxt-link>
