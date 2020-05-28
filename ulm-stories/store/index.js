@@ -19,7 +19,6 @@ export const state = () => ({
     { chapter: "intro", scene: 12, isFinish: false, type: TYPE.video },
     { chapter: "intro", scene: 13, isFinish: false, type: TYPE.video },
     { chapter: "intro", scene: 14, isFinish: false, type: TYPE.video },
-    { chapter: "intro", scene: 15, isFinish: false, type: TYPE.video },
     { chapter: "ensinger", scene: 0, isFinish: false, type: TYPE.video },
     { chapter: "ensinger", scene: 1, isFinish: false, type: TYPE.video },
     { chapter: "ensinger", scene: 2, isFinish: false, type: TYPE.video },
@@ -528,7 +527,7 @@ export const actions = {
   },
   updateProfCalling({ commit, getters, dispatch }, chapter) {
     if (chapter === "ensinger") {
-      commit("changeProfCallFlag", true);
+      commit("profCall/setProfState", 1);
       dispatch("npcLocation/activateMultipleLocations", [
         "aicher",
         "streicher",
@@ -547,7 +546,7 @@ export const actions = {
     ) {
       commit("changeProfCallFlag", true);
       dispatch("npcLocation/activateMultipleLocations", ["einstein"]);
-      commit("changeProfState", 2);
+      commit("profCall/setProfState", 2);
     }
   }
 };

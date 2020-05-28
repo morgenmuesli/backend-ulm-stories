@@ -17,10 +17,17 @@
 </template>
 
 <script>
-import Icon from "~/components/icon";
 export default {
   name: "Phone",
-  components: { Icon }
+  components: {},
+  mounted() {
+    this.$store.dispatch("profCall/updateNewMessages");
+  },
+  computed: {
+    isProfCalling() {
+      return this.$store.getters["profCall/checkifProfIsCalling"];
+    }
+  }
 };
 </script>
 
@@ -46,6 +53,7 @@ export default {
     height: 10%;
     position: relative;
     bottom: 0;
+    width: 100%;
   }
 }
 </style>

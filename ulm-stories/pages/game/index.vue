@@ -1,9 +1,6 @@
 <template>
   <div class="mapfield">
     <LeafletMap :rerenderkey="rerenderkey" />
-    <div v-show="profCall" class="profcall">
-      <nuxt-link to="/game/phoneCall">Push me Hard!</nuxt-link>
-    </div>
   </div>
 </template>
 
@@ -20,11 +17,7 @@ export default {
   data: () => ({
     rerenderkey: 0
   }),
-  computed: {
-    profCall() {
-      return this.$store.state.profIsCalling;
-    }
-  },
+  computed: {},
   mounted() {
     this.forceRerender();
   },
@@ -41,12 +34,5 @@ export default {
 .mapfield {
   height: 100%;
   width: 100%;
-}
-
-.profcall {
-  z-index: 10;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: red;
 }
 </style>

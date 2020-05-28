@@ -101,7 +101,16 @@ export default {
     input: "Schreib etwas"
   }),
   mounted() {
-    this.currentMessages = this.$store.getters.getProfVideos;
+    this.displayMessages = [
+      ...this.$store.getters["profCall/getDisplayedMessages"]
+    ];
+    this.displayMessages.sort((a, b) => b.scene - a.scene);
+    this.currentMessages = [
+      ...this.$store.getters["profCall/getNewProfMessages"]
+    ];
+    this.currentMessages.sort((a, b) => b.scene - a.scene);
+    this.$store.dispatch("profCall/clearMessages");
+
     this.popMessages();
   },
   methods: {
