@@ -30,7 +30,9 @@
 import Icon from "~/components/icon";
 export default {
   name: "Phone",
-  components: {},
+  components: {
+    Icon
+  },
   mounted() {
     this.$store.dispatch("profCall/updateNewMessages");
   },
