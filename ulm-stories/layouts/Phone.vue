@@ -5,11 +5,21 @@
       <nav class="level bottom-menu is-mobile">
         <p class="level-item has-text-centered">
           <nuxt-link to="/game/inventory" class="link is-info"
-            >Inventar</nuxt-link
-          >
+            ><icon
+              name="inventory"
+              color="red"
+              style="width: 48px; height: 48px"
+            ></icon
+          ></nuxt-link>
         </p>
         <p class="level-item has-text-centered">
-          <nuxt-link to="/game/phoneCall" class="link is-info"></nuxt-link>
+          <nuxt-link to="/game/phoneCall" class="link is-info"
+            ><icon
+              name="message"
+              color="red"
+              style="height: 48px; width: 48px"
+            ></icon
+          ></nuxt-link>
         </p>
       </nav>
     </div>
@@ -17,6 +27,7 @@
 </template>
 
 <script>
+import Icon from "~/components/icon";
 export default {
   name: "Phone",
   components: {},
@@ -52,8 +63,7 @@ export default {
     background-color: lightgray;
     height: 10%;
     position: relative;
-    bottom: 0;
-    width: 100%;
+    z-index: 5;
   }
 }
 </style>

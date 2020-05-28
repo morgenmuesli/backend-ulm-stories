@@ -1,15 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-<g>
-	<path fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M254,131v89c0,13.75-11.279,25-25.029,25H32.983
-		C19.233,245,8,233.75,8,220v-99.725C8,106.525,19.233,95,32.983,95H218"/>
-</g>
-<line fill="none" stroke="#000000" stroke-width="9" stroke-miterlimit="10" x1="7" y1="136.552" x2="131.96" y2="170.138"/>
-<line fill="none" stroke="#000000" stroke-width="9" stroke-miterlimit="10" x1="254.952" y1="136.718" x2="129.992" y2="170.138"/>
-<ellipse fill="none" stroke="#000000" stroke-width="9" stroke-miterlimit="10" cx="253.314" cy="95.259" rx="39.686" ry="40.259"/>
-<polygon points="259.804,105 247.153,105 243.145,67 263.807,67 "/>
-<rect x="247" y="110" width="13" height="13"/>
+<svg width="100%" height="100%" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;">
+    <g>
+        <path d="M254,131L254,220C254,233.75 242.721,245 228.971,245L32.983,245C19.233,245 8,233.75 8,220L8,120.275C8,106.525 19.233,95 32.983,95L218,95" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:10px;"/>
+        <path d="M7,136.552L131.96,170.138" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:9px;"/>
+        <path d="M254.952,136.718L129.992,170.138" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:9px;"/>
+        <path d="M259.804,105L247.153,105L243.145,67L263.807,67L259.804,105Z" style="fill-rule:nonzero;"/>
+        <ellipse cx="253.314" cy="95.259" rx="39.686" ry="40.259" style="fill:none;stroke:black;stroke-width:9px;"/>
+        <rect x="247" y="110" width="13" height="13"/>
+    </g>
 </svg>
