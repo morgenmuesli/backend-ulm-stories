@@ -658,7 +658,7 @@ export const state = () => ({
       img: "holl",
       video: "62_Holl",
       text:
-        "Auch nach 62 Folterungen habe ich nicht klein gegeben. Nach fast einem Jahr wurde ich endlich frei gelassen. Nachdem die Bürger von Ulm und der Ulmer Rat sich für mich stark gemacht haben.",
+        "Auch nach 62 Folterungen habe ich nicht klein bei gegeben. Nach fast einem Jahr wurde ich endlich frei gelassen. Nachdem die Bürger von Ulm und der Ulmer Rat sich für mich stark gemacht haben.",
       answer: "Weiter"
     },
     {
@@ -667,7 +667,7 @@ export const state = () => ({
       img: "holl",
       video: "63_Holl",
       text:
-        "Sie haben bei dem Papst du Freilassung und Gnade gebeten. Und hier stehe ich nun. Als erste Frau, die jemals die Folterungen überlebt hat.",
+        "Sie haben bei dem Papst um Freilassung und Gnade gebeten. Und hier stehe ich nun. Als erste Frau, die jemals die Folterungen überlebt hat.",
       answer: "Weiter"
     },
     {
@@ -676,7 +676,7 @@ export const state = () => ({
       img: "holl",
       video: "64_Holl",
       text:
-        "Genug von grauenhaften und ernsten Gespächen! Um den Kristall wieder zu bekommen spielen wir ein Spiel.",
+        "Doch genug von grauenhaften und ernsten Gespächen! Um den Kristall wieder zu bekommen, spielen wir ein Spiel.",
       answer: "Weiter"
     },
     {
