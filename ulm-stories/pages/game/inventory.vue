@@ -57,7 +57,6 @@ export default {
   top: 0;
   background-color: #272727;
   opacity: 0.95;
-  width: 100%;
   height: 10%;
   display: flex;
   z-index: 5;
