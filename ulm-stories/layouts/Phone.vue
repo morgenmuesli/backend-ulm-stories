@@ -2,37 +2,14 @@
   <div class="frame">
     <div class="frame-content">
       <nuxt />
-      <nav class="level bottom-menu is-mobile">
-        <p class="level-item has-text-centered">
-          <nuxt-link to="/game/inventory" class="link is-info"
-            ><icon
-              name="inventory"
-              color="red"
-              style="width: 48px; height: 48px"
-            ></icon
-          ></nuxt-link>
-        </p>
-        <p class="level-item has-text-centered">
-          <nuxt-link to="/game/phoneCall" class="link is-info"
-            ><icon
-              name="message"
-              color="red"
-              style="height: 48px; width: 48px"
-            ></icon
-          ></nuxt-link>
-        </p>
-      </nav>
     </div>
   </div>
 </template>
 
 <script>
-import Icon from "~/components/icon";
 export default {
   name: "Phone",
-  components: {
-    Icon
-  },
+  components: {},
   mounted() {
     this.$store.dispatch("profCall/updateNewMessages");
   },
@@ -60,12 +37,6 @@ export default {
     height: 85%;
     position: relative;
     top: 7.5%;
-  }
-  .bottom-menu {
-    background-color: lightgray;
-    height: 10%;
-    position: relative;
-    z-index: 5;
   }
 }
 </style>

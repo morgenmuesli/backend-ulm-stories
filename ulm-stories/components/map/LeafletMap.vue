@@ -89,9 +89,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 #leafletmap {
   width: 100%;
   height: 100%;
+
+  .leaflet-control-container {
+    .leaflet-bottom.leaflet-right {
+      display: none;
+    }
+  }
 }
 </style>
