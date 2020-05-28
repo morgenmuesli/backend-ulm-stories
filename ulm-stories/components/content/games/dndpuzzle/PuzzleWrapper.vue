@@ -50,7 +50,6 @@ export default {
   align-content: center;
 }
 .won {
-  z-index: 20;
   top: 0;
   left: 0;
   position: absolute;
