@@ -1,5 +1,5 @@
 <template>
-  <div class="container is-central">
+  <div id="inventory" class="container is-central-mobile">
     <crystal
       ref="kristall"
       :size="crystalSize"
@@ -11,15 +11,15 @@
 <script>
 import crystal from "~/components/inventory/crystal";
 export default {
-  layout: "game",
+  layout: "Phone",
   components: {
     crystal
   },
   data: () => ({
     finishedList: [],
     crystalSize: {
-      height: "70%",
-      width: "70%"
+      height: "100%",
+      width: "100%"
     }
   }),
   computed: {
@@ -32,4 +32,16 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#inventory {
+  display: flex;
+  align-content: center;
+  justify-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  background-image: url("../../assets/img/background/backpack-clipart-4.png");
+  background-size: cover;
+  padding: 0.5rem;
+}
+</style>
