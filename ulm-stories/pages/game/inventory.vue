@@ -1,10 +1,21 @@
 <template>
-  <div id="inventory" class="container is-central-mobile">
-    <crystal
-      ref="kristall"
-      :size="crystalSize"
-      :visible-characters="finishedChapter"
-    ></crystal>
+  <div class="fullscreen">
+    <div class="header">
+      <nuxt-link to="/game">
+        <icon
+          name="back"
+          style="width: 100%; height: 100%"
+          class="is-one-fifth"
+        />
+      </nuxt-link>
+    </div>
+    <div id="inventory">
+      <crystal
+        ref="kristall"
+        :size="crystalSize"
+        :visible-characters="finishedChapter"
+      ></crystal>
+    </div>
   </div>
 </template>
 
@@ -34,14 +45,27 @@ export default {
 
 <style scoped>
 #inventory {
-  display: flex;
-  align-content: center;
-  justify-items: center;
-  height: 100%;
+  flex-grow: 1;
   width: 100%;
-  background-color: white;
-  background-image: url("../../assets/img/background/backpack-clipart-4.png");
+  background-color: whitesmoke;
   background-size: cover;
   padding: 0.5rem;
+}
+
+.header {
+  width: 100%;
+  top: 0;
+  background-color: #272727;
+  opacity: 0.95;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  z-index: 5;
+}
+.fullscreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 </style>
