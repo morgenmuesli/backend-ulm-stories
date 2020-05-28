@@ -2,16 +2,14 @@
   <div class="frame">
     <div class="frame-content">
       <nuxt />
-      <nav class="level bottom-menu">
+      <nav class="level bottom-menu is-mobile">
         <p class="level-item has-text-centered">
           <nuxt-link to="/game/inventory" class="link is-info"
             >Inventar</nuxt-link
           >
         </p>
         <p class="level-item has-text-centered">
-          <nuxt-link to="/game/phoneCall" class="link is-info"
-            >Contact</nuxt-link
-          >
+          <nuxt-link to="/game/phoneCall" class="link is-info"></nuxt-link>
         </p>
       </nav>
     </div>
@@ -19,8 +17,10 @@
 </template>
 
 <script>
+import Icon from "~/components/icon";
 export default {
-  name: "Phone"
+  name: "Phone",
+  components: { Icon }
 };
 </script>
 

@@ -7,9 +7,7 @@
         @click="clickOnPuzzle(item)"
         class="puzzleTile"
         v-for="(item, index) in puzzleList"
-      >
-        <p></p>
-      </div>
+      ></div>
     </div>
     <div class="dragList" style="width: 100%">
       <div
@@ -18,9 +16,7 @@
         @click="selectItem(item)"
         class="tile"
         v-for="(item, index) in tileList"
-      >
-        <p></p>
-      </div>
+      ></div>
     </div>
   </div>
 </template>
@@ -173,9 +169,10 @@ export default {
   max-width: 70vh;
 
   width: 100%;
-
+  max-height: 100%;
   top: 0;
   left: 0;
+  overflow-y: hidden;
 }
 
 .puzzle {

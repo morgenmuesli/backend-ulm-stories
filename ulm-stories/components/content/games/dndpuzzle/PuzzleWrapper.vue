@@ -7,6 +7,8 @@
         :won="nextPage"
       ></won-component>
     </div>
+    <h3 class="title has-text-centered">Puzzle</h3>
+    <p>Klicke zunächst auf die Teile und dann auf die passende Position</p>
     <div class="container center">
       <PuzzleDND :wincallback="winning" />
     </div>
@@ -38,10 +40,11 @@ export default {
 
 <style scoped>
 .container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
+  padding: 2rem;
 }
 </style>
