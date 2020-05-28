@@ -5,6 +5,7 @@
         id="won"
         v-if="this.hasWon"
         :won="nextPage"
+        class="won"
       ></won-component>
     </div>
     <h3 class="title has-text-centered">Puzzle</h3>
@@ -46,5 +47,18 @@ export default {
   justify-content: center;
   align-content: center;
   padding: 2rem;
+}
+.won {
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+p {
+  padding: 0.5rem;
+}
+.title {
+  margin-top: 5px;
 }
 </style>

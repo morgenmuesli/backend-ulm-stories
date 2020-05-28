@@ -14,6 +14,13 @@
       <p class="level-item has-text-centered">
         <nuxt-link to="/game/phoneCall" class="link is-info">
           <icon
+            v-if="profIsCalling"
+            name="newMessage"
+            color="white"
+            style="height: 48px; width: 48px"
+          ></icon>
+          <icon
+            v-else
             name="message"
             color="white"
             style="height: 48px; width: 48px"
@@ -39,7 +46,11 @@ export default {
   data: () => ({
     rerenderkey: 0
   }),
-  computed: {},
+  computed: {
+    profIsCalling() {
+      return this.$store.getters["profCall/checkifProfIsCalling"];
+    }
+  },
   mounted() {
     this.forceRerender();
   },

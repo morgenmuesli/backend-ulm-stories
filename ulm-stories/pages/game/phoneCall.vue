@@ -95,6 +95,7 @@ import _ from "lodash";
 import Icon from "../../components/icon";
 export default {
   name: "PhoneCall",
+
   components: { Icon },
   middleware: "profcall",
   data: () => ({

@@ -60,7 +60,8 @@ export default {
 }
 .videoStyle {
   position: absolute;
-  height: 100vh !important;
-  width: auto;
+  height: auto;
+  min-height: 100vh;
+  width: 100vw !important;
 }
 </style>
