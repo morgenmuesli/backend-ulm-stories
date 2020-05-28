@@ -25,7 +25,7 @@
             </b>
             <ul>
               <li>Jennifer (Illustration),</li>
-              <li>Jörg & Gabriele (Synchronstimmen) und</li>
+              <li>Jörg & Gaby (Synchronstimmen) und</li>
               <li>Jens (Dozent)</li>
             </ul>
           </h2>
