@@ -59,7 +59,7 @@ export const state = () => ({
       img: "labor_kaputt",
       video: "03_Zweistein",
       text:
-        "Ach du meine Güte!! Der Kristall des Zeitmessgeräts ist in 6 Teile zersprungen.",
+        "Ach du meine Güte!! Der Kristall des Zeitmessgeräts ist in sechs Teile zersprungen.",
       answer: "Weiter"
     },
     {
@@ -92,7 +92,7 @@ export const state = () => ({
       img: "labor_kaputt",
       video: "07_Zweistein",
       text:
-        "Du musst in die Stadt und die Kristallscherben finden, während ich hier im Labor versuche die Katastrophe in den Griff zu bekommen. Ich benötige die Einzelteile um das Chaos hier zu stoppen- und das Ulm-Zeit-Kontinuum wieder zu stabilisieren.",
+        "Du musst in die Stadt und die Kristallscherben finden, während ich hier im Labor versuche die Katastrophe in den Griff zu bekommen.",
       answer: "Weiter"
     },
     {
@@ -110,7 +110,7 @@ export const state = () => ({
       img: "labor_kaputt",
       video: "09_Zweistein",
       text:
-        "Wenn uns das nicht gelingt ... oh, ich darf gar nicht an die Folgen denken…",
+        "Wenn uns das nicht gelingt ... oh, ich darf gar nicht an die Folgen denken ...",
       answer: "Weiter"
     },
     {
@@ -119,7 +119,7 @@ export const state = () => ({
       img: "labor_kaputt",
       video: "010_Zweistein",
       text:
-        "Du musst sofort los! Starte Am Münster – da habe ich das stärkste Signal!",
+        "Du musst sofort los! Starte am Münster – da habe ich das stärkste Signal!",
       answer: "Weiter"
     },
     {
@@ -128,16 +128,7 @@ export const state = () => ({
       img: "labor_kaputt",
       video: "011_Zweistein",
       text:
-        "Hier! Benutze dieses Ortungsgerät. Die roten Punkte zeigen dir, an welche Orte du dich begeben musst.",
-      answer: "Weiter"
-    },
-    {
-      chapter: "intro",
-      scene: 15,
-      img: "labor_kaputt",
-      video: "011_Zweistein",
-      text:
-        "Du musst sofort los! Starte Am Münster – da habe ich das stärkste Signal!",
+        "Hier! Benutze dieses Ortungsgerät. Die Punkte zeigen dir, an welche Orte du dich begeben musst.",
       answer: "Weiter"
     },
     {
@@ -801,7 +792,7 @@ export const state = () => ({
       img: "schwanenwirtin",
       video: "77_Schwanenwirtin",
       text:
-        "Damit man diese Person als Schwanenwirtin erkennt, soll sie mir äußerlich ähneln, aber auch verschiedene Gegenstände, die mit mir in Verbindung stehen tragen.",
+        "Damit man diese Person als Schwanenwirtin erkennt, soll sie mir äußerlich ähneln, aber auch verschiedene Gegenstände, die mit mir in Verbindung stehen, tragen.",
       answer: "Weiter"
     },
     {
