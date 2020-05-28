@@ -9,7 +9,9 @@
       ></won-component>
     </div>
     <h3 class="title has-text-centered">Puzzle</h3>
-    <p>Klicke zunächst auf die Teile und dann auf die passende Position</p>
+    <p>
+      Klicke zunächst auf die Teile und dann auf die passende Position.
+    </p>
     <div class="container center">
       <PuzzleDND :wincallback="winning" />
     </div>
@@ -46,7 +48,6 @@ export default {
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 2rem;
 }
 .won {
   z-index: 20;
@@ -59,6 +60,7 @@ export default {
 
 p {
   padding: 0.5rem;
+  font-family: "Ubuntu", sans-serif;
 }
 .title {
   margin-top: 5px;

@@ -9,6 +9,7 @@
         v-for="(item, index) in puzzleList"
       ></div>
     </div>
+    <p>Scrolle nach rechts oder links</p>
     <div class="dragList" style="width: 100%">
       <div
         :key="index"
