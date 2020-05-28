@@ -113,7 +113,7 @@ export default {
       ...this.$store.getters["profCall/getNewProfMessages"]
     ];
     this.currentMessages.sort((a, b) => b.scene - a.scene);
-    this.$store.dispatch("profCall/clearMessages");
+    this.$store.dispatch("profCall/updateDisplayMessages");
 
     this.popMessages();
   },

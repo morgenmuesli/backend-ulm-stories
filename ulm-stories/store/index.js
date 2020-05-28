@@ -527,7 +527,8 @@ export const actions = {
   },
   updateProfCalling({ commit, getters, dispatch }, chapter) {
     if (chapter === "ensinger") {
-      commit("profCall/setProfState", 1);
+      dispatch("profCall/setProfState", 1);
+      dispatch("profCall/updateNewMessages");
       dispatch("npcLocation/activateMultipleLocations", [
         "aicher",
         "streicher",
@@ -544,9 +545,9 @@ export const actions = {
         "berblinger"
       ])
     ) {
-      commit("changeProfCallFlag", true);
       dispatch("npcLocation/activateMultipleLocations", ["einstein"]);
-      commit("profCall/setProfState", 2);
+      dispatch("profCall/setProfState", 2);
+      dispatch("profCall/updateNewMessages");
     }
   }
 };

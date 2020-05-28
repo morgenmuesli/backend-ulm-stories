@@ -10,14 +10,7 @@
 export default {
   name: "Phone",
   components: {},
-  mounted() {
-    this.$store.dispatch("profCall/updateNewMessages");
-  },
-  computed: {
-    isProfCalling() {
-      return this.$store.getters["profCall/checkifProfIsCalling"];
-    }
-  }
+  mounted() {}
 };
 </script>
 

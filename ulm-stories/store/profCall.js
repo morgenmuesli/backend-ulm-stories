@@ -78,8 +78,9 @@ export const state = () => ({
 });
 
 export const getters = {
-  checkifProfIsCalling(state) {
-    if (state.newMessages) {
+  checkifProfIsCalling(state, getters) {
+    if (getters.getNewProfMessages.length > 0) {
+      console.debug("PROF IS CALLING");
       return true;
     }
     return false;
@@ -134,5 +135,8 @@ export const actions = {
   },
   clearMessages({ commit }) {
     commit("clearNewMessages");
+  },
+  setProfState({ state, commit }, profState) {
+    commit("setProfState", profState);
   }
 };
