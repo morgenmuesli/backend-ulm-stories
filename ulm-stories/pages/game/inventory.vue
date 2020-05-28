@@ -4,7 +4,7 @@
       <nuxt-link to="/game">
         <icon
           name="back"
-          style="width: 100%; height: 100%"
+          style="width: 48px; height: 48px"
           class="is-one-fifth"
         />
       </nuxt-link>
@@ -20,11 +20,13 @@
 </template>
 
 <script>
+import icon from "../../components/icon";
 import crystal from "~/components/inventory/crystal";
 export default {
   layout: "Phone",
   components: {
-    crystal
+    crystal,
+    icon
   },
   data: () => ({
     finishedList: [],
