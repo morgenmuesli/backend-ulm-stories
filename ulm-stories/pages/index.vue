@@ -17,7 +17,7 @@
           >
         </li>
         <li>
-          <nuxt-link to="/preferences"
+          <nuxt-link to="/"
             ><Button class="btn">Einstellungen</Button></nuxt-link
           >
         </li>

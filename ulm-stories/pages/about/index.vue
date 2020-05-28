@@ -1,5 +1,13 @@
 <template>
   <div class="container">
+    <nuxt-link to="/">
+      <icon
+        name="back"
+        color="#272727"
+        style="width: 48px; height: 48px"
+        class="back-btn"
+      ></icon>
+    </nuxt-link>
     <section class="hero">
       <div class="hero-body">
         <div class="container">
@@ -39,8 +47,10 @@
 </template>
 
 <script>
+import Icon from "../../components/icon";
 export default {
-  name: "IndexVue"
+  name: "IndexVue",
+  components: { Icon }
 };
 </script>
 
@@ -49,12 +59,18 @@ export default {
 .title {
   font-family: "Ubuntu", sans-serif;
   font-size: 30px;
+  color: #272727;
 }
 .subtitle {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
+  color: #272727;
 }
 .list {
   list-style-type: disc;
+}
+.back-btn {
+  top: 2%;
+  left: 2%;
 }
 </style>

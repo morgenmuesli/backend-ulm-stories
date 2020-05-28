@@ -861,7 +861,7 @@ export const state = () => ({
       chapter: "einstein_animation",
       scene: 4,
       img: "einstein",
-      video: "schlussanimation",
+      video: "schlussanimation_final",
       text: null,
       answer: null
     },
