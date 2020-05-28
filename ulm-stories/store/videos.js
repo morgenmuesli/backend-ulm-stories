@@ -947,7 +947,7 @@ export const state = () => ({
     {
       chapter: "einstein",
       scene: 14,
-      img: "einstein",
+      img: "background_simple",
       video: "100_Schwanenwirtin_End",
       text:
         "Glückwunsch! Du hast die Story  durchgespielt. Wenn du mehr über Albert Einstein und seine Arbeit erfahren möchtest,  folge diesem Link. https://www.ulm.de/tourismus/stadtgeschichte/koepfe/einstein-der-relative-ulmer \n" +

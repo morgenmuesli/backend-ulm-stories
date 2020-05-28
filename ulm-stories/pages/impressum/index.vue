@@ -89,10 +89,7 @@
       ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich
       ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von
       Werbeinformationen, etwa durch Spam-Mails, vor.<br />
-      <br />Website Impressum erstellt durch
-      <a href="https://www.impressum-generator.de">impressum-generator.de</a>
-      von der
-      <a href="https://www.kanzlei-hasselbach.de/">Kanzlei Hasselbach</a>
+      <br />
     </p>
     <br />
     <br /><strong>Bildrechte</strong><br /><br />
@@ -149,6 +146,12 @@
     >
       [Otl Aicher] - Wikipedia
     </a>
+    <br />
+    <br />
+    Website Impressum erstellt durch
+    <a href="https://www.impressum-generator.de">impressum-generator.de</a>
+    von der
+    <a href="https://www.kanzlei-hasselbach.de/">Kanzlei Hasselbach</a>
   </div>
 </template>
 

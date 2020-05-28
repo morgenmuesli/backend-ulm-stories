@@ -6,7 +6,7 @@ export const state = () => ({
       latlng: [48.396018, 9.991371],
       chapter: 7,
       haveVisit: false,
-      isActive: false
+      isActive: true
     },
     {
       characterID: "ensinger",
