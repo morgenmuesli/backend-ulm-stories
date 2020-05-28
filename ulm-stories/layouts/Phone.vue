@@ -15,7 +15,7 @@
         <p class="level-item has-text-centered">
           <nuxt-link to="/game/phoneCall" class="link is-info"
             ><icon
-              name="newMessage"
+              name="message"
               color="red"
               style="height: 48px; width: 48px"
             ></icon

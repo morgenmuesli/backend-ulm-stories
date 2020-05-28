@@ -118,8 +118,8 @@
             style="fill:none;fill-rule:nonzero;stroke-width:9px;"
           />
           <path
-            d="M259.804,105L247.153,105L243.145,67L263.807,67L259.804,105Z"
             :style="{ fill: color }"
+            d="M259.804,105L247.153,105L243.145,67L263.807,67L259.804,105Z"
           />
           <ellipse
             cx="253.314"
@@ -134,6 +134,54 @@
             y="110"
             width="13"
             height="13"
+          />
+        </g>
+      </svg>
+    </template>
+    <template v-else-if="name === 'message'">
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 300 300"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve"
+        xmlns:serif="http://www.serif.com/"
+        style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;"
+      >
+        <g :style="{ stroke: color }">
+          <path
+            d="M252,116L263.5,116C269.825,116 275,122.05 275,129.75L275,236.75C275,244.45 268.7,251 261,251L39,251C31.3,251 25,244.45 25,236.75L25,129.75C25,122.05 29.95,116 36,116L47,116"
+            style="fill:none;fill-rule:nonzero;stroke-width:10px;"
+          />
+          <path
+            d="M252,157L252,74.25C252,60.5 241.25,49 227.5,49L72.5,49C58.75,49 47,60.5 47,74.25L47,156"
+            style="fill:none;fill-rule:nonzero;stroke-width:10px;"
+          />
+          <path
+            d="M276,149.769L149,183.25"
+            style="fill:none;fill-rule:nonzero;stroke-width:9px;"
+          />
+          <path
+            d="M24,149.603L151,183.25"
+            style="fill:none;fill-rule:nonzero;stroke-width:9px;"
+          />
+          <path
+            d="M220,122C220,123.65 218.2,125 216,125L84,125C81.8,125 80,123.65 80,122C80,120.35 81.8,119 84,119L216,119C218.2,119 220,120.35 220,122Z"
+            style="fill-rule:nonzero;"
+          />
+          <path
+            d="M220,122C220,123.65 218.2,125 216,125L84,125C81.8,125 80,123.65 80,122C80,120.35 81.8,119 84,119L216,119C218.2,119 220,120.35 220,122Z"
+            style="fill:none;fill-rule:nonzero;stroke-width:4px;"
+          />
+          <path
+            d="M220,86C220,87.65 218.2,89 216,89L84,89C81.8,89 80,87.65 80,86C80,84.35 81.8,83 84,83L216,83C218.2,83 220,84.35 220,86Z"
+            style="fill-rule:nonzero;"
+          />
+          <path
+            d="M220,86C220,87.65 218.2,89 216,89L84,89C81.8,89 80,87.65 80,86C80,84.35 81.8,83 84,83L216,83C218.2,83 220,84.35 220,86Z"
+            style="fill:none;fill-rule:nonzero;stroke-width:4px;"
           />
         </g>
       </svg>
