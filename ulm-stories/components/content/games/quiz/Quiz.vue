@@ -11,7 +11,26 @@
       <h4>{{ element.question }}</h4>
       <div class="answers">
         <button
-          v-for="(item, indices) in element.answers"
+          v-if="selected_answers_number === 0"
+          v-for="(item, indices) in element.answers_zero"
+          :key="indices"
+          :class="select ? check(item) : ''"
+          @click="selectResponse"
+        >
+          {{ item.answer }}
+        </button>
+        <button
+          v-if="selected_answers_number === 1"
+          v-for="(item, indices) in element.answers_one"
+          :key="indices"
+          :class="select ? check(item) : ''"
+          @click="selectResponse"
+        >
+          {{ item.answer }}
+        </button>
+        <button
+          v-if="selected_answers_number === 2"
+          v-for="(item, indices) in element.answers_two"
           :key="indices"
           :class="select ? check(item) : ''"
           @click="selectResponse"
@@ -33,18 +52,39 @@ export default {
       playing: true,
       hasWon: false,
       won: false,
+      selected_answers_number: null,
       questions: [
         {
           question: "Wie hoch ist das Ulmer Münster?",
-          answers: [
+          answers_zero: [
             { answer: "16" },
             { answer: "161", correct: true },
             { answer: "600" }
+          ],
+          answers_one: [
+            { answer: "1" },
+            { answer: "16" },
+            { answer: "161", correct: true }
+          ],
+          answers_two: [
+            { answer: "161", correct: true },
+            { answer: "1600" },
+            { answer: "6000" }
           ]
         },
         {
           question: "Wie viele Treppen hat das Ulmer Münster?",
-          answers: [
+          answers_zero: [
+            { answer: "7" },
+            { answer: "76" },
+            { answer: "768", correct: true }
+          ],
+          answers_one: [
+            { answer: "768", correct: true },
+            { answer: "7600" },
+            { answer: "80000" }
+          ],
+          answers_two: [
             { answer: "76" },
             { answer: "768", correct: true },
             { answer: "8000" }
@@ -55,6 +95,9 @@ export default {
       b: 1,
       select: false
     };
+  },
+  mounted() {
+    this.selected_answers();
   },
   methods: {
     check(status) {
@@ -83,6 +126,10 @@ export default {
     nextPage() {
       this.$emit("nextPage");
       this.$confetti.stop();
+    },
+    selected_answers() {
+      const answersnumber = Math.floor(Math.random() * Math.floor(3));
+      this.selected_answers_number = answersnumber;
     }
   }
 };

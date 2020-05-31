@@ -29,6 +29,7 @@ export default {
     width: 90%;
     height: 85%;
     position: relative;
+
     top: 7.5%;
   }
 }
