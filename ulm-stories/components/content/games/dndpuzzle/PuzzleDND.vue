@@ -165,7 +165,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .frame {
   max-width: 70vh;
 
@@ -174,19 +174,26 @@ export default {
   top: 0;
   left: 0;
   overflow-y: hidden;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
 }
 
 .puzzle {
   margin-bottom: 2em;
   background-color: rgb(255, 235, 173);
-  outline: sandybrown ridge 0.1em;
+}
+.puzzleTile {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 0.01em solid rgba(0, 0, 0, 0.5);
 }
 
 .puzzleTile:hover {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 2px solid lightblue;
+  border: 1px solid lightblue;
 }
 
 .dragList {
@@ -200,5 +207,9 @@ export default {
   border-radius: 2px;
   border: 1px solid black;
   margin-right: 0.2em;
+}
+p {
+  padding: 0.5rem;
+  text-align: center;
 }
 </style>

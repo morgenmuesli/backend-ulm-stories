@@ -24,11 +24,11 @@
       </div>
     </section>
     <section>
-      <div class="container chatRoom">
+      <div class="container chatRoom reverseorder">
         <div
           :key="index"
           v-for="(item, index) in displayMessages"
-          class="columns is-mobile "
+          class="columns is-mobile"
         >
           <div
             :class="{ 'is-offset-one-fifth': item.isFromMe }"
@@ -47,7 +47,7 @@
                     v-if="item.video"
                     :src="require('@/assets/webm/' + item.video + '.webm')"
                     @ended="popMessages"
-                    autoplay
+                    controls
                     style="position: absolute; bottom: 2%; right:0"
                   ></video>
                 </div>
@@ -108,6 +108,9 @@ export default {
     this.displayMessages = [
       ...this.$store.getters["profCall/getDisplayedMessages"]
     ];
+    if (this.displayMessages.length > 0) {
+      this.displayMessages = this.displayMessages.splice().reverse();
+    }
     this.displayMessages.sort((a, b) => b.scene - a.scene);
     this.currentMessages = [
       ...this.$store.getters["profCall/getNewProfMessages"]
@@ -120,9 +123,13 @@ export default {
   methods: {
     send() {
       this.displayMessages.push({ text: this.input, isFromMe: true });
-      if (this.waitForAnswerMessage) {
+      if (this.waitForAnswerMessage != null) {
         setTimeout(
-          () => this.displayMessages.push(this.waitForAnswerMessage),
+          () =>
+            this.displayMessages.push({
+              text: this.input,
+              isFromMe: true
+            }),
           2000
         );
         this.waitForAnswerMessage = null;
@@ -236,5 +243,10 @@ h3 {
   position: fixed;
   bottom: 0;
   padding-right: 2rem;
+}
+
+.reverseorder {
+  display: flex;
+  flex-direction: column-reverse;
 }
 </style>
