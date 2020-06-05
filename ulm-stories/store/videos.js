@@ -101,7 +101,7 @@ export const state = () => ({
       img: "labor_kaputt",
       video: "08_Zweistein",
       text:
-        "Ich benötige die Einzelteile um das Chaos hier zu stoppen- und das Ulm-Zeit-Kontinuum wieder zu stabilisieren.",
+        "Ich benötige die Einzelteile um das Chaos hier zu stoppen und das Ulm-Zeit-Kontinuum wieder zu stabilisieren.",
       answer: "Weiter"
     },
     {
