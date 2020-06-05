@@ -17,11 +17,6 @@
           >
         </li>
         <li>
-          <nuxt-link to="/"
-            ><Button class="btn">Einstellungen</Button></nuxt-link
-          >
-        </li>
-        <li>
           <nuxt-link to="/about"
             ><Button class="btn">Über Uns</Button></nuxt-link
           >
