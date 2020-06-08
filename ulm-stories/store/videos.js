@@ -950,7 +950,10 @@ export const state = () => ({
       img: "background_simple",
       video: "100_Schwanenwirtin_End",
       text:
-        "Glückwunsch! Du hast die Story  durchgespielt. Wenn du mehr über Albert Einstein und seine Arbeit erfahren möchtest,  folge diesem Link. https://www.ulm.de/tourismus/stadtgeschichte/koepfe/einstein-der-relative-ulmer \n" +
+        "Glückwunsch! Du hast die Story durchgespielt. Wenn du mehr über Albert Einstein und seine Arbeit erfahren möchtest folge diesem " +
+        str.link(
+          "https://www.ulm.de/tourismus/stadtgeschichte/koepfe/einstein-der-relative-ulmer"
+        ) +
         " \n" +
         "Viel Spaß in Ulm! \n" +
         " \n" +
@@ -1030,7 +1033,7 @@ export const state = () => ({
     }
   ]
 });
-
+const str = "Link.";
 export const getters = {
   getAllSortedVideosOfChapter: state => chapterId => {
     const videosOfChapter = state.videos.filter(a => a.chapter === chapterId);
