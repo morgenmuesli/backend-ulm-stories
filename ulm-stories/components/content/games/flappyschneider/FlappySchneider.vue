@@ -218,11 +218,13 @@ export default {
   background: url("../../../../assets/img/flappybird/pipeup.svg") bottom
     no-repeat;
   background-size: cover;
+  opacity: 70%;
 }
 
 .pipe-bottom {
   background: url("../../../../assets/img/flappybird/pipedown.svg") no-repeat;
   background-size: 100%;
+  opacity: 70%;
 }
 
 .pipe-group {

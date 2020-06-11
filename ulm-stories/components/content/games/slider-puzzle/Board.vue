@@ -1,9 +1,9 @@
 <template>
   <div class="board">
+    <div v-if="won" class="winning">
+      <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
+    </div>
     <div class="frame-wrapper">
-      <div v-if="won">
-        <won-component id="won" v-if="hasWon" :won="nextPage"></won-component>
-      </div>
       <div v-if="playing">
         <div
           v-if="showingOriginal && image"
@@ -242,6 +242,13 @@ export default {
 
 <style scoped lang="scss">
 .board {
+  width: 100%;
+}
+.winning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
 }
 

@@ -21,12 +21,12 @@
 <script>
 import _ from "lodash";
 import Tile from "~/components/content/games/memory/Tile";
-import WonComponent from "~/components/content/games/wonComponent";
+import wonComponent from "~/components/content/games/wonComponent";
 
 export default {
   name: "GameField",
   // eslint-disable-next-line vue/no-unused-components
-  components: { WonComponent, Tile },
+  components: { wonComponent, Tile },
   data: () => ({
     won: false,
     field: [],
@@ -84,9 +84,9 @@ export default {
         );
         if (pair.length > 1) {
           if (this.checkWin()) {
+            this.$confetti.start();
             this.hasWon = true;
             this.won = true;
-            this.$confetti.start();
           }
         } else {
           for (let i = 0; i < this.openTiles.length; i++) {
@@ -155,6 +155,5 @@ h1 {
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 3;
 }
 </style>

@@ -8,16 +8,17 @@
         class="puzzleTile"
         v-for="(item, index) in puzzleList"
       ></div>
-    </div>
-    <p>Scrolle nach rechts oder links</p>
-    <div class="dragList" style="width: 100%">
-      <div
-        :key="index"
-        :style="item.style"
-        @click="selectItem(item)"
-        class="tile"
-        v-for="(item, index) in tileList"
-      ></div>
+
+      <p>Scrolle nach rechts oder links</p>
+      <div class="dragList" style="width: 100%">
+        <div
+          :key="index"
+          :style="item.style"
+          @click="selectItem(item)"
+          class="tile"
+          v-for="(item, index) in tileList"
+        ></div>
+      </div>
     </div>
   </div>
 </template>
