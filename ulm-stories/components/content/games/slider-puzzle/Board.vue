@@ -100,10 +100,7 @@ export default {
   watch: {
     valid() {
       if (this.valid) {
-        this.playing = false;
-        this.won = true;
-        this.hasWon = true;
-        this.$confetti.start();
+        setTimeout(() => this.winScreen(), 3000);
       }
     }
   },
@@ -235,6 +232,12 @@ export default {
     nextPage() {
       this.$emit("solved");
       this.$confetti.stop();
+    },
+    winScreen() {
+      this.playing = false;
+      this.won = true;
+      this.hasWon = true;
+      this.$confetti.start();
     }
   }
 };

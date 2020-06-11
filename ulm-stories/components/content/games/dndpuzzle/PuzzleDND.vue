@@ -132,6 +132,12 @@ export default {
       }
       return true;
     },
+    winScreen() {
+      this.playing = false;
+      this.won = true;
+      this.hasWon = true;
+      this.wincallback();
+    },
     clickOnPuzzle(item) {
       if (this.selectedItem) {
         const member = this.puzzleList.find(
@@ -150,10 +156,7 @@ export default {
           this.__swapTile(item);
         }
         if (this.checkWin()) {
-          this.playing = false;
-          this.won = true;
-          this.hasWon = true;
-          this.wincallback();
+          setTimeout(() => this.winScreen(), 3000);
         }
       } else if (item.containedItem !== -1) {
         this.selectedItem = {
